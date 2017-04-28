@@ -1,0 +1,37 @@
+# Emacs editor
+*.*~
+\#*.*#
+\.#*
+\#*#
+
+# Mac Finder
+.DS_Store
+.Thumbs_DB
+
+# Java build
+target
+
+#random stuff
+hacks
+*staples*.*
+
+#serverlogs
+log
+
+# IntelliJ
+.idea
+ess-service.iml
+
+#UI
+/node_modules
+/.tmp
+/.sass-cache
+/bower_components
+/service/main/resources/root
+
+# big data
+demoassets
+src/main/resources/root/admin/data
+/bin/
+ess-pk.yaml
+selfsigned.crt
