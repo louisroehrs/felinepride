@@ -1,0 +1,97 @@
+
+
+<html>
+<head>
+<style>
+
+.coords{
+    position:absolute;
+    top 740px;
+    left:50%;
+    width:1000px;
+    height:40px;
+   margin-left: -500px;
+}
+
+.viewport {
+   position:absolute;
+   top: 20;
+   left: 50%;
+//   margin-top: -350px;
+   margin-left: -500px;
+   width:1000;
+   height: 700;
+   border: 30px solid black;
+   border-bottom: 80px solid black;
+   overflow:scroll;
+
+}
+
+BODY {
+   background-image: url('tiger-stripes-felinepride.jpg');
+}
+HTML {
+   font-family:Herculanum;
+   color:white;
+
+}
+
+
+.title {
+   position: relative;
+   top: 750;
+   text-shadow: 4px 2px 4px black;
+   font-size:48pt;
+   text-align:center;
+}
+</style>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script language=Javascript>
+
+
+$(document).ready( function() {
+    $('.viewport').scrollTop(1925);
+    $('.viewport').scrollLeft(2610);
+
+    window.onkeypress = function (event) {
+        var keymove = 5;
+        if (event.keyCode ==40) {
+            $('.viewport').scrollTop($('.viewport').scrollTop()+5);
+            event.preventDefault();
+        }
+        if (event.keyCode==39) {
+            $('.viewport').scrollLeft($('.viewport').scrollLeft()+5);
+            event.preventDefault();
+        }
+        if (event.keyCode==38) {
+            $('.viewport').scrollTop($('.viewport').scrollTop()-5);
+            event.preventDefault();
+        }
+        if (event.keyCode==37) {
+            $('.viewport').scrollLeft($('.viewport').scrollLeft()-5);
+            event.preventDefault();
+        }
+        $('.coords').text("(" + $('.viewport').scrollLeft() +","+ $('.viewport').scrollTop() +" )");
+    }
+
+});
+
+
+  
+</script>
+</head>
+<body>
+
+
+
+
+<div class=viewport>
+<img src="pyramidhut-felinepride.jpeg" width=4320 height=2880>
+</div>
+<div class=coords></div>
+<div class="title">Feline Pride</div>
+
+
+<body>
+</html>

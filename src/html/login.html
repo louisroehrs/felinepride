@@ -1,0 +1,126 @@
+
+
+<html>
+<head>
+<style>
+
+BODY {
+   background-image: url('sockycat.jpg');
+   background-position: 50% 0%%;
+   text-shadow: 4px 2px 4px black;
+   font-size:30pt;
+}
+
+HTML {
+   font-family:Herculanum;
+   color:white;
+}
+
+INPUT {
+   font-family:Herculanum;
+   font-size:30pt;
+   opacity:.8;
+   box-shadow: 8px 8px 8px white;
+}
+
+INPUT:focus {
+   opacity:1.0;
+}
+
+A { color:white;}
+
+.title {
+   position: relative;
+   top: 50;
+   left: 100;
+   text-shadow: 4px 2px 4px black;
+   font-size:48pt;
+}
+
+
+#username {
+   position: relative;
+   top: 150;
+   left: 100;
+}
+
+#password {
+   position: relative;
+   top: 200;
+   left: 100;
+}
+
+#loginbutton {
+   position: relative;
+   top: 250;
+   left: 300;
+   width:150;
+   height:150;
+}
+
+#logintext {
+   position: relative;
+   top: 210;
+   left: 335;
+   width:150;
+   height:150;
+   font-size:20pt
+}
+
+
+#newbutton {
+   position: relative;
+   top: 160;
+   left: 230;
+   width:150;
+   height:150;
+}
+
+#newtext {
+   position: relative;
+   top: 120;
+   left: 265;
+   width:150;
+   height:150;
+   font-size:20pt
+}
+
+
+</style>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script language=JavaScript>
+
+/* not worky
+jQuery('#loginbutton').click(function () { 
+   jQuery('body').fadeOut(1000, function() {
+      window.location= "game.html";
+   });
+
+});
+
+*/
+  
+</script>
+</head>
+<body>
+
+<div class="title">Feline Pride</div>
+<div id="username">UserName<BR><input name="username"  autofocus></input></div>
+
+<div id="password"  type="password">Password<br><input name="password"></input></div>
+
+<a href="game.html"><img id="loginbutton" src="catpawprint.png"></img>
+<div id="logintext">Login</div></a>
+
+<a href="#register"><img id="newbutton" src="catpawprint.png"></img>
+<div id="newtext">New?</div></a>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+
+<a href="register">
+<div id="username">UserName<BR><input name="username"  autofocus></input></div>
+
+<div id="password"  type="password">Password<br><input name="password"></input></div>
+
+<body>
+</html>
