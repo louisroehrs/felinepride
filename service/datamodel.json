@@ -1,0 +1,136 @@
+
+
+Data Model
+
+
+PLAYERS (top level)
+{
+    "username": "fuzzycat23"
+    "type": "player",
+    "area": "kittacentral",
+    "avatars": [
+        "tiger",
+        "cheetah"
+    ],
+    "currentaction": "sitting",
+    "currentavatar": "tiger",
+    "inventory": [],
+    "money": [
+        {
+            "currency": "tigerstones",
+            "qty": 20
+        },
+        {
+            "currency": "pawpoints",
+            "qty": 45
+        }
+    ],
+    "moving": {
+        "x": 0,
+        "y": 0
+    },
+    "password": "asd",
+    "position": {
+        "x": 1000,
+        "y": 1000
+    }
+}
+
+
+PLAYERAVATAR (player sub doc) // specific to players 
+{ 
+    "type" : "playeravatar",
+    "kind" : "tiger",
+    "wearing" : [ "head","bluehat",
+                  "neck","birdbones"
+                  "chest" ,  kittydress
+                ]
+}
+
+
+AVATARS
+{ 
+    "type": "avatar",
+    "name": "Fuzzy Tiger",
+    "image": "    "
+}
+
+
+PLAYERITEMS (player sub doc)
+{
+    "type" : "playeritem",
+    "item" : item,
+    "color" : "blue"
+}
+
+
+ITEMS (top level)
+{
+    "type" : "item",
+    "kind" : "dress",
+    "name": "kittydress",
+    "price" : 23,
+    "wearabletypes" : ["chest","legs"], // first item in the list is what the item moves with.
+    "imageset" : ["kittydress.jpg"],
+    "availablecolors" : "blue",
+    "attachpoint" : {x: 23, y: 23}
+}
+
+
+// wearabletypes : [ "head","neck","legs","paws","chest","tail","earrings"]
+
+AREAS  (top level)
+{ 
+    "type": "area",
+    "name":"Kitta Central",
+    "backgroundimage":"blah.jpg",
+    "walkable" : [       ],
+    "items" : [
+        { "item": "wavyplant"     ,
+          "location" : { "x": 23, "y": 23 }
+        }           
+    ]
+}
+
+        
+
+GET /object/{type}
+SELECT FROM fp.* WHERE type = {type} 
+
+GET /object/{type}/{id}
+SELECT FROM fp.* WHERE type = {type} AND (meta().id) = {id}
+
+PUT /object/{type}/{id}
+
+POST /object/{type}
+
+DELETE /object/{type}/{id}
+
+
+couchbase does...
+
+
+
+public String save(Kitten kitten, boolean isNew) {
+    JsonDocument response = null;
+    JsonObject kittenJSON = JsonObject.fromJson("{\""+Kitten.entity+"\":"+gson.toJson(kitten)+"}");
+    if (isNew) {
+        response = bucket.insert(
+            JsonDocument.create(kitten.getId(),
+                                kittenJSON)
+        );
+    }
+    else {
+        response = bucket.upsert(
+            JsonDocument.create(kitten.getId(),
+                                kittenJSON), PersistTo.MASTER
+        );
+    }
+    return response.id();
+}
+
+
+
+
+
+
