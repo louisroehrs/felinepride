@@ -95,6 +95,7 @@ function newGuid() {
     return GUID;
 }
 
+// user joined, create a session { nick: username, id randomsessionid, timestamp, poke(), destroy() }
 function createSession (nick) {
     if (nick.length > 50) return null;
     if (/[^\w_\-^!]/.exec(nick)) return null;
@@ -197,6 +198,8 @@ fu.get("/sprites/dad.png", fu.staticHandler("sprites/dad.png"));
 fu.get("/sprites/lucy.png", fu.staticHandler("sprites/lucy.png"));
 fu.get("/sprites/sophia.png", fu.staticHandler("sprites/sophia.png"));
 
+
+// who is here.
 fu.get("/who", function (req, res) {
     var nicks = [];
     for (var id in sessions) {
@@ -209,6 +212,7 @@ fu.get("/who", function (req, res) {
                         });
 });
 
+// user joins the room.  
 fu.get("/join", function (req, res) {
     var message = JSON.parse(qs.parse(url.parse(req.url).query).message);
     nick = message.nick;
@@ -236,6 +240,8 @@ fu.get("/join", function (req, res) {
                         });
 });
 
+
+// leave the room
 fu.get("/part", function (req, res) {
     var id = qs.parse(url.parse(req.url).query).id;
     var session;
@@ -246,6 +252,8 @@ fu.get("/part", function (req, res) {
     res.simpleJSON(200, { rss: mem.rss });
 });
 
+
+// ?since=milliseconds&  get the messages since a given time.
 fu.get("/recv", function (req, res) {
     if (!qs.parse(url.parse(req.url).query).since) {
         res.simpleJSON(400, { error: "Must supply since parameter" });

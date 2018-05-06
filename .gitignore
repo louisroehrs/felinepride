@@ -23,11 +23,11 @@ log
 ess-service.iml
 
 #UI
-/node_modules
-/.tmp
-/.sass-cache
-/bower_components
-/service/main/resources/root
+node_modules
+.tmp
+.sass-cache
+bower_components
+service/main/resources/root
 
 # big data
 demoassets

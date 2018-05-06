@@ -1,0 +1,94 @@
+{
+  "id": "avatar:domesticshorthair",
+  "img": "domesticshorthair.png",
+  "walkingsprites": {
+    "up": [
+      "walk1.png",
+      "walk2.png"
+    ],
+    "down": [
+      "walkdown.png",
+      "walkdown.png"
+    ]
+  },
+  "accessorypositions": [
+    "tail",
+    "neck",
+    "crown",
+    "shirt"
+  ]
+}
+{
+  "id": "door:city1tocity2",
+  "from": "world:city1",
+  "to": "world:city2",
+  "imgclosed": "doorimage.png",
+  "imgopen": "dooropenimage.png"
+}
+{
+  "type": "player",
+  "username": "fuzzycat23",
+  "password": "asd",
+  "area": "kittacentral",
+  "position": {
+    "x": 1000,
+    "y": 1000
+  },
+  "currentaction": "sitting",
+  "moving": {
+    "x": 0,
+    "y": 0
+  },
+  "inventory": [],
+  "money": [
+    {
+      "qty": 20,
+      "currency": "tigerstones"
+    },
+    {
+      "qty": 45,
+      "currency": "pawpoints"
+    }
+  ],
+  "currentavatar": "tiger",
+  "avatars": [
+    "tiger",
+    "cheetah"
+  ]
+}
+
+{
+  "type": "common",
+  "name": "City 1",
+  "id": "world:city1",
+  "backgroundImage": "world.jpg",
+  "size": {
+    "x": 1000,
+    "y": 1000
+  },
+  "walkarea": [],
+  "furniture": [
+    {
+      "id": "furniture:couch1",
+      "x": 564,
+      "y": 233
+    }
+  ],
+  "doors": [
+    {
+      "id": "door:city1tocity2",
+      "x": 333,
+      "y": 215
+    }
+  ],
+  "fixtures": [
+    {
+      "id": "fixture:appletree2",
+      "x": 333,
+      "y": 215
+    }
+  ],
+  "music": "music:party.mp3"
+}
+
+
