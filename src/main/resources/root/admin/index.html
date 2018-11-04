@@ -1,0 +1,22 @@
+<html>
+<head>
+    <script type="text/javascript" src="/admin/essms/js/jquery.1.11.0.min.js"></script>
+
+    <script language=JavaScript>
+
+jQuery.get("/service/v1/auth/user", {}, function(result) { if (result) goforward()} , function (result) { goLoginIn()}, "json");
+
+function goforward() {
+   window.location.href = "/admin/essms/html/login.html";
+}
+function goLoginIn() {
+   window.top.location.href = "/";
+}
+
+    </script>
+
+</head>
+<body>
+Authentication Required
+</body>
+</html>

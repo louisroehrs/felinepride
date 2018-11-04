@@ -1,0 +1,53 @@
+<html><head>
+    <title>WCE GraphQL Visualizer</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="/admin/graphql/style/style.css"> 
+</head>
+<body>
+  <div class="container">
+    <div class="banner">
+      <img class="newappIcon" src="images/newapp-icon.png">
+      <p class="appTitle">
+            WCE GraphQL Visualizer
+            </p>
+      </div>
+
+
+    <section>
+      <table id="notes" class="records" border="0" cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr class="tableRows" data-id="b443e1b59a2249eafa76af6b9b99b25c">
+            <td class="contentName">
+              <textarea id="nameText" class="nameText" onkeydown="onKey(event)">WCE-GraphQL-Schema</textarea>
+            </td>
+            <td class="contentDetails">
+              <textarea id="valText" onkeydown="onKey(event)">A work in progress</textarea>
+            </td>
+            <td class="contentAction">
+              <button class="viewGraphQLBtn" onclick="viewGraphQL(this)" title="view graphql">Visualize GraphQL</button></td>
+            <td class="contentAction">
+              <button class="graphiQLBtn" onclick="graphiQL(this)" title="try graphiql">Try it with GraphiQL</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <footer>
+      <div>
+        <!-- <button class='detailBtn' onclick="toggleServiceInfo()" title='Service information'>
+             <img src='images/detail.png' alt='detail'/>
+             -->
+      <div id="loadingImage"></div>
+      <br><br><br><br><br>
+      <div id="errorDiv" class="errorMsg"></div>
+      </footer>
+    <script type="text/javascript" src="/admin/graphql/scripts/util.js"></script>
+    <script type="text/javascript" src="/admin/graphql/scripts/index.js"></script>
+    <div id="myImage"><div id="innerImg"></div></div>
+    <br><br><br>
+    </div>
+
+
+</body></html>

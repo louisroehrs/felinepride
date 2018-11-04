@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="//cdn.jsdelivr.net/react/15.4.2/react.min.js"></script>
+    <script src="//cdn.jsdelivr.net/react/15.4.2/react-dom.min.js"></script>
+
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/graphql-voyager/dist/voyager.css" />
+    <script src="//cdn.jsdelivr.net/npm/graphql-voyager/dist/voyager.min.js"></script>
+  </head>
+  <body>
+    <div id="voyager">Loading...</div>
+    <script>
+      function introspectionProvider(query) {
+        // ... do a call to server using introspectionQuery provided
+        // or just return pre-fetched introspection
+
+      return fetch(window.location.origin + '/graphql', {
+      method: 'post',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({query: query}),
+      }).then(response => response.json());
+
+      }
+
+      // Render <Voyager />
+      GraphQLVoyager.init(document.getElementById('voyager'), {
+        introspection: introspectionProvider
+      })
+    </script>
+  </body>
+</html>

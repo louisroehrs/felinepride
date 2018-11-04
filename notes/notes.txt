@@ -1,0 +1,24 @@
+Notes from game engine research.
+
+
+Backend server topics https://code.tutsplus.com/tutorials/create-a-multiplayer-pirate-shooter-game-in-your-browser--cms-23311
+
+Multiplayer on  playcanvas https://developer.playcanvas.com/en/tutorials/real-time-multiplayer/
+
+Playcanvas,   best html renderer, online editor, downloadable game engine.
+Pay to export to it.  Use backend above for multiplayer. 
+Full API to engine.
+
+Lance,  smart networking and delta updating, no front end.
+
+The list https://html5gameengine.com
+
+WADE cute, but not world class, online only editing.
+
+Isogenic multiplayer html5, looks solid, no more development happening. Free. Has editors?  Runs casinorpg.com    https://github.com/irrelon/ige clone and use.  Commits in oct 2018
+
+
+
+
+
+ 

@@ -1,0 +1,167 @@
+#####
+# HTTP settings
+#####
+server:
+  rootPath: '/service/*'
+  applicationConnectors:
+    - type: http
+      port: 0
+  adminConnectors:
+    - type: http
+      port: 0
+
+  requestLog:
+    appenders:
+      - type: file
+        currentLogFilename: ./log/access.log
+        archivedLogFilenamePattern: ./log/access.log.%d.gz
+        archivedFileCount: 5
+        timeZone: UTC
+
+# DAL Configuration
+#dalConfiguration:
+#  host : 169.55.89.254
+#  #host : 127.0.0.1
+#  port : 27017
+#  database : ess
+#  user: owner
+#  driver: com.felinepride.commerce.ess.v1.dal.DAL
+#  user: owner
+#  password: IloveSearch
+
+couchbaseConfiguration:
+  nodes:
+    - 169.55.89.254
+#    - 127.0.0.1
+  metricsBucket: ISISearchMetric
+  metricsBucketPassword: IloveSearch
+  essBucket: ess
+  essBucketPassword: IloveSearch
+  driver: com.felinepride.commerce.ess.v1.dal.DAL2
+
+#####
+# Logging settings.
+#####
+logging:
+
+  # The default level of all loggers. Can be OFF, ERROR, WARN, INFO, DEBUG, TRACE, or ALL.
+  level: ALL
+
+  # Logger-specific levels.
+  loggers:
+    "com" : INFO
+    "org" : INFO
+    "io.dropwizard" : ALL
+    "javax.management" : INFO
+    "org.apache.shiro" : DEBUG
+    "org.pac4j" : DEBUG
+    "com.ibm": ALL
+    "com.felinepride.x1.tech.bluewizard.auth" : DEBUG
+
+  appenders:
+    - type: console
+      threshold: DEBUG
+      logFormat: "%highlight(%-5level) [%cyan(%d{ISO8601})] %yellow(%c{25}): %m%n%xEx"
+    - type: file
+      threshold: ALL
+      currentLogFilename: ./log/server.log
+      archivedLogFilenamePattern: ./log/ess.%d.log.gz
+      archivedFileCount: 50
+      timeZone: UTC
+
+# leave off ending slash
+# server path is url. Either absolute with protocol or this server relative
+dmsConfiguration:
+  uploadDir: /Users/lroehrs/ess/uploads
+  serverPath: /uploads
+
+
+#####
+# Jersey Log setting
+#####
+jersey:
+  logTraffic: true
+
+solr:
+  url: http://localhost:8983/solr/esslowes3/
+
+params:
+  sizeLimit: 3000000000
+  essYoutubeServiceBaseUrl : http://localhost:9108/service/v1/
+  classifierId: 33ffe6x85-nlc-5306
+  classifierUrl: https://gateway.watsonplatform.net/natural-language-classifier/api
+  classifierPassword: 3q8DHUmGxMc6
+  classifierUsername: 6890f55d-6e46-4f5e-8986-d16ea58f9ce6
+  keywordExpanderUrl: http://localhost:10090/service/v1/expander/
+  serviceAddress: http://localhost:9080
+  parser: http://www.ibmsitesearch.com:8585
+  loginUrl: https://prepiam.toronto.ca.felinepride.com/idaas/oidc/endpoint/default/authorize?response_type=code&scope=openid&client_id=MWQ3M2U4MzMtY2ZhNS00&redirect_uri=https://localhost:8443/service/authc/oidc
+  adminUrl: /admin/essms/html/organizations.html
+  landingUrl: /admin/essms/html/login.html
+
+
+resource:
+  include:
+    - DocumentTypeResource
+    - InstanceResource
+    - OrganizationResource
+    - SearchMetricResource
+    - SearchResource
+    - SearchTermHistoryResource
+    - SolrProxyResource
+    - SearchDocumentResource
+    - UserResource
+    - OAuthCallbackResource
+    - ApiKeyDirector
+    - ProductResource
+    - ArticleResource
+    - HelpResource
+    - ServiceResource
+    - SemanticIntentResource
+    - GroundTruthResource
+    - RankerResource
+    - NlpProxyResource
+    - AuthTestResource
+    - EventResource
+    - RerankingModelResource
+
+youtube:
+  essYoutubeConsentRedirectUrl: http://localhost:9080/service/v1/oauth/validate/youtube?user={user}
+  youtubeAuthConsentUrl: https://accounts.google.com/o/oauth2/auth?client_id={CLIENT-ID}&redirect_uri={REDIRECT-URI}&response_type=code&approval_prompt=auto&scope={scope}&access_type=offline&
+  clientId: 272867635709-iod5v5h3dbcivje0m21mngcirnl5oais.apps.googleusercontent.com
+  clientSecret: tyPVwtPTLOS-9_p_LtRs_MN3
+  responseType: code
+  accessType: offline
+  oauthTokenUrl: https://accounts.google.com/o/oauth2/token
+  oauthRedirectUri: https://localhost:9080/service/v1/oauth/youtube/token?user={user}
+  grantType: authorization_code
+  youtubeScope:
+    - https://www.googleapis.com/auth/youtube.force-ssl
+    - https://www.googleapis.com/auth/youtube.readonly
+
+instagram:
+  clientId: 1084945748469-eg34imk572gdhu83gj5p0an9fut6urp5.apps.googleusercontent.com
+  redirectUri: http%3A%2F%2Flocalhost%2Foauth2callback
+  responseType: code
+  essInstagramRedirectUrl: http://localhost:9080/service/v1/oauth/validate/instagram?user={user}
+  instagramRedirectUrl: https://api.instagram.com/oauth/authorize/?client_id={CLIENT-ID}&redirect_uri={REDIRECT-URI}&response_type=code
+
+sundial:
+  thread-pool-size: 10
+  shutdown-on-unload: true
+  wait-on-shutdown: false
+  start-delay-seconds: 0
+  start-scheduler-on-load: true
+  global-lock-on-load: false
+  annotated-jobs-package-name: com.felinepride.commerce.ess.v1.thirdpartyjobs.job
+#  tasks: [startjob, stopjob]
+
+swagger:
+  host: "localhost:9080"
+
+#####
+# Shiro Security Settings
+#####
+shiro:
+  iniConfigs: ["file:../shiro-local.ini"]
+  filterUrlPattern: /*

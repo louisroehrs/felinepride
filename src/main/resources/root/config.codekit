@@ -1,0 +1,4857 @@
+{
+"CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
+"creatorBuild": "19127",
+"files": {
+	"\/admin\/essms\/css\/bootstrap-theme.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/css\/bootstrap-theme.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/essms\/css\/bootstrap-theme.min.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/css\/bootstrap-theme.min.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/essms\/css\/bootstrap.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/css\/bootstrap.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/essms\/css\/bootstrap.min.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/css\/bootstrap.min.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/essms\/css\/cvoc.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/css\/cvoc.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/essms\/css\/dashboard.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/css\/dashboard.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/essms\/css\/dc.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/css\/dc.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/essms\/css\/gadgetx.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/css\/gadgetx.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/essms\/css\/googlechart1.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/css\/googlechart1.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/essms\/css\/ibmdc.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/css\/ibmdc.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/essms\/css\/kalendae.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/css\/kalendae.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/essms\/css\/nv.d3.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/css\/nv.d3.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/essms\/css\/nv.d3.min.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/css\/nv.d3.min.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/essms\/css\/panels.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/css\/panels.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/essms\/css\/roehrs.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/css\/roehrs.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/essms\/css\/scx-cvoc.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/css\/scx-cvoc.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/essms\/css\/style.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/css\/style.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/essms\/css\/wireframe.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/css\/wireframe.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/essms\/html\/about.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/html\/about.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/essms\/html\/admin.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/html\/admin.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/essms\/html\/api.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/html\/api.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/essms\/html\/blank.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/html\/blank.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/essms\/html\/corpusanalytics.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/html\/corpusanalytics.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/essms\/html\/cvoc.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/html\/cvoc.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/essms\/html\/dataflow.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/html\/dataflow.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/essms\/html\/groundtruth.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/html\/groundtruth.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/essms\/html\/home.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/html\/home.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/essms\/html\/import.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/html\/import.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/essms\/html\/improvesearch.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/html\/improvesearch.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/essms\/html\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/html\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/essms\/html\/instancedetails.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/html\/instancedetails.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/essms\/html\/instancemap.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/html\/instancemap.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/essms\/html\/instances.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/html\/instances.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/essms\/html\/login.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/html\/login.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/essms\/html\/logs.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/html\/logs.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/essms\/html\/newinstance.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/html\/newinstance.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/essms\/html\/organizations.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/html\/organizations.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/essms\/html\/rules.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/html\/rules.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/essms\/html\/searchanalytics.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/html\/searchanalytics.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/essms\/html\/searchanalytics_performance.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/html\/searchanalytics_performance.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/essms\/html\/searchanalytics_wheel.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/html\/searchanalytics_wheel.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/essms\/html\/searchiframe.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/html\/searchiframe.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/essms\/html\/searchinsights.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/html\/searchinsights.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/essms\/html\/searchrealtime.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/html\/searchrealtime.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/essms\/html\/searchterms.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/html\/searchterms.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/essms\/html\/tunesearch.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/html\/tunesearch.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/essms\/html\/users.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/html\/users.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/essms\/html\/vc_example.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/html\/vc_example.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/essms\/i\/analytics-512.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 42359,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/analytics-512.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/analytics-512.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/apiibm.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1340,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/apiibm.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/apiibm.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/blueibm.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 39555,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/blueibm.jpg",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/blueibm.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/bullhorn.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1804,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/bullhorn.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/bullhorn.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/cart.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1707,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/cart.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/cart.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/ch\/peggy.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 27192,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/ch\/peggy.jpg",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/ch\/peggy.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/chat.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1949,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/chat.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/chat.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/computer.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1626,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/computer.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/computer.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/contract.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 16021,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/contract.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/contract.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/dollarsign1.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 9045,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/dollarsign1.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/dollarsign1.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/dollarsignsquare.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 8939,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/dollarsignsquare.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/dollarsignsquare.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/dudes.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 14081,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/dudes.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/dudes.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/email.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1702,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/email.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/email.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/exclamationpoint.jpeg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5969,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/exclamationpoint.jpeg",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/exclamationpoint.jpeg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/FontAwesomeIcons.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 120696,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/FontAwesomeIcons.jpg",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/FontAwesomeIcons.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/footer_bg.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 146,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/footer_bg.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/footer_bg.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/gear.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 21826,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/gear.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/gear.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/globe.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 6024,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/globe.jpg",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/globe.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/grey-gear-icon_137x137.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 13444,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/grey-gear-icon_137x137.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/grey-gear-icon_137x137.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/happy.jpeg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2619,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/happy.jpeg",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/happy.jpeg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/heart.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 17555,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/heart.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/heart.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/ibm-logo-anim-sprite.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 18087,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/ibm-logo-anim-sprite.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/ibm-logo-anim-sprite.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/ibm_logo_print.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1048,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/ibm_logo_print.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/ibm_logo_print.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/Icon-Gear01-Grey.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 21175,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/Icon-Gear01-Grey.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/Icon-Gear01-Grey.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/Icon_13-512.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 24763,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/Icon_13-512.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/Icon_13-512.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/images-1.jpeg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3410,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/images-1.jpeg",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/images-1.jpeg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/images-10.jpeg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2314,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/images-10.jpeg",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/images-10.jpeg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/images-11.jpeg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7025,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/images-11.jpeg",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/images-11.jpeg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/images-12.jpeg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1679,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/images-12.jpeg",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/images-12.jpeg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/images-2.jpeg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3988,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/images-2.jpeg",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/images-2.jpeg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/images-3.jpeg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2773,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/images-3.jpeg",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/images-3.jpeg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/images-4.jpeg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2221,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/images-4.jpeg",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/images-4.jpeg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/images-5.jpeg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2956,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/images-5.jpeg",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/images-5.jpeg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/images-6.jpeg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1742,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/images-6.jpeg",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/images-6.jpeg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/images-7.jpeg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3662,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/images-7.jpeg",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/images-7.jpeg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/images-8.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7613,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/images-8.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/images-8.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/images-9.jpeg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3420,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/images-9.jpeg",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/images-9.jpeg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/images.jpeg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1528,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/images.jpeg",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/images.jpeg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/instance.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 25160,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/instance.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/instance.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/iphone.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1545,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/iphone.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/iphone.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/list.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3482,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/list.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/list.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/live-online-grey.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 12092,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/live-online-grey.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/live-online-grey.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/logs.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 47846,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/logs.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/logs.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/Medical-Grey-Health-Sign.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 13910,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/Medical-Grey-Health-Sign.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/Medical-Grey-Health-Sign.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/order-storage.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 10454,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/order-storage.jpg",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/order-storage.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/phone.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1754,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/phone.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/phone.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/plus-4-xxl.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3485,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/plus-4-xxl.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/plus-4-xxl.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/plus.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5720,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/plus.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/plus.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/rightarrow.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 12167,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/rightarrow.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/rightarrow.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/rules.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 28217,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/rules.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/rules.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/scrollbarvert.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1543,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/scrollbarvert.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/scrollbarvert.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/search.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 6758,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/search.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/search.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/searchanalytics.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 102535,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/searchanalytics.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/searchanalytics.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/searchglass.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 8296,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/searchglass.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/searchglass.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/simple-grey-house-th.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4709,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/simple-grey-house-th.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/simple-grey-house-th.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/stopwatch.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 17758,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/stopwatch.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/stopwatch.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/tablet.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1719,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/tablet.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/tablet.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/ticket.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 18150,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/ticket.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/ticket.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/ticketsquare.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 18266,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/ticketsquare.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/ticketsquare.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/trash.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1531,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/trash.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/trash.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/Unknown.jpeg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1802,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/Unknown.jpeg",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/Unknown.jpeg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/Unknown.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4699,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/Unknown.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/Unknown.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/users.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 28912,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/users.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/users.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/view_details.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 10999,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/view_details.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/view_details.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/i\/view_map.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 37968,
+		"inputAbbreviatedPath": "\/admin\/essms\/i\/view_map.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/i\/view_map.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/essms\/js\/bootstrap.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/bootstrap.js",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/min\/bootstrap-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/essms\/js\/bootstrap.min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/bootstrap.min.js",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/min\/bootstrap.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/essms\/js\/cardflip.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/cardflip.js",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/min\/cardflip-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/essms\/js\/client.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/client.js",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/min\/client-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/essms\/js\/colorbrewer.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/colorbrewer.js",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/min\/colorbrewer-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/essms\/js\/crossfilter.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/crossfilter.js",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/min\/crossfilter-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/essms\/js\/cvoc.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/cvoc.js",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/min\/cvoc-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/essms\/js\/d3.chart.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/d3.chart.js",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/min\/d3.chart-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/essms\/js\/d3.chart.min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/d3.chart.min.js",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/min\/d3.chart.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/essms\/js\/d3.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/d3.js",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/min\/d3-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/essms\/js\/d3.v3.min.js.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/d3.v3.min.js.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/essms\/js\/d3.v4.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/d3.v4.js",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/min\/d3.v4-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/essms\/js\/date.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/date.js",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/min\/date-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/essms\/js\/dc.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/dc.js",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/min\/dc-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/essms\/js\/docs.min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/docs.min.js",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/min\/docs.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/essms\/js\/env-data.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/env-data.js",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/min\/env-data-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/essms\/js\/fu.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/fu.js",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/min\/fu-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/essms\/js\/ibmd3.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/ibmd3.js",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/min\/ibmd3-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/essms\/js\/ibmdc.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/ibmdc.js",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/min\/ibmdc-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/essms\/js\/ibminbox.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/ibminbox.js",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/min\/ibminbox-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/essms\/js\/ibmx1.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/ibmx1.js",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/min\/ibmx1-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/essms\/js\/img\/network\/acceptDeleteIcon.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 20675,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/img\/network\/acceptDeleteIcon.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/img\/network\/acceptDeleteIcon.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/js\/img\/network\/addNodeIcon.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 20998,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/img\/network\/addNodeIcon.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/img\/network\/addNodeIcon.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/js\/img\/network\/backIcon.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 20802,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/img\/network\/backIcon.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/img\/network\/backIcon.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/js\/img\/network\/connectIcon.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 20764,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/img\/network\/connectIcon.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/img\/network\/connectIcon.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/js\/img\/network\/cross.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 18303,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/img\/network\/cross.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/img\/network\/cross.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/js\/img\/network\/cross2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 17768,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/img\/network\/cross2.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/img\/network\/cross2.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/js\/img\/network\/deleteIcon.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 20981,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/img\/network\/deleteIcon.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/img\/network\/deleteIcon.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/js\/img\/network\/downArrow.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4460,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/img\/network\/downArrow.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/img\/network\/downArrow.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/js\/img\/network\/editIcon.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 21016,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/img\/network\/editIcon.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/img\/network\/editIcon.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/js\/img\/network\/leftArrow.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4531,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/img\/network\/leftArrow.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/img\/network\/leftArrow.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/js\/img\/network\/minus.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4147,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/img\/network\/minus.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/img\/network\/minus.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/js\/img\/network\/plus.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4341,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/img\/network\/plus.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/img\/network\/plus.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/js\/img\/network\/rightArrow.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4514,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/img\/network\/rightArrow.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/img\/network\/rightArrow.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/js\/img\/network\/upArrow.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4461,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/img\/network\/upArrow.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/img\/network\/upArrow.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/js\/img\/network\/zoomExtends.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4464,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/img\/network\/zoomExtends.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/img\/network\/zoomExtends.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/js\/img\/timeline\/delete.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 665,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/img\/timeline\/delete.png",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/img\/timeline\/delete.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/admin\/essms\/js\/jquery.1.11.0.min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/jquery.1.11.0.min.js",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/min\/jquery.1.11.0.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/essms\/js\/kalendae.standalone.mit.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/kalendae.standalone.mit.js",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/min\/kalendae.standalone.mit-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/essms\/js\/min\/cvoc-ck.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/min\/cvoc-ck.js",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/min\/min\/cvoc-ck-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/essms\/js\/min\/cvoc-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/min\/cvoc-min.js",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/min\/min\/cvoc-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/essms\/js\/min\/ibmd3-ck.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/min\/ibmd3-ck.js",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/min\/min\/ibmd3-ck-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/essms\/js\/min\/ibmd3-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/min\/ibmd3-min.js",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/min\/min\/ibmd3-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/essms\/js\/min\/ibminbox-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/min\/ibminbox-min.js",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/min\/min\/ibminbox-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/essms\/js\/min\/ibmx1-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/min\/ibmx1-min.js",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/min\/min\/ibmx1-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/essms\/js\/min\/scx-ck.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/min\/scx-ck.js",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/min\/min\/scx-ck-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/essms\/js\/min\/scx-cvoc-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/min\/scx-cvoc-min.js",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/min\/min\/scx-cvoc-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/essms\/js\/min\/scx-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/min\/scx-min.js",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/min\/min\/scx-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/essms\/js\/min\/wordpress-min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/min\/wordpress-min.js",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/min\/min\/wordpress-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/essms\/js\/mockdata.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/mockdata.js",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/min\/mockdata-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/essms\/js\/nonbounce.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/nonbounce.js",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/min\/nonbounce-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/essms\/js\/nv.d3.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/nv.d3.js",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/min\/nv.d3-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/essms\/js\/nv.d3.min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/nv.d3.min.js",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/min\/nv.d3.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/essms\/js\/samples.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/samples.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/samples-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/admin\/essms\/js\/scx-cvoc.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/scx-cvoc.js",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/min\/scx-cvoc-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/essms\/js\/scx.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/scx.js",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/min\/scx-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/essms\/js\/vc.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/vc.js",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/min\/vc-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/essms\/js\/vis.min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/vis.min.js",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/min\/vis.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/essms\/js\/viz.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/essms\/js\/viz.js",
+		"outputAbbreviatedPath": "\/admin\/essms\/js\/min\/viz-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/search\/ajax-solr-master\/core\/AbstractFacetWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/ajax-solr-master\/core\/AbstractFacetWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/ajax-solr-master\/core\/min\/AbstractFacetWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/ajax-solr-master\/core\/AbstractManager.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/ajax-solr-master\/core\/AbstractManager.js",
+		"outputAbbreviatedPath": "\/admin\/search\/ajax-solr-master\/core\/min\/AbstractManager-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/ajax-solr-master\/core\/AbstractSpatialWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/ajax-solr-master\/core\/AbstractSpatialWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/ajax-solr-master\/core\/min\/AbstractSpatialWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/ajax-solr-master\/core\/AbstractSpellcheckWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/ajax-solr-master\/core\/AbstractSpellcheckWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/ajax-solr-master\/core\/min\/AbstractSpellcheckWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/ajax-solr-master\/core\/AbstractTextWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/ajax-solr-master\/core\/AbstractTextWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/ajax-solr-master\/core\/min\/AbstractTextWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/ajax-solr-master\/core\/AbstractWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/ajax-solr-master\/core\/AbstractWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/ajax-solr-master\/core\/min\/AbstractWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/ajax-solr-master\/core\/Core.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/ajax-solr-master\/core\/Core.js",
+		"outputAbbreviatedPath": "\/admin\/search\/ajax-solr-master\/core\/min\/Core-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/ajax-solr-master\/core\/Parameter.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/ajax-solr-master\/core\/Parameter.js",
+		"outputAbbreviatedPath": "\/admin\/search\/ajax-solr-master\/core\/min\/Parameter-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/ajax-solr-master\/core\/ParameterHashStore.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/ajax-solr-master\/core\/ParameterHashStore.js",
+		"outputAbbreviatedPath": "\/admin\/search\/ajax-solr-master\/core\/min\/ParameterHashStore-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/ajax-solr-master\/core\/ParameterStore.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/ajax-solr-master\/core\/ParameterStore.js",
+		"outputAbbreviatedPath": "\/admin\/search\/ajax-solr-master\/core\/min\/ParameterStore-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/ajax-solr-master\/managers\/Manager.jquery.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/ajax-solr-master\/managers\/Manager.jquery.js",
+		"outputAbbreviatedPath": "\/admin\/search\/ajax-solr-master\/managers\/min\/Manager.jquery-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/ajax-solr-master\/managers\/min\/Manager.jquery-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/ajax-solr-master\/managers\/min\/Manager.jquery-min.js",
+		"outputAbbreviatedPath": "\/admin\/search\/ajax-solr-master\/managers\/min\/min\/Manager.jquery-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/ajax-solr-master\/README.md": {
+		"criticStyle": 0,
+		"enableFootnotes": 1,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
+		"fileType": 4096,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/ajax-solr-master\/README.md",
+		"maskEmailAddresses": 1,
+		"outputAbbreviatedPath": "\/admin\/search\/ajax-solr-master\/README.html",
+		"outputFormat": 0,
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
+		},
+	"\/admin\/search\/ajax-solr-master\/widgets\/jquery\/AutocompleteTermWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/ajax-solr-master\/widgets\/jquery\/AutocompleteTermWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/ajax-solr-master\/widgets\/jquery\/min\/AutocompleteTermWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/ajax-solr-master\/widgets\/jquery\/min\/PagerWidget-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/ajax-solr-master\/widgets\/jquery\/min\/PagerWidget-min.js",
+		"outputAbbreviatedPath": "\/admin\/search\/ajax-solr-master\/widgets\/jquery\/min\/min\/PagerWidget-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/ajax-solr-master\/widgets\/jquery\/PagerWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/ajax-solr-master\/widgets\/jquery\/PagerWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/ajax-solr-master\/widgets\/jquery\/min\/PagerWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/ajax-solr-master\/widgets\/ParameterHistoryStore.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/ajax-solr-master\/widgets\/ParameterHistoryStore.js",
+		"outputAbbreviatedPath": "\/admin\/search\/ajax-solr-master\/widgets\/min\/ParameterHistoryStore-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/ajax-solr-master\/widgets\/ParameterYUIStore.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/ajax-solr-master\/widgets\/ParameterYUIStore.js",
+		"outputAbbreviatedPath": "\/admin\/search\/ajax-solr-master\/widgets\/min\/ParameterYUIStore-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/solr-configset\/general_configs\/conf\/_rest_managed.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/solr-configset\/general_configs\/conf\/_rest_managed.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/solr-configset\/general_configs\/conf\/_rest_managed-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/solr-configset\/general_configs\/conf\/_schema_analysis_stopwords_english.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/solr-configset\/general_configs\/conf\/_schema_analysis_stopwords_english.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/solr-configset\/general_configs\/conf\/_schema_analysis_stopwords_english-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/solr-configset\/general_configs\/conf\/_schema_analysis_synonyms_english.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/solr-configset\/general_configs\/conf\/_schema_analysis_synonyms_english.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/solr-configset\/general_configs\/conf\/_schema_analysis_synonyms_english-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/solr-configset\/general_configs\/conf\/admin-extra.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/solr-configset\/general_configs\/conf\/admin-extra.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/search\/sites\/general\/solr-configset\/general_configs\/conf\/admin-extra.menu-bottom.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/solr-configset\/general_configs\/conf\/admin-extra.menu-bottom.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/search\/sites\/general\/solr-configset\/general_configs\/conf\/admin-extra.menu-top.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/solr-configset\/general_configs\/conf\/admin-extra.menu-top.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/search\/sites\/general\/solr-configset\/general_configs\/conf\/update-script.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/solr-configset\/general_configs\/conf\/update-script.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/solr-configset\/general_configs\/conf\/min\/update-script-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/solr-configset\/general_configs\/conf\/velocity\/jquery.autocomplete.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/solr-configset\/general_configs\/conf\/velocity\/jquery.autocomplete.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/search\/sites\/general\/solr-configset\/general_configs\/conf\/velocity\/jquery.autocomplete.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/solr-configset\/general_configs\/conf\/velocity\/jquery.autocomplete.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/solr-configset\/general_configs\/conf\/velocity\/min\/jquery.autocomplete-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/solr-configset\/general_configs\/conf\/velocity\/main.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/solr-configset\/general_configs\/conf\/velocity\/main.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/search\/sites\/general\/ui\/css\/flare.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/css\/flare.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/css\/flare-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/ui\/css\/search.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/css\/search.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/search\/sites\/general\/ui\/flare.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/flare.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/flare-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/ui\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/core\/AbstractFacetWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/core\/AbstractFacetWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/core\/min\/AbstractFacetWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/core\/AbstractManager.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/core\/AbstractManager.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/core\/min\/AbstractManager-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/core\/AbstractSpatialWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/core\/AbstractSpatialWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/core\/min\/AbstractSpatialWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/core\/AbstractSpellcheckWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/core\/AbstractSpellcheckWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/core\/min\/AbstractSpellcheckWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/core\/AbstractTextWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/core\/AbstractTextWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/core\/min\/AbstractTextWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/core\/AbstractWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/core\/AbstractWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/core\/min\/AbstractWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/core\/Core.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/core\/Core.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/core\/min\/Core-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/core\/min\/AbstractManager-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/core\/min\/AbstractManager-min.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/core\/min\/min\/AbstractManager-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/core\/Parameter.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/core\/Parameter.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/core\/min\/Parameter-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/core\/ParameterHashStore.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/core\/ParameterHashStore.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/core\/min\/ParameterHashStore-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/core\/ParameterStore.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/core\/ParameterStore.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/core\/min\/ParameterStore-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/managers\/Manager.jquery.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/managers\/Manager.jquery.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/managers\/min\/Manager.jquery-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/managers\/min\/Manager.jquery-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/managers\/min\/Manager.jquery-min.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/managers\/min\/min\/Manager.jquery-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/README.md": {
+		"criticStyle": 0,
+		"enableFootnotes": 1,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
+		"fileType": 4096,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/README.md",
+		"maskEmailAddresses": 1,
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/README.html",
+		"outputFormat": 0,
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
+		},
+	"\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/widgets\/jquery\/AutocompleteTermWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/widgets\/jquery\/AutocompleteTermWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/widgets\/jquery\/min\/AutocompleteTermWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/widgets\/jquery\/min\/PagerWidget-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/widgets\/jquery\/min\/PagerWidget-min.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/widgets\/jquery\/min\/min\/PagerWidget-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/widgets\/jquery\/PagerWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/widgets\/jquery\/PagerWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/widgets\/jquery\/min\/PagerWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/widgets\/ParameterHistoryStore.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/widgets\/ParameterHistoryStore.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/widgets\/min\/ParameterHistoryStore-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/widgets\/ParameterYUIStore.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/widgets\/ParameterYUIStore.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/js\/ajax-solr-master\/widgets\/min\/ParameterYUIStore-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/ui\/js\/jquery.history.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/js\/jquery.history.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/js\/min\/jquery.history-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/ui\/js\/min\/search-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/js\/min\/search-min.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/js\/min\/min\/search-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/ui\/js\/search.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/js\/search.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/js\/min\/search-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/ui\/test.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/test.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/search\/sites\/general\/ui\/widgets\/AutocompleteWidget.7.0.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/widgets\/AutocompleteWidget.7.0.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/widgets\/min\/AutocompleteWidget.7.0-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/ui\/widgets\/AutocompleteWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/widgets\/AutocompleteWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/widgets\/min\/AutocompleteWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/ui\/widgets\/CalendarWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/widgets\/CalendarWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/widgets\/min\/CalendarWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/ui\/widgets\/ColorsWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/widgets\/ColorsWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/widgets\/min\/ColorsWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/ui\/widgets\/CountryCodeWidget.8.0.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/widgets\/CountryCodeWidget.8.0.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/widgets\/min\/CountryCodeWidget.8.0-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/ui\/widgets\/CountryCodeWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/widgets\/CountryCodeWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/widgets\/min\/CountryCodeWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/ui\/widgets\/CurrentSearchWidget.9.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/widgets\/CurrentSearchWidget.9.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/widgets\/min\/CurrentSearchWidget.9-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/ui\/widgets\/CurrentSearchWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/widgets\/CurrentSearchWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/widgets\/min\/CurrentSearchWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/ui\/widgets\/DimensionsWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/widgets\/DimensionsWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/widgets\/min\/DimensionsWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/ui\/widgets\/FacetWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/widgets\/FacetWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/widgets\/min\/FacetWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/ui\/widgets\/min\/AutocompleteWidget-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/widgets\/min\/AutocompleteWidget-min.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/widgets\/min\/min\/AutocompleteWidget-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/ui\/widgets\/min\/CurrentSearchWidget-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/widgets\/min\/CurrentSearchWidget-min.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/widgets\/min\/min\/CurrentSearchWidget-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/ui\/widgets\/min\/CurrentSearchWidget.9-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/widgets\/min\/CurrentSearchWidget.9-min.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/widgets\/min\/min\/CurrentSearchWidget.9-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/ui\/widgets\/min\/ResultWidget-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/widgets\/min\/ResultWidget-min.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/widgets\/min\/min\/ResultWidget-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/ui\/widgets\/min\/TabWidget-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/widgets\/min\/TabWidget-min.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/widgets\/min\/min\/TabWidget-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/ui\/widgets\/ParseWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/widgets\/ParseWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/widgets\/min\/ParseWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/ui\/widgets\/ResultWidget.2.0.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/widgets\/ResultWidget.2.0.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/widgets\/min\/ResultWidget.2.0-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/ui\/widgets\/ResultWidget.f.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/widgets\/ResultWidget.f.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/widgets\/min\/ResultWidget.f-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/ui\/widgets\/ResultWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/widgets\/ResultWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/widgets\/min\/ResultWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/ui\/widgets\/SemanticIntentWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/widgets\/SemanticIntentWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/widgets\/min\/SemanticIntentWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/ui\/widgets\/TabWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/widgets\/TabWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/widgets\/min\/TabWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/ui\/widgets\/TagcloudWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/widgets\/TagcloudWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/widgets\/min\/TagcloudWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/ui\/widgets\/TextWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/widgets\/TextWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/widgets\/min\/TextWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/general\/ui\/widgets\/treetest.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/general\/ui\/widgets\/treetest.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/search\/sites\/reuters\/ui\/css\/reuters.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/css\/reuters.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/search\/sites\/reuters\/ui\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/search\/sites\/reuters\/ui\/js\/ajax-solr-master\/core\/AbstractFacetWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/js\/ajax-solr-master\/core\/AbstractFacetWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/js\/ajax-solr-master\/core\/min\/AbstractFacetWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/reuters\/ui\/js\/ajax-solr-master\/core\/AbstractManager.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/js\/ajax-solr-master\/core\/AbstractManager.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/js\/ajax-solr-master\/core\/min\/AbstractManager-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/reuters\/ui\/js\/ajax-solr-master\/core\/AbstractSpatialWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/js\/ajax-solr-master\/core\/AbstractSpatialWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/js\/ajax-solr-master\/core\/min\/AbstractSpatialWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/reuters\/ui\/js\/ajax-solr-master\/core\/AbstractSpellcheckWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/js\/ajax-solr-master\/core\/AbstractSpellcheckWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/js\/ajax-solr-master\/core\/min\/AbstractSpellcheckWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/reuters\/ui\/js\/ajax-solr-master\/core\/AbstractTextWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/js\/ajax-solr-master\/core\/AbstractTextWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/js\/ajax-solr-master\/core\/min\/AbstractTextWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/reuters\/ui\/js\/ajax-solr-master\/core\/AbstractWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/js\/ajax-solr-master\/core\/AbstractWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/js\/ajax-solr-master\/core\/min\/AbstractWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/reuters\/ui\/js\/ajax-solr-master\/core\/Core.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/js\/ajax-solr-master\/core\/Core.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/js\/ajax-solr-master\/core\/min\/Core-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/reuters\/ui\/js\/ajax-solr-master\/core\/Parameter.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/js\/ajax-solr-master\/core\/Parameter.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/js\/ajax-solr-master\/core\/min\/Parameter-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/reuters\/ui\/js\/ajax-solr-master\/core\/ParameterHashStore.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/js\/ajax-solr-master\/core\/ParameterHashStore.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/js\/ajax-solr-master\/core\/min\/ParameterHashStore-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/reuters\/ui\/js\/ajax-solr-master\/core\/ParameterStore.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/js\/ajax-solr-master\/core\/ParameterStore.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/js\/ajax-solr-master\/core\/min\/ParameterStore-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/reuters\/ui\/js\/ajax-solr-master\/managers\/Manager.jquery.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/js\/ajax-solr-master\/managers\/Manager.jquery.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/js\/ajax-solr-master\/managers\/min\/Manager.jquery-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/reuters\/ui\/js\/ajax-solr-master\/README.md": {
+		"criticStyle": 0,
+		"enableFootnotes": 1,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
+		"fileType": 4096,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/js\/ajax-solr-master\/README.md",
+		"maskEmailAddresses": 1,
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/js\/ajax-solr-master\/README.html",
+		"outputFormat": 0,
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
+		},
+	"\/admin\/search\/sites\/reuters\/ui\/js\/ajax-solr-master\/widgets\/jquery\/AutocompleteTermWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/js\/ajax-solr-master\/widgets\/jquery\/AutocompleteTermWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/js\/ajax-solr-master\/widgets\/jquery\/min\/AutocompleteTermWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/reuters\/ui\/js\/ajax-solr-master\/widgets\/jquery\/PagerWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/js\/ajax-solr-master\/widgets\/jquery\/PagerWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/js\/ajax-solr-master\/widgets\/jquery\/min\/PagerWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/reuters\/ui\/js\/ajax-solr-master\/widgets\/ParameterHistoryStore.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/js\/ajax-solr-master\/widgets\/ParameterHistoryStore.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/js\/ajax-solr-master\/widgets\/min\/ParameterHistoryStore-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/reuters\/ui\/js\/ajax-solr-master\/widgets\/ParameterYUIStore.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/js\/ajax-solr-master\/widgets\/ParameterYUIStore.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/js\/ajax-solr-master\/widgets\/min\/ParameterYUIStore-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/reuters\/ui\/js\/jquery.history.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/js\/jquery.history.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/js\/min\/jquery.history-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/reuters\/ui\/js\/reuters.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/js\/reuters.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/js\/min\/reuters-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/reuters\/ui\/widgets\/AutocompleteWidget.7.0.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/widgets\/AutocompleteWidget.7.0.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/widgets\/min\/AutocompleteWidget.7.0-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/reuters\/ui\/widgets\/AutocompleteWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/widgets\/AutocompleteWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/widgets\/min\/AutocompleteWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/reuters\/ui\/widgets\/CalendarWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/widgets\/CalendarWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/widgets\/min\/CalendarWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/reuters\/ui\/widgets\/CountryCodeWidget.8.0.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/widgets\/CountryCodeWidget.8.0.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/widgets\/min\/CountryCodeWidget.8.0-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/reuters\/ui\/widgets\/CountryCodeWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/widgets\/CountryCodeWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/widgets\/min\/CountryCodeWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/reuters\/ui\/widgets\/CurrentSearchWidget.9.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/widgets\/CurrentSearchWidget.9.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/widgets\/min\/CurrentSearchWidget.9-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/reuters\/ui\/widgets\/CurrentSearchWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/widgets\/CurrentSearchWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/widgets\/min\/CurrentSearchWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/reuters\/ui\/widgets\/ResultWidget.2.0.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/widgets\/ResultWidget.2.0.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/widgets\/min\/ResultWidget.2.0-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/reuters\/ui\/widgets\/ResultWidget.f.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/widgets\/ResultWidget.f.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/widgets\/min\/ResultWidget.f-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/reuters\/ui\/widgets\/ResultWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/widgets\/ResultWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/widgets\/min\/ResultWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/reuters\/ui\/widgets\/TagcloudWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/widgets\/TagcloudWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/widgets\/min\/TagcloudWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/reuters\/ui\/widgets\/TextWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/widgets\/TextWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/reuters\/ui\/widgets\/min\/TextWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/solr-home\/README.md": {
+		"criticStyle": 0,
+		"enableFootnotes": 1,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
+		"fileType": 4096,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/solr-home\/README.md",
+		"maskEmailAddresses": 1,
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/solr-home\/README.html",
+		"outputFormat": 0,
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
+		},
+	"\/admin\/search\/sites\/trends4\/solr-configset\/trends_configs\/conf\/_rest_managed.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/solr-configset\/trends_configs\/conf\/_rest_managed.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/solr-configset\/trends_configs\/conf\/_rest_managed-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/admin\/search\/sites\/trends4\/solr-configset\/trends_configs\/conf\/_schema_analysis_stopwords_english.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/solr-configset\/trends_configs\/conf\/_schema_analysis_stopwords_english.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/solr-configset\/trends_configs\/conf\/_schema_analysis_stopwords_english-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/admin\/search\/sites\/trends4\/solr-configset\/trends_configs\/conf\/_schema_analysis_synonyms_english.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/solr-configset\/trends_configs\/conf\/_schema_analysis_synonyms_english.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/solr-configset\/trends_configs\/conf\/_schema_analysis_synonyms_english-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/admin\/search\/sites\/trends4\/solr-configset\/trends_configs\/conf\/admin-extra.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/solr-configset\/trends_configs\/conf\/admin-extra.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/search\/sites\/trends4\/solr-configset\/trends_configs\/conf\/admin-extra.menu-bottom.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/solr-configset\/trends_configs\/conf\/admin-extra.menu-bottom.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/search\/sites\/trends4\/solr-configset\/trends_configs\/conf\/admin-extra.menu-top.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/solr-configset\/trends_configs\/conf\/admin-extra.menu-top.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/search\/sites\/trends4\/solr-configset\/trends_configs\/conf\/update-script.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/solr-configset\/trends_configs\/conf\/update-script.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/solr-configset\/trends_configs\/conf\/min\/update-script-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/trends4\/solr-configset\/trends_configs\/conf\/velocity\/jquery.autocomplete.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/solr-configset\/trends_configs\/conf\/velocity\/jquery.autocomplete.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/search\/sites\/trends4\/solr-configset\/trends_configs\/conf\/velocity\/jquery.autocomplete.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/solr-configset\/trends_configs\/conf\/velocity\/jquery.autocomplete.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/solr-configset\/trends_configs\/conf\/velocity\/min\/jquery.autocomplete-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/trends4\/solr-configset\/trends_configs\/conf\/velocity\/main.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/solr-configset\/trends_configs\/conf\/velocity\/main.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/search\/sites\/trends4\/ui\/css\/flare.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/css\/flare.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/css\/flare-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/admin\/search\/sites\/trends4\/ui\/css\/trends4.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/css\/trends4.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/search\/sites\/trends4\/ui\/flare.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/flare.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/flare-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/admin\/search\/sites\/trends4\/ui\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/admin\/search\/sites\/trends4\/ui\/js\/ajax-solr-master\/core\/AbstractFacetWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/js\/ajax-solr-master\/core\/AbstractFacetWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/js\/ajax-solr-master\/core\/min\/AbstractFacetWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/trends4\/ui\/js\/ajax-solr-master\/core\/AbstractManager.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/js\/ajax-solr-master\/core\/AbstractManager.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/js\/ajax-solr-master\/core\/min\/AbstractManager-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/trends4\/ui\/js\/ajax-solr-master\/core\/AbstractSpatialWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/js\/ajax-solr-master\/core\/AbstractSpatialWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/js\/ajax-solr-master\/core\/min\/AbstractSpatialWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/trends4\/ui\/js\/ajax-solr-master\/core\/AbstractSpellcheckWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/js\/ajax-solr-master\/core\/AbstractSpellcheckWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/js\/ajax-solr-master\/core\/min\/AbstractSpellcheckWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/trends4\/ui\/js\/ajax-solr-master\/core\/AbstractTextWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/js\/ajax-solr-master\/core\/AbstractTextWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/js\/ajax-solr-master\/core\/min\/AbstractTextWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/trends4\/ui\/js\/ajax-solr-master\/core\/AbstractWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/js\/ajax-solr-master\/core\/AbstractWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/js\/ajax-solr-master\/core\/min\/AbstractWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/trends4\/ui\/js\/ajax-solr-master\/core\/Core.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/js\/ajax-solr-master\/core\/Core.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/js\/ajax-solr-master\/core\/min\/Core-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/trends4\/ui\/js\/ajax-solr-master\/core\/Parameter.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/js\/ajax-solr-master\/core\/Parameter.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/js\/ajax-solr-master\/core\/min\/Parameter-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/trends4\/ui\/js\/ajax-solr-master\/core\/ParameterHashStore.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/js\/ajax-solr-master\/core\/ParameterHashStore.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/js\/ajax-solr-master\/core\/min\/ParameterHashStore-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/trends4\/ui\/js\/ajax-solr-master\/core\/ParameterStore.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/js\/ajax-solr-master\/core\/ParameterStore.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/js\/ajax-solr-master\/core\/min\/ParameterStore-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/trends4\/ui\/js\/ajax-solr-master\/managers\/Manager.jquery.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/js\/ajax-solr-master\/managers\/Manager.jquery.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/js\/ajax-solr-master\/managers\/min\/Manager.jquery-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/trends4\/ui\/js\/ajax-solr-master\/README.md": {
+		"criticStyle": 0,
+		"enableFootnotes": 1,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
+		"fileType": 4096,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/js\/ajax-solr-master\/README.md",
+		"maskEmailAddresses": 1,
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/js\/ajax-solr-master\/README.html",
+		"outputFormat": 0,
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
+		},
+	"\/admin\/search\/sites\/trends4\/ui\/js\/ajax-solr-master\/widgets\/jquery\/AutocompleteTermWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/js\/ajax-solr-master\/widgets\/jquery\/AutocompleteTermWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/js\/ajax-solr-master\/widgets\/jquery\/min\/AutocompleteTermWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/trends4\/ui\/js\/ajax-solr-master\/widgets\/jquery\/PagerWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/js\/ajax-solr-master\/widgets\/jquery\/PagerWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/js\/ajax-solr-master\/widgets\/jquery\/min\/PagerWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/trends4\/ui\/js\/ajax-solr-master\/widgets\/ParameterHistoryStore.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/js\/ajax-solr-master\/widgets\/ParameterHistoryStore.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/js\/ajax-solr-master\/widgets\/min\/ParameterHistoryStore-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/trends4\/ui\/js\/ajax-solr-master\/widgets\/ParameterYUIStore.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/js\/ajax-solr-master\/widgets\/ParameterYUIStore.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/js\/ajax-solr-master\/widgets\/min\/ParameterYUIStore-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/trends4\/ui\/js\/jquery.history.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/js\/jquery.history.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/js\/min\/jquery.history-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/trends4\/ui\/js\/min\/trends-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/js\/min\/trends-min.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/js\/min\/min\/trends-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/trends4\/ui\/js\/trends.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/js\/trends.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/js\/min\/trends-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/trends4\/ui\/widgets\/AutocompleteWidget.7.0.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/widgets\/AutocompleteWidget.7.0.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/widgets\/min\/AutocompleteWidget.7.0-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/trends4\/ui\/widgets\/AutocompleteWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/widgets\/AutocompleteWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/widgets\/min\/AutocompleteWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/trends4\/ui\/widgets\/CalendarWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/widgets\/CalendarWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/widgets\/min\/CalendarWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/trends4\/ui\/widgets\/CountryCodeWidget.8.0.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/widgets\/CountryCodeWidget.8.0.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/widgets\/min\/CountryCodeWidget.8.0-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/trends4\/ui\/widgets\/CountryCodeWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/widgets\/CountryCodeWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/widgets\/min\/CountryCodeWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/trends4\/ui\/widgets\/CurrentSearchWidget.9.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/widgets\/CurrentSearchWidget.9.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/widgets\/min\/CurrentSearchWidget.9-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/trends4\/ui\/widgets\/CurrentSearchWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/widgets\/CurrentSearchWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/widgets\/min\/CurrentSearchWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/trends4\/ui\/widgets\/min\/ResultWidget-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/widgets\/min\/ResultWidget-min.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/widgets\/min\/min\/ResultWidget-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/trends4\/ui\/widgets\/ResultWidget.2.0.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/widgets\/ResultWidget.2.0.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/widgets\/min\/ResultWidget.2.0-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/trends4\/ui\/widgets\/ResultWidget.f.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/widgets\/ResultWidget.f.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/widgets\/min\/ResultWidget.f-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/trends4\/ui\/widgets\/ResultWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/widgets\/ResultWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/widgets\/min\/ResultWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/trends4\/ui\/widgets\/TagcloudWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/widgets\/TagcloudWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/widgets\/min\/TagcloudWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/admin\/search\/sites\/trends4\/ui\/widgets\/TextWidget.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/widgets\/TextWidget.js",
+		"outputAbbreviatedPath": "\/admin\/search\/sites\/trends4\/ui\/widgets\/min\/TextWidget-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/akamai\/sureroute-test-object.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/akamai\/sureroute-test-object.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/api\/css\/ibm.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/api\/css\/ibm.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/api\/css\/print.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/api\/css\/print.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/api\/css\/reset.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/api\/css\/reset.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/api\/css\/screen.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/api\/css\/screen.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/api\/css\/style.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/api\/css\/style.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/api\/css\/typography.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/api\/css\/typography.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/api\/images\/explorer_icons.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5763,
+		"inputAbbreviatedPath": "\/api\/images\/explorer_icons.png",
+		"outputAbbreviatedPath": "\/api\/images\/explorer_icons.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/api\/images\/favicon-16x16.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 645,
+		"inputAbbreviatedPath": "\/api\/images\/favicon-16x16.png",
+		"outputAbbreviatedPath": "\/api\/images\/favicon-16x16.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/api\/images\/favicon-32x32.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1654,
+		"inputAbbreviatedPath": "\/api\/images\/favicon-32x32.png",
+		"outputAbbreviatedPath": "\/api\/images\/favicon-32x32.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/api\/images\/ibm_logo_print.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1048,
+		"inputAbbreviatedPath": "\/api\/images\/ibm_logo_print.png",
+		"outputAbbreviatedPath": "\/api\/images\/ibm_logo_print.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/api\/images\/logo_small.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 770,
+		"inputAbbreviatedPath": "\/api\/images\/logo_small.png",
+		"outputAbbreviatedPath": "\/api\/images\/logo_small.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/api\/images\/pet_store_api.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 824,
+		"inputAbbreviatedPath": "\/api\/images\/pet_store_api.png",
+		"outputAbbreviatedPath": "\/api\/images\/pet_store_api.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/api\/images\/wordnik_api.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 980,
+		"inputAbbreviatedPath": "\/api\/images\/wordnik_api.png",
+		"outputAbbreviatedPath": "\/api\/images\/wordnik_api.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/api\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/api\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/api\/lang\/en.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/api\/lang\/en.js",
+		"outputAbbreviatedPath": "\/api\/lang\/min\/en-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/api\/lang\/es.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/api\/lang\/es.js",
+		"outputAbbreviatedPath": "\/api\/lang\/min\/es-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/api\/lang\/fr.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/api\/lang\/fr.js",
+		"outputAbbreviatedPath": "\/api\/lang\/min\/fr-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/api\/lang\/it.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/api\/lang\/it.js",
+		"outputAbbreviatedPath": "\/api\/lang\/min\/it-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/api\/lang\/ja.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/api\/lang\/ja.js",
+		"outputAbbreviatedPath": "\/api\/lang\/min\/ja-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/api\/lang\/pl.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/api\/lang\/pl.js",
+		"outputAbbreviatedPath": "\/api\/lang\/min\/pl-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/api\/lang\/pt.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/api\/lang\/pt.js",
+		"outputAbbreviatedPath": "\/api\/lang\/min\/pt-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/api\/lang\/ru.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/api\/lang\/ru.js",
+		"outputAbbreviatedPath": "\/api\/lang\/min\/ru-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/api\/lang\/tr.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/api\/lang\/tr.js",
+		"outputAbbreviatedPath": "\/api\/lang\/min\/tr-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/api\/lang\/translator.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/api\/lang\/translator.js",
+		"outputAbbreviatedPath": "\/api\/lang\/min\/translator-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/api\/lang\/zh-cn.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/api\/lang\/zh-cn.js",
+		"outputAbbreviatedPath": "\/api\/lang\/min\/zh-cn-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/api\/lib\/backbone-min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/api\/lib\/backbone-min.js",
+		"outputAbbreviatedPath": "\/api\/lib\/min\/backbone-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/api\/lib\/handlebars-2.0.0.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/api\/lib\/handlebars-2.0.0.js",
+		"outputAbbreviatedPath": "\/api\/lib\/min\/handlebars-2.0.0-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/api\/lib\/highlight.7.3.pack.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/api\/lib\/highlight.7.3.pack.js",
+		"outputAbbreviatedPath": "\/api\/lib\/min\/highlight.7.3.pack-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/api\/lib\/jquery-1.8.0.min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/api\/lib\/jquery-1.8.0.min.js",
+		"outputAbbreviatedPath": "\/api\/lib\/min\/jquery-1.8.0.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/api\/lib\/jquery.ba-bbq.min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/api\/lib\/jquery.ba-bbq.min.js",
+		"outputAbbreviatedPath": "\/api\/lib\/min\/jquery.ba-bbq.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/api\/lib\/jquery.slideto.min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/api\/lib\/jquery.slideto.min.js",
+		"outputAbbreviatedPath": "\/api\/lib\/min\/jquery.slideto.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/api\/lib\/jquery.wiggle.min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/api\/lib\/jquery.wiggle.min.js",
+		"outputAbbreviatedPath": "\/api\/lib\/min\/jquery.wiggle.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/api\/lib\/jsoneditor.min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/api\/lib\/jsoneditor.min.js",
+		"outputAbbreviatedPath": "\/api\/lib\/min\/jsoneditor.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/api\/lib\/marked.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/api\/lib\/marked.js",
+		"outputAbbreviatedPath": "\/api\/lib\/min\/marked-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/api\/lib\/swagger-oauth.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/api\/lib\/swagger-oauth.js",
+		"outputAbbreviatedPath": "\/api\/lib\/min\/swagger-oauth-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/api\/lib\/underscore-min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/api\/lib\/underscore-min.js",
+		"outputAbbreviatedPath": "\/api\/lib\/min\/underscore-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/api\/o2c.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/api\/o2c.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/api\/swagger-ui.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/api\/swagger-ui.js",
+		"outputAbbreviatedPath": "\/api\/min\/swagger-ui-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/api\/swagger-ui.min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/api\/swagger-ui.min.js",
+		"outputAbbreviatedPath": "\/api\/min\/swagger-ui.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/data\/blueid-preprod-jwk.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/data\/blueid-preprod-jwk.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/data\/blueid-preprod-jwk-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/data\/blueid-prod-jwk.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/data\/blueid-prod-jwk.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/data\/blueid-prod-jwk-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/docs\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/docs\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/fbshare.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/fbshare.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/redoc\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/redoc\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		}
+	},
+"hooks": [
+	],
+"lastSavedByUser": "Louis Roehrs",
+"manualImportLinks": {
+	},
+"projectAttributes": {
+	"bowerAbbreviatedPath": "",
+	"displayValue": "root",
+	"displayValueWasSetByUser": 1,
+	"iconImageName": "pencil_brown"
+	},
+"projectSettings": {
+	"alwaysUseExternalServer": 0,
+	"animateCSSInjections": 1,
+	"autoApplyPSLanguageSettingsStyle": 0,
+	"autoprefixerBrowserString": "> 1%, last 2 versions, Firefox ESR, Opera 12.1",
+	"autoSyncProjectSettingsFile": 1,
+	"browserRefreshDelay": 0,
+	"coffeeAutoOutputPathEnabled": 1,
+	"coffeeAutoOutputPathFilenamePattern": "*.js",
+	"coffeeAutoOutputPathRelativePath": "",
+	"coffeeAutoOutputPathReplace1": "",
+	"coffeeAutoOutputPathReplace2": "",
+	"coffeeAutoOutputPathStyle": 0,
+	"coffeeCreateSourceMap": 0,
+	"coffeeLintFlags2": {
+		"arrow_spacing": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"camel_case_classes": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"colon_assignment_spacing": {
+			"active": 0,
+			"flagValue": 1
+			},
+		"cyclomatic_complexity": {
+			"active": 0,
+			"flagValue": 10
+			},
+		"duplicate_key": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"empty_constructor_needs_parens": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"ensure_comprehensions": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"indentation": {
+			"active": 1,
+			"flagValue": 2
+			},
+		"line_endings": {
+			"active": 0,
+			"flagValue": 0
+			},
+		"max_line_length": {
+			"active": 0,
+			"flagValue": 150
+			},
+		"missing_fat_arrows": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"newlines_after_classes": {
+			"active": 0,
+			"flagValue": 3
+			},
+		"no_backticks": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"no_debugger": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"no_empty_functions": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"no_empty_param_list": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"no_implicit_braces": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"no_implicit_parens": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"no_interpolation_in_single_quotes": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"no_nested_string_interpolation": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"no_plusplus": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"no_private_function_fat_arrows": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"no_stand_alone_at": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"no_tabs": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"no_this": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"no_throwing_strings": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"no_trailing_semicolons": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"no_trailing_whitespace": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"no_unnecessary_double_quotes": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"no_unnecessary_fat_arrows": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"non_empty_constructor_needs_parens": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"prefer_english_operator": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"space_operators": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"spacing_after_comma": {
+			"active": 1,
+			"flagValue": -1
+			}
+		},
+	"coffeeMinifyOutput": 1,
+	"coffeeOutputStyle": 0,
+	"coffeeSyntaxCheckerStyle": 1,
+	"externalServerAddress": "http:\/\/localhost:8888",
+	"externalServerPreviewPathAddition": "",
+	"genericWebpageFileExtensionsString": "html, htm, shtml, shtm, xhtml, php, jsp, asp, aspx, erb, ctp",
+	"hamlAutoOutputPathEnabled": 1,
+	"hamlAutoOutputPathFilenamePattern": "*.html",
+	"hamlAutoOutputPathRelativePath": "",
+	"hamlAutoOutputPathReplace1": "",
+	"hamlAutoOutputPathReplace2": "",
+	"hamlAutoOutputPathStyle": 0,
+	"hamlEscapeHTMLCharacters": 0,
+	"hamlNoEscapeInAttributes": 0,
+	"hamlOutputFormat": 2,
+	"hamlOutputStyle": 0,
+	"hamlUseCDATA": 0,
+	"hamlUseDoubleQuotes": 0,
+	"hamlUseUnixNewlines": 0,
+	"jadeAutoOutputPathEnabled": 1,
+	"jadeAutoOutputPathFilenamePattern": "*.html",
+	"jadeAutoOutputPathRelativePath": "",
+	"jadeAutoOutputPathReplace1": "",
+	"jadeAutoOutputPathReplace2": "",
+	"jadeAutoOutputPathStyle": 0,
+	"jadeCompileDebug": 1,
+	"jadeOutputStyle": 0,
+	"javascriptAutoOutputPathEnabled": 1,
+	"javascriptAutoOutputPathFilenamePattern": "*-min.js",
+	"javascriptAutoOutputPathRelativePath": "\/min",
+	"javascriptAutoOutputPathReplace1": "",
+	"javascriptAutoOutputPathReplace2": "",
+	"javascriptAutoOutputPathStyle": 2,
+	"javascriptCreateSourceMap": 1,
+	"javascriptOutputStyle": 1,
+	"javascriptSyntaxCheckerStyle": 1,
+	"jsCheckerReservedNamesString": "",
+	"jsHintFlags2": {
+		"asi": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"bitwise": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"boss": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"browser": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"browserify": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"camelcase": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"couch": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"curly": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"debug": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"devel": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"dojo": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"elision": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"eqeqeq": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"eqnull": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"es3": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"esnext": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"evil": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"expr": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"forin": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"freeze": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"funcscope": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"futurehostile": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"globalstrict": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"immed": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"indent": {
+			"active": 0,
+			"flagValue": 4
+			},
+		"iterator": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"jasmine": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"jquery": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"lastsemic": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"latedef": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"laxbreak": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"laxcomma": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"loopfunc": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"maxcomplexity": {
+			"active": 0,
+			"flagValue": 10
+			},
+		"maxdepth": {
+			"active": 0,
+			"flagValue": 3
+			},
+		"maxlen": {
+			"active": 0,
+			"flagValue": 150
+			},
+		"maxparams": {
+			"active": 0,
+			"flagValue": 3
+			},
+		"maxstatements": {
+			"active": 0,
+			"flagValue": 4
+			},
+		"mocha": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"mootools": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"moz": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"multistr": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"newcap": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"noarg": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"nocomma": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"node": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"noempty": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"nonbsp": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"nonew": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"nonstandard": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"notypeof": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"noyield": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"onecase": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"phantom": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"plusplus": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"proto": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"prototypejs": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"qunit": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"regexp": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"rhino": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"scripturl": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"shadow": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"shelljs": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"singleGroups": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"strict": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"sub": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"supernew": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"typed": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"undef": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"unused": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"varstmt": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"withstmt": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"worker": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"wsh": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"yui": {
+			"active": 0,
+			"flagValue": -1
+			}
+		},
+	"jsLintFlags2": {
+		"bitwise": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"browser": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"couch": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"devel": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"es6": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"eval": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"for": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"maxlen": {
+			"active": 0,
+			"flagValue": 150
+			},
+		"node": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"this": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"white": {
+			"active": 0,
+			"flagValue": -1
+			}
+		},
+	"jsonAutoOutputPathEnabled": 0,
+	"jsonAutoOutputPathFilenamePattern": "*-min.json",
+	"jsonAutoOutputPathRelativePath": "",
+	"jsonAutoOutputPathReplace1": "",
+	"jsonAutoOutputPathReplace2": "",
+	"jsonAutoOutputPathStyle": 0,
+	"jsonOrderOutput": 0,
+	"jsonOutputStyle": 1,
+	"kitAutoOutputPathEnabled": 1,
+	"kitAutoOutputPathFilenamePattern": "*.html",
+	"kitAutoOutputPathRelativePath": "",
+	"kitAutoOutputPathReplace1": "",
+	"kitAutoOutputPathReplace2": "",
+	"kitAutoOutputPathStyle": 0,
+	"lessAllowInsecureImports": 0,
+	"lessAutoOutputPathEnabled": 1,
+	"lessAutoOutputPathFilenamePattern": "*.css",
+	"lessAutoOutputPathRelativePath": "..\/css",
+	"lessAutoOutputPathReplace1": "less",
+	"lessAutoOutputPathReplace2": "css",
+	"lessAutoOutputPathStyle": 2,
+	"lessCreateSourceMap": 0,
+	"lessDisableJavascript": 0,
+	"lessIeCompatibility": 1,
+	"lessOutputStyle": 0,
+	"lessRelativeURLS": 0,
+	"lessStrictImports": 0,
+	"lessStrictMath": 0,
+	"lessStrictUnits": 0,
+	"markdownAutoOutputPathEnabled": 1,
+	"markdownAutoOutputPathFilenamePattern": "*.html",
+	"markdownAutoOutputPathRelativePath": "",
+	"markdownAutoOutputPathReplace1": "",
+	"markdownAutoOutputPathReplace2": "",
+	"markdownAutoOutputPathStyle": 0,
+	"markdownCriticStyle": 0,
+	"markdownEnableFootnotes": 1,
+	"markdownEnableLabels": 1,
+	"markdownEnableSmartQuotes": 1,
+	"markdownEscapeLineBreaks": 0,
+	"markdownMaskEmailAddresses": 1,
+	"markdownOutputFormat": 0,
+	"markdownOutputStyle": 0,
+	"markdownParseMetadata": 1,
+	"markdownProcessHTML": 0,
+	"markdownRandomFootnoteNumbers": 0,
+	"markdownUseCompatibilityMode": 0,
+	"reloadFileURLs": 0,
+	"sassAutoOutputPathEnabled": 1,
+	"sassAutoOutputPathFilenamePattern": "*.css",
+	"sassAutoOutputPathRelativePath": "..\/css",
+	"sassAutoOutputPathReplace1": "sass",
+	"sassAutoOutputPathReplace2": "css",
+	"sassAutoOutputPathStyle": 2,
+	"sassCreateSourceMap": 0,
+	"sassDebugStyle": 0,
+	"sassDecimalPrecision": 10,
+	"sassOutputStyle": 0,
+	"sassUseLibsass": 0,
+	"shouldRunAutoprefixer": 0,
+	"shouldRunBless": 0,
+	"skippedItemsString": ".svn, .git, .hg, log, _logs, _cache, cache, logs, node_modules",
+	"slimAutoOutputPathEnabled": 1,
+	"slimAutoOutputPathFilenamePattern": "*.html",
+	"slimAutoOutputPathRelativePath": "",
+	"slimAutoOutputPathReplace1": "",
+	"slimAutoOutputPathReplace2": "",
+	"slimAutoOutputPathStyle": 0,
+	"slimCompileOnly": 0,
+	"slimLogicless": 0,
+	"slimOutputFormat": 0,
+	"slimOutputStyle": 1,
+	"slimRailsCompatible": 0,
+	"stylusAutoOutputPathEnabled": 1,
+	"stylusAutoOutputPathFilenamePattern": "*.css",
+	"stylusAutoOutputPathRelativePath": "..\/css",
+	"stylusAutoOutputPathReplace1": "stylus",
+	"stylusAutoOutputPathReplace2": "css",
+	"stylusAutoOutputPathStyle": 2,
+	"stylusCreateSourceMap": 0,
+	"stylusDebugStyle": 0,
+	"stylusImportCSS": 0,
+	"stylusOutputStyle": 0,
+	"stylusResolveRelativeURLS": 0,
+	"typescriptAutoOutputPathEnabled": 1,
+	"typescriptAutoOutputPathFilenamePattern": "*.js",
+	"typescriptAutoOutputPathRelativePath": "\/js",
+	"typescriptAutoOutputPathReplace1": "",
+	"typescriptAutoOutputPathReplace2": "",
+	"typescriptAutoOutputPathStyle": 2,
+	"typescriptCreateDeclarationFile": 0,
+	"typescriptCreateSourceMap": 0,
+	"typescriptJSXMode": 0,
+	"typescriptMinifyOutput": 0,
+	"typescriptModuleResolutionType": 0,
+	"typescriptModuleType": 2,
+	"typescriptNoImplicitAny": 0,
+	"typescriptPreserveConstEnums": 0,
+	"typescriptRemoveComments": 0,
+	"typescriptSuppressImplicitAnyIndexErrors": 0,
+	"typescriptTargetECMAVersion": 0,
+	"uglifyDefinesString": "",
+	"uglifyFlags2": {
+		"ascii-only": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"bare-returns": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"booleans": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"bracketize": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"cascade": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"comments": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"comparisons": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"compress": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"conditionals": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"dead_code": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"drop_console": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"drop_debugger": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"eval": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"evaluate": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"hoist_funs": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"hoist_vars": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"if_return": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"indent-level": {
+			"active": 0,
+			"flagValue": 4
+			},
+		"indent-start": {
+			"active": 0,
+			"flagValue": 0
+			},
+		"inline-script": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"join_vars": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"keep_fargs": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"keep_fnames": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"loops": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"mangle": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"max-line-len": {
+			"active": 1,
+			"flagValue": 32000
+			},
+		"negate_iife": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"properties": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"pure_getters": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"quote-keys": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"screw-ie8": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"semicolons": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"sequences": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"sort": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"space-colon": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"toplevel": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unused": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"warnings": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"width": {
+			"active": 1,
+			"flagValue": 80
+			}
+		},
+	"uglifyReservedNamesString": "$",
+	"websiteRelativeRoot": ""
+	},
+"settingsFileVersion": "2"
+}

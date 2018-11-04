@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="api/swaggercss/terms-privacy.css">
+
+<div class="content-box1">
+  <div class="tab-box">
+    <div class="tab tab-notactive"><a href="/terms">TERMS</a></div> | 
+    <div class="tab tab-active">PRIVACY</div>
+  </div>
+  <div class="clear"></div>
+  <div class="content-box2">
+    <h2 class="title">"Watson Trend" Application Privacy Statement</h2>
+
+    
+    <p>The Application Privacy Statement ("Statement") sets forth the privacy practices of IBM relating to information it collects through this "Watson Trend" application (the "App"). This Statement identifies the data elements collected by the App and the practices regarding IBM’s use and protection of such data. If this Statement is silent as to a particular data element (such as, for example, geo location data), then the App does not collect that data element. You should read this Statement before downloading, accessing, or otherwise using the App. Downloading, accessing, or otherwise using the App indicates that you have read this Statement and consent to its terms. If you do not consent to the terms of this Statement, do not proceed to download, access, or otherwise use the App.</p>
+    
+    <p>You are required to register and provide personal information to use the App, including your name, email address, Facebook ID and/or IBM ID, password, security question and answer. If you choose to log-in with Facebook we will use only your basic public profile information to identify you. By logging in with Facebook you are not giving IBM permission to post on your wall.</p>
+    
+    <p>Please keep in mind that you may not be able to use some or all of the features offered by the App unless you provide such information. Each time you log-in to the App, your IBM or Facebook profile information may be used to verify you  as a registered user. If you provide personal information in registering for the App, such information will be handled, used, shared and retained by IBM as provided in the ibm.com privacy policy at <a href="http://www.ibm.com/privacy/details/us/en/">http://www.ibm.com/privacy/details/us/en/</a>.</p>
+    
+    <p>In addition, the App collects the following information automatically: number of active users, platform type, OS Type. IBM uses this information for the purpose of usage and diagnostic analytics.</p>
+    
+    <p>IBM uses cookies and/or other web tracking technology through the App. The information we collect may be combined to help us improve the App or to help us better tailor our interactions with you. To find out more, go to "Cookies, Web Beacons and Other Technologies" in the ibm.com privacy policy at <a href="http://www.ibm.com/privacy/us/en/?lnk=flg-priv-usen">http://www.ibm.com/privacy/us/en/?lnk=flg-priv-usen</a>.</p>
+    
+    <p>IBM does not use the App to knowingly solicit data from or market to children under the age of 13. If a parent or guardian becomes aware that his or her child has provided us with information without their consent, he or she should contact us at <a href="http://www.ibm.com/scripts/contact/contact/us/en/privacy/">http://www.ibm.com/scripts/contact/contact/us/en/privacy/</a> We will delete such information from our files within a reasonable time.</p>
+    
+    <p>IBM may gather aggregated, non-personally identifiable information about your use of the App, including the frequency of use, number and type of feedback questions submitted via the App, general feedback and ratings regarding the App, for the purpose of usage and performance analytics.</p>
+    
+    <p>This Statement may be updated from time to time for any reason. We will notify you of any changes to this Statement by posting a new version at <a href="/privacy">https://www.ibmwatsontrend.com/privacy</a></p>
+    
+    <p>By using the App, you consent to the processing of the information collected by the App as set forth in this Statement now or as amended.</p>
+  </div>
+</div>
