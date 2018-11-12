@@ -1,7 +1,7 @@
-# WCE GraphQL
+# FelinePride
 
 This projects demonstrates a prototype graphql endpoint and schema for 
-WCE. A visualizer and graphiql query ui are provided.  
+FelinePride. A visualizer and graphiql query ui are provided.  
 
 ## Schema
 The schema is a work in progress where the initial effort will be 
@@ -13,13 +13,13 @@ First steps will be building out query model and workflows.
 The next steps will focus on mutation workflows while continuing to 
 enhance the query model.
 
-The schema is located at src/main/resources/wce.graphql
+The schema is located at src/main/resources/fp.graphql
 
 ## Running 
 
 Clone the repository.
 
-Cd to the wce-graphql directory.  Build with maven.
+Cd to the fp-graphql directory.  Build with maven.
 
 ```mvn clean install```
 
@@ -50,12 +50,12 @@ off a perl script.
 
 ## More information
 
-Contact: lroehrs@us.ibm.com or @lroehrs on the WCE slack.  Just a hint, the 
+Contact: lroehrs at gmail com.  Just a hint, the 
 slack option will be faster.
 
 ## todo
 
-Add in correct commerce entity descriptors.  See wce-tables.txt for a list of WCS v9 tables or https://www.ibm.com/support/knowledgecenter/en/SSZLC2_9.0.0/com.felinepride.commerce.database.doc/database/a.html for more information.
+
 
 
 
