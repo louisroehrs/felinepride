@@ -7,24 +7,18 @@
 package com.felinepride.app.graphql.api.graphql;
 
 import com.couchbase.client.java.document.json.JsonObject;
-import com.felinepride.app.graphql.Utils;
 import com.felinepride.app.graphql.dal.CouchbaseGeneralDAO;
 import com.felinepride.app.graphql.dal.DAORegistry;
 import com.felinepride.app.graphql.util.EncodingUtil;
-import com.google.common.primitives.Chars;
 import com.nimbusds.jose.util.JSONObjectUtils;
 import com.nimbusds.oauth2.sdk.util.JSONArrayUtils;
 import graphql.schema.DataFetcher;
 import graphql.schema.DataFetchingEnvironment;
 import graphql.schema.GraphQLTypeUtil;
 import graphql.schema.idl.RuntimeWiring;
-import graphql.schema.idl.TypeRuntimeWiring;
 import lombok.extern.slf4j.Slf4j;
-import net.minidev.json.JSONObject;
-import org.assertj.core.internal.Characters;
 
 import java.util.Map;
-import java.util.UUID;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -110,6 +104,8 @@ public class GraphQLDataFetcherBuilder {
             @Override
             public Object get(DataFetchingEnvironment environment) {
 
+                /* TODO: add authorization fields and keys and such */
+
                 String uuidShort = EncodingUtil.generateShortUUID();
 
                 if (environment.getArguments().isEmpty()) return null;
@@ -131,28 +127,28 @@ public class GraphQLDataFetcherBuilder {
                     data.put("id",id);
                     data.put("type",type);
                     results =  couchbaseGeneralDAO.store(id, data).content().toString();
-                }
+                } else
 
                 if (obj.getObject("update")!=null) {
                     JsonObject data = obj.getObject("update");
+                    data.put("type",type);
                     String id = data.getString("id");
                     results = couchbaseGeneralDAO.store(id, data).content().toString();
-                }
-/*
+                } else
+
                 if (obj.getObject("delete")!=null) {
                     JsonObject data = obj.getObject("delete");
                     String id = data.getString("id");
-                    results = couchbaseGeneralDAO.delete(id);
+                    couchbaseGeneralDAO.delete(id);
+                    results = "{ \"id\":\""+id+"\"}";
                 }
-*/
+
                 try {
                     return JSONObjectUtils.parse(results);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-
                 return null;
-
             }
         };
 
@@ -162,10 +158,6 @@ public class GraphQLDataFetcherBuilder {
                         typeWiring -> typeWiring.defaultDataFetcher(generalCouchbaseQuery))
                 .type( "Mutation",
                         typeWiring -> typeWiring.defaultDataFetcher(generalCouchbaseUpdate))
-//                .type("Query",
-//                        typeWiring -> typeWiring.dataFetcher("users", generalCouchbaseQuery))
-//                .type("Mutation",
-//                        typeWiring -> typeWiring.dataFetcher( "user", generalCouchbaseMutation))
                 .build();
 
         return wiring;

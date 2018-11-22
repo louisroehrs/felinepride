@@ -41,11 +41,17 @@ public class CouchbaseGeneralDAO extends BaseDAO {
         return jsonString.append("]").toString();
     }
 
+
     public JsonDocument store (String id, JsonObject jsonObject) {
         JsonDocument response = bucket.upsert(
                 JsonDocument.create(id,
                         jsonObject), PersistTo.MASTER
         );
+        return response;
+    }
+
+    public JsonDocument delete (String id) {
+        JsonDocument response = bucket.remove(id, PersistTo.MASTER);
         return response;
     }
 

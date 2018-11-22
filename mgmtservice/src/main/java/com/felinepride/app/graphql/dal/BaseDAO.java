@@ -5,13 +5,11 @@ import com.couchbase.client.deps.com.fasterxml.jackson.databind.ObjectMapper;
 import com.couchbase.client.java.Bucket;
 import com.couchbase.client.java.PersistTo;
 import com.couchbase.client.java.document.JsonDocument;
-import com.couchbase.client.java.document.RawJsonDocument;
 import com.couchbase.client.java.document.json.JsonObject;
 import com.couchbase.client.java.query.*;
 import com.couchbase.client.java.query.dsl.Expression;
 import com.felinepride.app.graphql.model.BaseModel;
 import com.felinepride.app.graphql.model.LoggedUser;
-import com.google.gson.Gson;
 import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 

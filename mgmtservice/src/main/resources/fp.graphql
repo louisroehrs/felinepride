@@ -10,7 +10,7 @@ type Query {
 
 type Mutation {
     registerUser( create: RegisterUserRequestInput ) :User
-    deleteUser( delete: DeleteUserRequestInput ) :User
+    deleteUser( delete: DeleteRequestInput ) :User
     updateUser( update: UpdateUserRequestInput ) :User
 }
 
@@ -19,9 +19,11 @@ input RegisterUserRequestInput {
     email: String
     password: String
 }
-input DeleteUserRequestInput {
-    userName: String
+
+input DeleteRequestInput {
+    id: String
 }
+
 input UpdateUserRequestInput {
     id: String
     userName: String

@@ -1,11 +1,8 @@
 package com.felinepride.app.graphql.util;
 
 
-
-import org.apache.commons.lang3.StringUtils;
 import org.glassfish.jersey.internal.util.Base64;
 
-import javax.crypto.KeyGenerator;
 import java.nio.ByteBuffer;
 import java.nio.LongBuffer;
 import java.util.UUID;
