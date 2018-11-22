@@ -1,11 +1,12 @@
 
+
 <html>
 <head>
 <style>
 
 BODY {
    background-image: url('sockycat.jpg');
-   background-position: 0% 20%;
+   background-position: 50% 0%%;
    text-shadow: 4px 2px 4px black;
    font-size:30pt;
 }
@@ -31,28 +32,39 @@ A { color:white;}
 
 .title {
    position: relative;
-   top: 30;
+   top: 50;
    left: 100;
    text-shadow: 4px 2px 4px black;
    font-size:48pt;
+}
+.subtitle {
+   position: relative;
+   top: 60;
+   left: 100;
+   text-shadow: 4px 2px 4px black;
 }
 
 
 #username {
    position: relative;
-   top: 100;
+   top: 150;
    left: 100;
 }
 
 #password {
    position: relative;
-   top: 120;
+   top: 200;
    left: 100;
 }
 
+#emailaddress {
+   position: relative;
+   top: 250;
+   left: 100;
+} 
 #loginbutton {
    position: relative;
-   top: 160;
+   top: 250;
    left: 310;
    width:170;
    height:170;
@@ -60,7 +72,7 @@ A { color:white;}
 
 #logintext {
    position: relative;
-   top: 120;
+   top: 210;
    left: 355;
    width:150;
    height:150;
@@ -70,7 +82,7 @@ A { color:white;}
 
 #signupbutton {
    position: relative;
-   top: 60;
+   top: 160;
    left: 230;
    width:170;
    height:170;
@@ -78,14 +90,28 @@ A { color:white;}
 
 #signuptext {
    position: relative;
-   top: 20;
+   top: 120;
    left: 260;
    width:150;
    height:150;
-   font-size:20pt
+   font-size:20px;
 }
 
+#nextstep1button {
+   position: relative;
+   top: 300;
+   left: 250;
+   width: 170;
+   height: 170;
+}
 
+#nextstep1text {
+   position: relative;
+   top:250;
+   left:285;
+   font-size: 20px; 
+}
+  
 </style>
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
@@ -105,19 +131,18 @@ jQuery('#loginbutton').click(function () {
 </head>
 <body>
 
-<div class="title">Feline Pride</div>
-<div id="username">UserName<BR><input name="username"  autofocus></input></div>
+<div class="title">Create an Avatar</div>
+<div class="subtitle">Step Two</div>
+<div id="username">Make A UserName<BR><input name="username"  autofocus></input></div>
 
-<div id="password"  type="password">Password<br><input type="password"  name="password"></input></div>
+<div id="password"  type="password">Make A Password<br><input name="password"></input></div>
 
-<a href="game.html"><img id="loginbutton" src="catpawprint.png"></img>
-<div id="logintext">Login</div></a>
+<div id="emailaddress" type="email">Enter Your Email Address<br><input name="email"></input></div>
+<a href="registertermsandconditions.html"><img id="nextstep1button" src="catpawprint.png"></img>
+<div id="nextstep1text">Next Step!</div></a>
 
-<a href="register.html"><img id="signupbutton" src="catpawprint.png"></img>
-<div id="signuptext">Sign up!</div></a>
+
 <BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
-
-<a href="register">
 
 <body>
 </html>

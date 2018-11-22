@@ -1,0 +1,50 @@
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+type Query {
+    user (userName: String email:String id:String): User
+}
+
+
+type Mutation {
+    registerUser( create: RegisterUserRequestInput ) :User
+    deleteUser( delete: DeleteUserRequestInput ) :User
+    updateUser( update: UpdateUserRequestInput ) :User
+}
+
+input RegisterUserRequestInput {
+    userName: String
+    email: String
+    password: String
+}
+input DeleteUserRequestInput {
+    userName: String
+}
+input UpdateUserRequestInput {
+    id: String
+    userName: String
+    email: String
+    password: String
+}
+
+
+type Position {
+    x: Int
+    y: Int
+}
+
+type User {
+    type: String
+    currentLand:String
+    position: Position
+    id: String
+    userName: String
+    firstName: String
+    lastName: String
+    email: String
+    password: String
+    isActive: Boolean
+}
+
