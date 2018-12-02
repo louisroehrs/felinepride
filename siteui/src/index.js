@@ -8,8 +8,8 @@ import App from './components/App';
 Vue.use(VeeValidate);
 
 // setup fake backend
-import { configureFakeBackend } from './helpers';
-configureFakeBackend();
+//import { configureFakeBackend } from './helpers';
+//configureFakeBackend();
 
 new Vue({
     el: '#app',

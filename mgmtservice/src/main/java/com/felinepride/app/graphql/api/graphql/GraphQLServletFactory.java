@@ -7,6 +7,7 @@
 package com.felinepride.app.graphql.api.graphql;
 
 import com.felinepride.app.graphql.configuration.FPConfiguration;
+import com.felinepride.app.graphql.filter.CorsFilter;
 import com.smoketurner.dropwizard.graphql.GraphQLFactory;
 import graphql.schema.GraphQLSchema;
 import graphql.servlet.SimpleGraphQLServlet;
@@ -21,6 +22,8 @@ public class GraphQLServletFactory {
         SimpleGraphQLServlet.Builder builder = SimpleGraphQLServlet.builder(schema);
         SimpleGraphQLServlet servlet = builder
                 .withInstrumentation(factory.getInstrumentations()).build();
+
+      //  servlet.getServletConfig().getServletContext().addFilter("corsFilter",new CorsFilter());
 
         return servlet;
     }

@@ -25,10 +25,12 @@ import java.util.stream.Collectors;
 @Slf4j
 public class GraphQLDataFetcherBuilder {
 
+    private static final String BACKTICK = "`";
+
     private static Function<Map<String, Object>, String> joiner(String entrySeparator, String valueSeparator, String quote) {
         return m -> m.entrySet()
                 .stream()
-                .map(e ->  e.getKey() + valueSeparator + quote + e.getValue()+ quote)
+                .map(e ->  BACKTICK + e.getKey()+BACKTICK + valueSeparator + quote + e.getValue()+ quote)
                 .collect(Collectors.joining(entrySeparator));
     }
 

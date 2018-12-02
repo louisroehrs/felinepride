@@ -10,6 +10,7 @@ import com.felinepride.app.graphql.api.graphql.GraphQLServletFactory;
 import com.felinepride.app.graphql.configuration.CouchbaseConfiguration;
 import com.felinepride.app.graphql.configuration.FPConfiguration;
 import com.felinepride.app.graphql.dal.*;
+import com.felinepride.app.graphql.filter.CorsFilter;
 import com.felinepride.app.graphql.health.DatabaseHealthCheck;
 import graphql.servlet.SimpleGraphQLServlet;
 import io.dropwizard.Application;
@@ -101,7 +102,7 @@ public class FPGraphQLApplication extends Application<FPConfiguration> {
         log.debug("8");
         // Do you need CORS?  Beware of cross site scripting!
         // Add CORS response filter
-        //responseFilters.add(ResponseCorsFilter.class.getName());
+        responseFilters.add(CorsFilter.class.getName());
         log.debug("9");
         // Apply Jersey Filters
         environment.jersey().property("com.sun.jersey.spi.container.ContainerRequestFilters", StringUtils.join(requestFilters.iterator(), ","));
@@ -125,7 +126,7 @@ public class FPGraphQLApplication extends Application<FPConfiguration> {
         // Add Admin Resources
         //environment.jersey().register(ServerStatusResource.class);
         log.debug("15");
-        enableCors(environment);
+      //  enableCors(environment);
         log.debug("16");
         SimpleGraphQLServlet servlet = GraphQLServletFactory.build( configuration);
         log.debug("17");

@@ -5,6 +5,7 @@ schema {
 
 type Query {
     user (userName: String email:String id:String): User
+    login (userName:String password:String) : User
 }
 
 

@@ -1,5 +1,6 @@
-import config from 'config';
+import {config} from './config';
 import { authHeader } from '../helpers';
+const axios = require('axios');
 
 export const userService = {
     login,
@@ -11,24 +12,63 @@ export const userService = {
     delete: _delete
 };
 
-function login(username, password) {
-    const requestOptions = {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username, password })
-    };
 
-    return fetch(`${config.apiUrl}/users/authenticate`, requestOptions)
-        .then(handleResponse)
-        .then(user => {
-            // login successful if there's a jwt token in the response
-            if (user.token) {
-                // store user details and jwt token in local storage to keep user logged in between page refreshes
-                localStorage.setItem('user', JSON.stringify(user));
-            }
+/* This is the graphql query creator 
+ * GraphQL Query:
+ * { login (userName: "fluffbucket",password:"test1234") {
+ * id 
+ * type
+ * userName
+ * }}
+ *
+ * query is the name of the query 'login'
+ * parameters is JSONObject of the parameters {userName:"fluffbucket","password": "test1234"}
+ * fields is a string of the fields in graphql notation
+*/
 
-            return user;
-        });
+const CL = "{", CR ="}", PL="(", PR =")";
+
+function graphql(query,parameters, fields) {
+
+  let parameterList = [];
+  for (var p in parameters) {
+    parameterList.push(p + ':"'+parameters[p]+'"');
+  }
+  let graphqlQuery = CL
+      + query
+      + PL
+      + parameterList.join(" ")
+      + PR
+      + fields
+      + CR;
+  return graphqlQuery;
+}
+
+function login(userName, password) {
+  const requestOptions = {
+    method: 'POST',
+    url:`${config.apiUrl}/graphql`,
+    header: "Content-Type: application/json",
+    data: { "query" : graphql('login',
+                              { userName, password },
+                              "{ id  type  userName}"),
+            "variables":null,
+            "operationName":null}
+  };
+
+  
+  return axios(requestOptions)
+    .then(handleResponse)
+    .then(response => {
+      const user = response.data.data.login;
+      user.token = user.id;
+      // login successful if there's a jwt token in the response
+      if (user.token) {
+        // store user details and jwt token in local storage to keep user logged in between page refreshes
+        localStorage.setItem('user', JSON.stringify(user));
+      }
+      return user;
+    });
 }
 
 function logout() {
@@ -86,19 +126,16 @@ function _delete(id) {
 }
 
 function handleResponse(response) {
-    return response.text().then(text => {
-        const data = text && JSON.parse(text);
-        if (!response.ok) {
-            if (response.status === 401) {
-                // auto logout if 401 response returned from api
-                logout();
-                location.reload(true);
-            }
-
-            const error = (data && data.message) || response.statusText;
-            return Promise.reject(error);
-        }
-
-        return data;
-    });
+  if (response.status != 200) {
+    if (response.status === 401) {
+      // auto logout if 401 response returned from api
+      logout();
+      location.reload(true);
+    }
+    
+    const error = (response && response.message) || response.statusText;
+    return Promise.reject(error);
+  }
+  
+  return response;
 }

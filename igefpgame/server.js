@@ -18,6 +18,8 @@ var Server = IgeClass.extend({
 				ige.start(function (success) {
 					// Check if the engine started successfully
 					if (success) {
+
+
 						// Add the network stream component
 						ige.network.addComponent(IgeStreamComponent)
 							.stream.sendInterval(120) // Send a stream update once every 30 milliseconds

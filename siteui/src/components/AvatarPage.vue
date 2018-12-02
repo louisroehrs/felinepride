@@ -1,6 +1,7 @@
 <template>
     <div>
-        <h2>Register to Feline Pride</h2>
+      <h2>Create an avatar</h2>
+      <h3>Step 2</h3>
         <form @submit.prevent="handleSubmit">
             <div class="form-group">
                 <label for="firstName">Make a Username</label>
@@ -18,7 +19,7 @@
                 <div v-if="submitted && errors.has('emailAddress')" class="invalid-feedback">{{ errors.first('emailAddress') }}</div>
             </div>
 
-            <a href="/avatar"><img id="signupbutton" src="../assets/catpawprint.png"></img>
+            <a href="/tac"><img id="signupbutton" src="../assets/catpawprint.png"></img>
 <div id="signuptext" class="btn btn-link">Next Step</div></a>
 
             <div class="form-group">
@@ -34,10 +35,10 @@
 import { mapState, mapActions } from 'vuex'
 
 export default {
-  data () {
-    return {
-      user: {
-        firstName: '',
+    data () {
+        return {
+            user: {
+                firstName: '',
                 lastName: '',
                 username: '',
                 password: ''
@@ -62,7 +63,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="css">
 
 BODY {
    background-image: url('../assets/sockycat.jpg');

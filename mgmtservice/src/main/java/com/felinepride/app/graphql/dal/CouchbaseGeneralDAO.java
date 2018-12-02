@@ -28,8 +28,10 @@ public class CouchbaseGeneralDAO extends BaseDAO {
 
         String newQuery = query.replace("{0}",bucket.name()).replace("{1}",bucket.name());
 
-        N1qlQuery n1qlQueryquery = N1qlQuery.simple(newQuery);
-        N1qlQueryResult qr1 = bucket.query(n1qlQueryquery);
+        N1qlQuery n1qlQuery = N1qlQuery.simple(newQuery);
+
+        N1qlQueryResult qr1 = bucket.query(n1qlQuery);
+
 
         StringBuilder jsonString = new StringBuilder("[");
         for (N1qlQueryRow row : qr1.allRows()) {
