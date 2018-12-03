@@ -6,9 +6,9 @@ const state = {
 
 const actions = {
     getAll({ commit }) {
-        commit('getAllRequest');
+      commit('getAllRequest');
 
-        userService.getAll()
+      userService.getAll('getAllUsers',null,"{id userName email}")
             .then(
                 users => commit('getAllSuccess', users),
                 error => commit('getAllFailure', error)

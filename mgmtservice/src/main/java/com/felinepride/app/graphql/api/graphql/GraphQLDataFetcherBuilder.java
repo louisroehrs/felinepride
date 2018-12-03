@@ -51,11 +51,15 @@ public class GraphQLDataFetcherBuilder {
                 if (!environment.getArguments().isEmpty()) {
                     query.append(" WHERE ");
                     query.append(joiner( " AND ", " = ","'").apply(environment.getArguments()));
+                    query.append(" AND ");
+                } else {
+                    query.append(" WHERE ");
                 }
 
                 String typeName = GraphQLTypeUtil.getUnwrappedTypeName((environment.getFieldType())).toLowerCase();
 
-                query.append(" AND type = '" + typeName.replace("[","").replace("]","") +"'");
+
+                query.append(" type = '" + typeName.replace("[","").replace("]","") +"'");
 
                 log.debug(query.toString());
 
