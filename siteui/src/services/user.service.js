@@ -58,7 +58,6 @@ function graphqlQuery(query,parameters, fields) {
 
 
 function graphqlMutationRequest(query,action, object, objectType, fields) {
-  debugger;
   return  {
     method: 'POST',
     url:`${config.apiUrl}/graphql`,
@@ -225,12 +224,14 @@ function update(user) {
 
 // prefixed function name with underscore because delete is a reserved word in javascript
 function _delete(id) {
-    const requestOptions = {
-        method: 'DELETE',
-        headers: authHeader()
-    };
-
-    return fetch(`${config.apiUrl}/users/${id}`, requestOptions).then(handleResponse);
+    const requestMutationRequest =
+          graphqlMutationRequest('deleteUser',
+                                 'delete',
+                                 { "input":{"id":id}}, /// i mean really these stupid frameworks....
+                                 'DeleteRequestInput',
+                                 "{ id }"
+                                );
+  return axios(requestMutationRequest).then(handleResponse);
 }
 
 function handleResponse(response) {
