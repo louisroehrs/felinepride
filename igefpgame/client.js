@@ -25,16 +25,17 @@ var Client = IgeClass.extend({
 				// than before the scene etc are created... maybe you want
 				// a splash screen or a menu first? Then connect after you've
 				// got a username or something?
-				ige.network.start('http://192.168.1.64:2000', function () {
+				ige.network.start('http://localhost:2000', function () {
 					ige.network.addComponent(IgeStreamComponent)
 						.stream.renderLatency(160) // Render the simulation 160 milliseconds in the past
 						// Create a listener that will fire whenever an entity
 						// is created because of the incoming stream data
 						.stream.on('entityCreated', function (entity) {
-							this.log('Stream entity created with ID: ' + entity.id());
-							if (entity._classId === 'Mover') {
+							this.log('KK Stream entity created with ID: ' + entity.id(),'warn');
+							if (entity.id() === 'mover0') {
 								// Track this entity with the camera
-								//self.vp1.camera.trackTranslate(entity, 10);
+							    this.log ("tracking entity " + entity.id(),'warn');
+							    self.vp1.camera.trackTranslate(entity, 10);
 							}
 						});
 

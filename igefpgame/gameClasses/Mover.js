@@ -2,7 +2,7 @@ var Mover = IgeEntity.extend({
 	classId: 'Mover',
   
 	init: function () {
-		IgeEntity.prototype.init.call(this);
+	        IgeEntity.prototype.init.call(this);
 
 		var self = this;
 
@@ -17,11 +17,11 @@ var Mover = IgeEntity.extend({
 					.height(100);
 			});
 
-      this._ballon = new SpeechBalloon("hi there")
-        .width(100)
-        .translateBy(0,80,-1)
-        .height(100)
-        .mount(self, this._balloon);
+			this._ballon = new SpeechBalloon("hi there")
+			    .width(100)
+			    .translateBy(0,80,-1)
+			    .height(100)
+			    .mount(self, this._balloon);
 
 		}
 
