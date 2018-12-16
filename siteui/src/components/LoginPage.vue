@@ -4,23 +4,24 @@
   <form @submit.prevent="handleSubmit" id="loginForm">
     
     <div class="form-group">
-      <div id="username">Username<BR/><input v-model="username" name="username"  class="form-control" :class="{ 'is-invalid': submitted && !username }" autofocus/></div>
-      <div v-show="submitted && !username" class="invalid-feedback">Username is required</div>
+      <div id="username"><div><label for="usernamefirstName">Username</label></div><input v-model="username" name="username"  class="form-control" :class="{ 'is-invalid': submitted && !username }" autofocus/>      <div v-show="submitted && !username" class="invalid-feedback">Username is required</div></div>
+
     </div>
     <div class="form-group">
       <div id="password">Password<BR/>
-        <input type="password" v-model="password" name="password" class="form-control" :class="{ 'is-invalid': submitted && !password }" /></div>
-      <div v-show="submitted && !password" class="invalid-feedback">Password is required</div>
+        <input type="password" v-model="password" name="password" class="form-control" :class="{ 'is-invalid': submitted && !password }" />
+            <div v-show="submitted && !password" class="invalid-feedback">Password is required</div></div>
+
     </div>
+
     <div class="form-group" >
       <img id="loginbutton" src="../assets/catpawprint.png" @click="submitForm"/>
-      <div id="logintext" class="btn btn-primary" :disabled="status.loggingIn">Login</div>
+      <div id="logintext" class="btn btn-primary"  @click="submitForm">Login</div>
       <img v-show="status.loggingIn" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
     </div>
 
     <button id="hiddenSubmit" style="display:none" class="btn btn-primary" :disabled="status.loggingIn">Login</button>
 
-    
     <a href="/register"><img id="signupbutton" src="../assets/catpawprint.png"></img><div id="signuptext" class="btn btn-link">Sign Up</div></a>
     
   </form>

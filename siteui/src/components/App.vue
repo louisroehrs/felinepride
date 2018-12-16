@@ -1,6 +1,7 @@
 <template>
 <div>
-	   <router-view></router-view>
+  <div v-if="alert.message" :class="`alert ${alert.type}`">{{alert.message}}</div>
+	<router-view></router-view>
 </div>
 </template>
 

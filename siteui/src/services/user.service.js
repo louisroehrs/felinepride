@@ -29,12 +29,12 @@ export const userService = {
 const CL = "{", CR ="}", PL="(", PR =")";
 
 
-function graphqlQuery(query,parameters, fields) {
+function graphqlQueryRequest(query,parameters, fields) {
   return  {
     method: 'POST',
     url:`${config.apiUrl}/graphql`,
     header: "Content-Type: application/json",
-    data: { "query" : graphql(query,
+    data: { "query" : graphqlQuery(query,
                               parameters,
                               fields),
             "variables":null,
@@ -42,8 +42,8 @@ function graphqlQuery(query,parameters, fields) {
   }  
 }
 
-function graphql(query,parameters, fields) {
-
+/* builds { query: getAllUsers {id type userName} } */
+function graphqlQuery(query,parameters, fields) {
   let parameterList = [];
   for (var p in parameters) {
     parameterList.push(p + ':"'+parameters[p]+'"');
@@ -53,21 +53,83 @@ function graphql(query,parameters, fields) {
     graphqlQuery +=  PL + parameterList.join(" ") + PR
   }
   graphqlQuery += fields + CR;
-  
+  return graphqlQuery;
+}
+
+
+function graphqlMutationRequest(query,action, object, objectType, fields) {
+  debugger;
+  return  {
+    method: 'POST',
+    url:`${config.apiUrl}/graphql`,
+    header: "Content-Type: application/json",
+    data: { "query" : graphqlMutation(query,
+                                         action,
+                                         objectType,
+                                         fields),
+            "variables":object,
+            "operationName":null}
+  }  
+}
+/* builds 
+mutation {registerUser($input:              <-query
+  (create: { userName:"u"           <- action
+	           email: "e"             <- object
+	           password: "p"})
+ {                                   <= fields
+  id
+  userName
+}
+}
+
+Pass this JSON in the body.
+{ query: "
+mutation registerUser($input: RegisterUserRequestInput) 
+{  registerUser(create: $input) 
+{
+  id
+  userName
+}
+}",
+
+"variables":
+{ "input": {"userName" : "loous",
+             "email" : "sdddd",
+              "password" : "dddd"}
+}
+}
+Nope, use variables to pass in json objects, the only way
+*/
+function graphqlMutation(query, action, objectType, fields) {
+
+  // note, need the exclmation point or the variables do not get sent.
+  let graphqlQuery = "mutation " + query+ PL + "$input: " + objectType + "!" + PR;
+  if (action) {
+    graphqlQuery +=  CL + query + PL + action +":$input" + PR;
+  }
+  if (fields) {
+    graphqlQuery += fields ;
+  }
+
+  graphqlQuery += CR;
   return graphqlQuery;
 }
 
 function login(userName, password) {
   
   const requestQuery =
-        graphqlQuery('login',
+        graphqlQueryRequest('login',
                     { userName, password },
                     "{ id  type  userName}"
                    );
+
   return axios(requestQuery)
     .then(handleResponse)
     .then(response => {
       const user = response.data.data.login;
+      if (user == null) { // login incorrect
+        return null;
+      }
       user.token = user.id;
       // login successful if there's a jwt token in the response
       if (user.token) {
@@ -84,18 +146,36 @@ function logout() {
 }
 
 function register(user) {
-    const requestOptions = {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(user)
-    };
-
-    return fetch(`${config.apiUrl}/users/register`, requestOptions).then(handleResponse);
+    const requestMutationRequest =
+          graphqlMutationRequest('registerUser',
+                                 'create',
+                                 { "input":user}, /// i mean really these stupid frameworks....
+                                 'RegisterUserRequestInput',
+                                 "{ id  type  userName}"
+                                );
+  
+  return axios(requestMutationRequest)
+    .then(handleResponse)
+    .then(response => {
+      const user = response.data.data.registerUser;
+      if (user == null) { // login incorrect
+        return null;
+      }
+      user.token = user.id;
+      // login successful if there's a jwt token in the response
+      if (user.token) {
+        // store user details and jwt token in local storage to keep user logged in between page refreshes
+        localStorage.setItem('user', JSON.stringify(user));
+      }
+      return user;
+    });
+  
+//    return fetch(`${config.apiUrl}/users/register`, requestOptions).then(handleResponse);
 }
 
 function getAll(query,filters,fields) {
     const requestQuery =
-          graphqlQuery(query,
+          graphqlQueryRequest(query,
                        filters, // { username, password}  expands to json object.
                        fields //  " { id  type  userName emailAddress}"  string
                       );
@@ -107,7 +187,7 @@ function getAll(query,filters,fields) {
   
 function getAllNew() {
   const requestQuery =
-        graphqlQuery('getAllUsers',
+        graphqlQueryRequest('getAllUsers',
                      null,
                      "{ id  type  userName email}"
                     );

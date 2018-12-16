@@ -11,9 +11,9 @@ type Query {
 
 
 type Mutation {
-    registerUser( create: RegisterUserRequestInput ) :User
-    deleteUser( delete: DeleteRequestInput ) :User
-    updateUser( update: UpdateUserRequestInput ) :User
+    registerUser( create: RegisterUserRequestInput! ) :User
+    deleteUser( delete: DeleteRequestInput!) :User
+    updateUser( update: UpdateUserRequestInput! ) :User
 }
 
 input RegisterUserRequestInput {

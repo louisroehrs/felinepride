@@ -33,10 +33,7 @@ module.exports = {
     },
     plugins: [new HtmlWebpackPlugin({
       template: './src/index.html'
-    }),
-              new webpack.DefinePlugin( {
-
-             ],
+    })],
     devServer: {
         historyApiFallback: true
     },
