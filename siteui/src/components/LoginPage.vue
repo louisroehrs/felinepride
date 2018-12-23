@@ -4,7 +4,7 @@
   <form @submit.prevent="handleSubmit" id="loginForm">
     
     <div class="form-group">
-      <div id="username"><div><label for="usernamefirstName">Username</label></div><input v-model="username" name="username"  class="form-control" :class="{ 'is-invalid': submitted && !username }" autofocus/>      <div v-show="submitted && !username" class="invalid-feedback">Username is required</div></div>
+      <div id="username"><div><label for="username">Username</label></div><input v-model="username" name="username"  class="form-control" :class="{ 'is-invalid': submitted && !username }" autofocus/>      <div v-show="submitted && !username" class="invalid-feedback">Username is required</div></div>
 
     </div>
     <div class="form-group">

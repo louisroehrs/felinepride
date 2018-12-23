@@ -10,6 +10,7 @@ var Server = IgeClass.extend({
 		// Add the server-side game methods / event handlers
 		this.implement(ServerNetworkEvents);
 
+
 		// Add the networking component
 		ige.addComponent(IgeNetIoComponent)
 			// Start the network server
@@ -100,6 +101,17 @@ var Server = IgeClass.extend({
               .translateTo(300,100,0)
               .streamMode(1)
 							.mount(self.scene1);
+            /* talk to couchbase and get the cats in this space */
+
+            
+            self.obj[4] = new Mover()
+							.id('mover1')
+							.depth(1)
+							.translateTo(300, 100, 0)
+							.streamMode(1)
+							.mount(self.scene1);
+
+
 					}
 				});
 			});

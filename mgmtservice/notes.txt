@@ -1,0 +1,63 @@
+Couchbase component editor
+
+Components
+
+{
+type:"<componentType>C",   // world, accessory, gem, etc., avatar, player
+id: "<componentType>C:<instanceid>",
+attributes: [ { "name":"name","value":"string" }],
+OR
+"<attributename>":"value"
+}
+
+ComponentEditor uses componentType to edit things
+
+{
+type:"componentType",
+componentType:"name of componentType" // world, accessory, gem, etc., avatar, player
+attributes: [{ "name":"name","type":"string", "editor":"cooleditor"}
+            ]
+}
+
+Editors could also exist.
+
+Editor
+{
+type:"editor",
+editortype:"link",
+code:"javascript component code"
+class:"native javascript class"
+}
+
+Editor types
+shortstring
+description
+number
+color
+image
+code
+combobox
+option picker
+checkbox
+
+{ "type":"componentType",
+  "componentType":"avatar",
+  "attributes" : [
+               { "name":"name","type":"string"},
+               { "name":"animal","type":"string"},
+               { "name":"image","type":"string","editor":"avatarImagePicker" }
+               ]
+}
+
+{ "type":"componentType",
+  "owl" : "fp:accessory",
+  "componentType":"accessory",
+  "attributes" : [
+               { "name":"name","type":"string","owl":"owl:name"},
+               { "name":"animal","type":"string"},
+               { "name":"image","type":"string","editor":"avatarImagePicker" }
+               ]
+}
+
+
+

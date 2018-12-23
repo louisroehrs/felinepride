@@ -1,4 +1,4 @@
-import { userService } from '../services';
+import { graphqlService } from '../services';
 
 const state = {
     all: {}
@@ -8,9 +8,9 @@ const actions = {
     getAll({ commit }) {
       commit('getAllRequest');
 
-      userService.getAllUsers('getAllUsers',null,"{id userName email}")
+      graphqlService.graphQuery('getAllComponentTypes',null,"{id name attributes {name value type}}")
             .then(
-                users => commit('getAllSuccess', users),
+                componentTypes => commit('getAllSuccess', componentTypes),
                 error => commit('getAllFailure', error)
             );
     },
@@ -18,9 +18,9 @@ const actions = {
     delete({ commit }, id) {
         commit('deleteRequest', id);
 
-        userService.delete(id)
+        graphqlService.delete(id)
             .then(
-                user => commit('deleteSuccess', id),
+                componentType => commit('deleteSuccess', id),
                 error => commit('deleteSuccess', { id, error: error.toString() })
             );
     }
@@ -30,40 +30,39 @@ const mutations = {
     getAllRequest(state) {
         state.all = { loading: true };
     },
-    getAllSuccess(state, users) {
-        state.all = { items: users };
+    getAllSuccess(state, componentTypes) {
+        state.all = { items: componentTypes };
     },
     getAllFailure(state, error) {
         state.all = { error };
     },
     deleteRequest(state, id) {
         // add 'deleting:true' property to user being deleted
-        state.all.items = state.all.items.map(user =>
-            user.id === id
-                ? { ...user, deleting: true }
-                : user
+        state.all.items = state.all.items.map(componentType =>
+            componentType.id === id
+                ? { ...componentType, deleting: true }
+                : componentType
         )
     },
     deleteSuccess(state, id) {
         // remove deleted user from state
-        state.all.items = state.all.items.filter(user => user.id !== id)
+        state.all.items = state.all.items.filter(componentType => componentType.id !== id)
     },
     deleteFailure(state, { id, error }) {
         // remove 'deleting:true' property and add 'deleteError:[error]' property to user 
-        state.all.items = state.items.map(user => {
-            if (user.id === id) {
+        state.all.items = state.items.map(componentType => {
+            if (componentType.id === id) {
                 // make copy of user without 'deleting:true' property
-                const { deleting, ...userCopy } = user;
+                const { deleting, ...componentTypeCopy } = componentType;
                 // return copy of user with 'deleteError:[error]' property
-                return { ...userCopy, deleteError: error };
+                return { ...componentTypeCopy, deleteError: error };
             }
-
-            return user;
+            return componentType;
         })
     }
 };
 
-export const users = {
+export const componentTypes = {
     namespaced: true,
     state,
     actions,

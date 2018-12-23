@@ -77,8 +77,8 @@ const mutations = {
 };
 
 export const account = {
-    namespaced: true,
-    state,
-    actions,
-    mutations
+  namespaced: true,
+  state,
+  actions,
+  mutations
 };

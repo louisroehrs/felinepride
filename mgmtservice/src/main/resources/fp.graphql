@@ -7,6 +7,7 @@ type Query {
     user (userName: String email:String id:String): User
     getAllUsers: [User]
     login (userName:String password:String) : User
+    getAllComponentTypes : [ComponentType]
 }
 
 
@@ -50,5 +51,19 @@ type User {
     email: String
     password: String
     isActive: Boolean
+    isAdmin: Boolean
+}
+
+type ComponentType {
+    type: String
+    name:String
+    id: String
+    attributes: [Attribute]
+}
+
+type Attribute {
+    name:String
+    value: String
+    type: String
 }
 

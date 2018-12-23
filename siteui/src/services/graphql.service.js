@@ -3,13 +3,8 @@ import { authHeader } from '../helpers';
 const axios = require('axios');
 
 export const graphqlService = {
-    login,
-    logout,
-    register,
-    getAll,
-    getById,
-    update,
-    delete: _delete
+  graphQuery: doGraphQuery       // schema query, parameters, fields
+//  , graphMutation: doGraphMutation   // schema query, action [create|update|delete], jsonobject, schema objectType, fields to bring back
 };
 
 
@@ -28,35 +23,39 @@ export const graphqlService = {
 
 const CL = "{", CR ="}", PL="(", PR =")";
 
+function graphqlQueryRequest(query,parameters, fields) {
+  return  {
+    method: 'POST',
+    url:`${config.apiUrl}/graphql`,
+    header: "Content-Type: application/json",
+    data: { "query" : graphqlQuery(query,
+        parameters,
+        fields),
+      "variables":null,
+      "operationName":null}
+  }
+}
+
+function graphqlMutationRequest(query,action, object, objectType, fields) {
+  return  {
+    method: 'POST',
+    url:`${config.apiUrl}/graphql`,
+    header: "Content-Type: application/json",
+    data: { "query" : graphqlMutation(query,
+        action,
+        objectType,
+        fields),
+      "variables":object,
+      "operationName":null}
+  }
+}
+
+/* builds { query: getAllUsers {id type userName} }
+ * query: "getAllUsers"
+ * parameters: json object
+ * fields: string beginning with { and fields  subfields and ending with } */
 
 function graphqlQuery(query,parameters, fields) {
-  return  {
-    method: 'POST',
-    url:`${config.apiUrl}/graphql`,
-    header: "Content-Type: application/json",
-    data: { "query" : graphql(query,
-                              parameters,
-                              fields),
-            "variables":null,
-            "operationName":null}
-  }  
-}
-
-function graphqlMutation(query,parameters, fields) {
-  return  {
-    method: 'POST',
-    url:`${config.apiUrl}/graphql`,
-    header: "Content-Type: application/json",
-    data: { "query" : graphql(query,
-                              parameters,
-                              fields),
-            "variables":null,
-            "operationName":null}
-  }  
-}
-
-function graphql(query,parameters, fields) {
-
   let parameterList = [];
   for (var p in parameters) {
     parameterList.push(p + ':"'+parameters[p]+'"');
@@ -66,26 +65,56 @@ function graphql(query,parameters, fields) {
     graphqlQuery +=  PL + parameterList.join(" ") + PR
   }
   graphqlQuery += fields + CR;
-  
   return graphqlQuery;
 }
 
-function graphqlMutation(mutation, request, object, fields) {
 
-  let parameterList = [];
-  for (var p in parameters) {
-    parameterList.push(p + ':"'+parameters[p]+'"');
+/* builds
+mutation {registerUser($input:              <-query
+  (create: { userName:"u"           <- action
+	           email: "e"             <- object
+	           password: "p"})
+ {                                   <= fields
+  id
+  userName
+}
+}
+
+Pass this JSON in the body.
+{ query: "
+mutation registerUser($input: RegisterUserRequestInput)
+{  registerUser(create: $input)
+{
+  id
+  userName
+}
+}",
+
+"variables":
+{ "input": {"userName" : "loous",
+             "email" : "sdddd",
+              "password" : "dddd"}
+}
+}
+Nope, use variables to pass in json objects, the only way
+*/
+function graphqlMutation(query, action, objectType, fields) {
+
+  // note, need the exclmation point or the variables do not get sent.
+  let graphqlQuery = "mutation " + query+ PL + "$input: " + objectType + "!" + PR;
+  if (action) {
+    graphqlQuery +=  CL + query + PL + action +":$input" + PR;
   }
-  let graphqlQuery = "mutation " +CL + query + PL + request +":";
-  if (object) {
-    graphqlQuery +=  PL + parameterList.join(" ") + PR
+  if (fields) {
+    graphqlQuery += fields ;
   }
-  graphqlQuery += fields + CR;
-  
+
+  graphqlQuery += CR;
   return graphqlQuery;
 }
 
-function store(mutation, object, fields) {
+// make into doGraphMutation at some point
+function gStore(mutation, object, fields) {
     const requestMutation =
           graphqlMutation(mutation,
                           "create",
@@ -105,9 +134,9 @@ function store(mutation, object, fields) {
 
 }
 
-function getAll(query,filters,fields) {
+function doGraphQuery(query,filters,fields) {
     const requestQuery =
-          graphqlQuery(query,
+          graphqlQueryRequest(query,  // type of object
                        filters, // { username, password}  expands to json object.
                        fields //  " { id  type  userName emailAddress}"  string
                       );
@@ -116,21 +145,9 @@ function getAll(query,filters,fields) {
     .then(handleResponse)
     .then(response => {return response.data.data[query]});;
 }
-  
-function getAllNew() {
-  const requestQuery =
-        graphqlQuery('getAllUsers',
-                     null,
-                     "{ id  type  userName email}"
-                    );
-
-  return axios(requestQuery)
-    .then(handleResponse)
-    .then(response => {return response.data.data.getAllUsers});;
-}
 
 
-function getById(parameters) {
+function gGetById(parameters) {
     const requestQuery =
         graphqlQuery('getBy',
                      parameters,
@@ -145,7 +162,7 @@ function getById(parameters) {
     return fetch(`${config.apiUrl}/users/${id}`, requestOptions).then(handleResponse);
 }
 
-function update(user) {
+function gUpdate(user) {
     const requestOptions = {
         method: 'PUT',
         headers: { ...authHeader(), 'Content-Type': 'application/json' },
@@ -156,7 +173,7 @@ function update(user) {
 }
 
 // prefixed function name with underscore because delete is a reserved word in javascript
-function _delete(id) {
+function gDelete(id) {
     const requestOptions = {
         method: 'DELETE',
         headers: authHeader()

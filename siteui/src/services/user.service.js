@@ -6,7 +6,7 @@ export const userService = {
     login,
     logout,
     register,
-    getAll,
+    getAllUsers,
     getById,
     update,
     delete: _delete
@@ -119,7 +119,7 @@ function login(userName, password) {
   const requestQuery =
         graphqlQueryRequest('login',
                     { userName, password },
-                    "{ id  type  userName}"
+                    "{ id  type  userName isAdmin}"
                    );
 
   return axios(requestQuery)
@@ -172,7 +172,7 @@ function register(user) {
 //    return fetch(`${config.apiUrl}/users/register`, requestOptions).then(handleResponse);
 }
 
-function getAll(query,filters,fields) {
+function getAllUsers(query,filters,fields) {
     const requestQuery =
           graphqlQueryRequest(query,
                        filters, // { username, password}  expands to json object.
