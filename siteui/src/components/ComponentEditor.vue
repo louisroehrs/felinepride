@@ -1,26 +1,17 @@
-<template> 
+<template >
     <div>
-        <h1><router-link to="/admin">Admin</router-link> > Component Editor</h1>
-        <div></div>
-        <div class="leftside scrolling" ref="scroller" v-bind:style="{ height: this.scrollerHeight+'px'}">
+        <h1><router-link to="/admin">Admin</router-link> > Component Editor > {{ componentType.name}}</h1>
+        <div>{{ componentType.name}}</div>
+        <div class="rightside scrolling" ref="scrollermain" v-bind:style="{ height: this.scrollerHeight+'px'}">
 <!--        <em v-if="componentTypes.loading">Loading componentTypes...</em>
         <span v-if="componentTypes.error" class="text-danger">ERROR: {{componentTypes.error}}</span>-->
-            <ul class="picklist" v-if="componentTypes.items">
-                    <li v-for="componentType in componentTypes.items" :key="componentType.id">
-                {{ componentType.name}}
-                        <span v-if="componentType.deleting"><em> - Deleting...</em></span>
-                        <span v-else-if="componentType.deleteError" class="text-danger"> - ERROR: {{componentType.deleteError}}</span>
-                    <!--    <span v-else> - <a @click="deleteComponentType(componentType.id)" class="text-danger">Delete</a></span> -->
-                        <div class="newbutton"><a @click="newComponent(componentType)" class="text-danger">+</a></div>
+            <ul class="componentfield" v-if="componentType.attributes">
+                    <li v-for="attribute in componentType.attributes" :key="attribute.name">
+                        <label>{{ attribute.name}}</label>
+                        <input :name="attribute.name"/>
                     </li>
                 </ul>
-
         </div>
-        <div class="bottombar" ref="bottombox"><div class="bottombutton">+</div><div class="bottombutton">-</div></div>
-        <div class="editarea">
-            <ComponentEditor v-if="editingComponentType" v-bind:componentType="editingComponentType"></ComponentEditor>
-        </div>
-
     </div>
 </template>
 
@@ -28,6 +19,9 @@
 import { mapState, mapActions } from 'vuex'
 
 export default {
+
+  props: ['componentType'],
+
   data() {
     return {
       scrollerHeight: 300
@@ -35,8 +29,6 @@ export default {
   },
   computed: {
     ...mapState({
-      componentTypes: state => state.componentTypes.all,
-      editingComponentType : state => state.componentTypes.editingComponentType
     })
   },
   created () {
@@ -48,7 +40,6 @@ export default {
       this.resize()
   },
 
-
   methods: {
     ...mapActions('componentTypes', {
       getAll: 'getAll',
@@ -56,7 +47,7 @@ export default {
       newComponent: 'newComponent'
     }),
     resize() {
-      this.scrollerHeight = window.innerHeight - this.$refs.scroller.offsetTop - this.$refs.bottombox.offsetHeight;
+      //this.scrollerHeight = window.innerHeight - this.$refs.scrollermain.offsetTop ;
     }
 
   },
@@ -64,7 +55,7 @@ export default {
   beforeDestroy() {
     window.removeEventListener('resize', this.resize);
   }
-}
+};
 </script>
 <style>
     body, html, div, ul , li {margin:0;padding:0;
