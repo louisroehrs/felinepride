@@ -26,7 +26,7 @@ const actions = {
 
     graphqlService.graphQuery('getComponentsByType',{ componentType: componentType.name },"{id componentType name attributes {name value }}")
       .then(
-        components => commit('getComponentsByTypeSuccess', components),
+        components => commit('getComponentsByTypeSuccess', { list:components, type:componentType}),
         error => commit('getComponentsByTypeFailure', error)
       );
   },
@@ -45,7 +45,7 @@ const actions = {
     graphqlService.delete(id)
       .then(
         componentType => commit('deleteSuccess', id),
-        error => commit('deleteSuccess', { id, error: error.toString() })
+        error => commit('deleteFailure', { id, error: error.toString() })
       );
   }
 };
@@ -71,7 +71,7 @@ const mutations = {
     state.components = { loading: true};
   },
   getComponentsByTypeSuccess(state, components) {
-    state.components = { items: components};
+    state.components = { items: components.list, componentType: components.type};
   },
   getComponentsByTypeFailure(state, error) {
     state.components = { error};

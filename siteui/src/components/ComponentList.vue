@@ -1,5 +1,6 @@
 <template >
     <div>
+        <div v-if="components.componentType">List of {{components.componentType.name}}</div>
         <div class="rightside scrolling" ref="scrollermain" v-bind:style="{ height: this.scrollerHeight+'px'}">
 <!--        <em v-if="componentTypes.loading">Loading componentTypes...</em>
         <span v-if="componentTypes.error" class="text-danger">ERROR: {{componentTypes.error}}</span>-->
