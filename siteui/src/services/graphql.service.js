@@ -31,7 +31,7 @@ function graphqlQueryRequest(query,parameters, fields) {
     data: { "query" : graphqlQuery(query,
         parameters,
         fields),
-      "variables":null,
+      "variables":parameters,
       "operationName":null}
   }
 }

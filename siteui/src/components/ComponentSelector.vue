@@ -1,63 +1,56 @@
 <template> 
     <div>
-        <h1><router-link to="/admin">Admin</router-link> > Component Editor</h1>
-        <div></div>
-        <div class="leftside scrolling" ref="scroller" v-bind:style="{ height: this.scrollerHeight+'px'}">
-<!--        <em v-if="componentTypes.loading">Loading componentTypes...</em>
-        <span v-if="componentTypes.error" class="text-danger">ERROR: {{componentTypes.error}}</span>-->
-            <ul class="picklist" v-if="componentTypes.items">
-                    <li class="componentType" v-for="componentType in componentTypes.items" :key="componentType.id">
-                        <a @click="listComponents(componentType)">{{ componentType.name}}</a>
-                        <span v-if="componentType.deleting"><em> - Deleting...</em></span>
-                        <span v-else-if="componentType.deleteError" class="text-danger"> - ERROR: {{componentType.deleteError}}</span>
-                    <!--    <span v-else> - <a @click="deleteComponentType(componentType.id)" class="text-danger">Delete</a></span> -->
-                        <div class="newbutton"><a @click="newComponent(componentType)" class="text-danger">+</a></div>
+         <div class="leftside scrolling" ref="scroller" v-bind:style="{ height: this.scrollerHeight+'px'}">
+        <em v-if="things.loading">Loading...</em>
+        <span v-if="things.error" class="text-danger">ERROR: {{things.error}}</span>
+            <ul class="picklist" v-if="things">
+                    <li class="element" v-for="listitem in things.items" :key="listitem.id">
+                {{ listitem.name}}
+                        <span v-if="listitem.deleting"><em> - Deleting...</em></span>
+                        <span v-else-if="listitem.deleteError" class="text-danger"> - ERROR: {{listitem.deleteError}}</span>
                     </li>
                 </ul>
-
         </div>
         <div class="bottombar" ref="bottombox"><div class="bottombutton">+</div><div class="bottombutton">-</div></div>
-        <div class="editarea">
-            <ComponentEditor v-if="editingComponentType" v-bind:componentType="editingComponentType"></ComponentEditor>
-            <ComponentList v-if="components" v-bind:components="components"></ComponentList>
-        </div>
-
     </div>
 </template>
 
 <script>
 import { mapState, mapActions } from 'vuex'
 
+
 export default {
+
+  props: [ "things"],
   data() {
     return {
-      scrollerHeight: 300
+      scrollerHeight: 300,
     }
   },
+
   computed: {
     ...mapState({
-      componentTypes: state => state.componentTypes.all,
-      components: state => state.componentTypes.components,
-      editingComponentType : state => state.componentTypes.editingComponentType
+     componentTypes: state => state.componentTypes.all,
+     editingComponentType : state => state.componentTypes.editingComponentType
     })
   },
+
   created () {
     this.getAll();
   },
+
   mounted() {
       window.addEventListener('resize', this.resize);
       //Init
       this.resize()
   },
 
-
   methods: {
-    ...mapActions('componentTypes', {
+//        ...mapActions('componentTypes', {
       getAll: 'getAll',
-      deleteComponentType: 'delete',
-      newComponent: 'newComponent',
-      listComponents: 'listComponents'
-    }),
+//      deleteComponentType: 'delete',
+//      newComponent: 'newComponent'
+//    }),
     resize() {
       this.scrollerHeight = window.innerHeight - this.$refs.scroller.offsetTop - this.$refs.bottombox.offsetHeight;
     }
@@ -93,7 +86,6 @@ export default {
     div.editarea {
         width:75%;
         margin-left:25%;
-        background-color:whitesmoke;
         padding:10px;
         border-top:1px solid grey;
     }
@@ -103,7 +95,7 @@ export default {
     ;
     }
 
-    li.componentType {
+    li.element {
         padding:25px;
         border-bottom:1px solid grey;
         list-style-type: none;
@@ -139,4 +131,10 @@ export default {
         font-weight:bold
     }
 
+    .fpbutton {
+        padding:7px;
+        background-color: #ff33f1;
+        border-radius:5px;
+        font-size:16px;
+    }
 </style>

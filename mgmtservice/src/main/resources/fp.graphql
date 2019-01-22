@@ -8,6 +8,7 @@ type Query {
     getAllUsers: [User]
     login (userName:String password:String) : User
     getAllComponentTypes : [ComponentType]
+    getComponentsByType ( componentType:String): [Component]
 }
 
 
@@ -61,9 +62,18 @@ type ComponentType {
     attributes: [Attribute]
 }
 
+type Component {
+    type: String
+    componentType:String
+    name:String
+    id: String
+    attributes: [Attribute]
+}
+
 type Attribute {
     name:String
     value: String
     type: String
+    owl: String
 }
 

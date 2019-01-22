@@ -1,18 +1,19 @@
 <template >
     <div>
-        <h1><router-link to="/admin">Admin</router-link> > Component Editor > {{ componentType.name}}</h1>
-        <div>{{ componentType.name}}</div>
-        <div class="rightside scrolling" ref="scrollermain" v-bind:style="{ height: this.scrollerHeight+'px'}">
+        <h3>New {{ componentType.name}}</h3>
+        <div class="editor rightside scrolling" ref="scrollermain" v-bind:style="{ height: this.scrollerHeight+'px'}">
 <!--        <em v-if="componentTypes.loading">Loading componentTypes...</em>
         <span v-if="componentTypes.error" class="text-danger">ERROR: {{componentTypes.error}}</span>-->
             <ul class="componentfield" v-if="componentType.attributes">
-                    <li v-for="attribute in componentType.attributes" :key="attribute.name">
-                        <label>{{ attribute.name}}</label>
-                        <input :name="attribute.name"/>
-                    </li>
-                </ul>
+                <li class="editfield" v-for="attribute in componentType.attributes" :key="attribute.name">
+                    <div class="editfieldlabel">{{ attribute.name}}</div>
+                    <input :name="attribute.name"/>
+                </li>
+            </ul>
+            <div class="savebutton">Save</div>
         </div>
     </div>
+
 </template>
 
 <script>
@@ -31,9 +32,7 @@ export default {
     ...mapState({
     })
   },
-  created () {
-    this.getAll();
-  },
+
   mounted() {
       window.addEventListener('resize', this.resize);
       //Init
@@ -42,9 +41,7 @@ export default {
 
   methods: {
     ...mapActions('componentTypes', {
-      getAll: 'getAll',
-      deleteComponentType: 'delete',
-      newComponent: 'newComponent'
+
     }),
     resize() {
       //this.scrollerHeight = window.innerHeight - this.$refs.scrollermain.offsetTop ;
@@ -68,63 +65,34 @@ export default {
     div.scrolling {
         overflow: scroll;
         display: block;
-        height: 200px;
     }
 
-    div.leftside {
-        border-top:1px solid grey;
-        background: #eee;
-        width:25%;
+    div.editfieldlabel {
         float:left;
+        text-align:right;
+        margin-right:5px;
+        min-width:50px;
+        font-size: 16px;
     }
-
-    div.editarea {
-        width:75%;
-        margin-left:25%;
-        background-color:blue;
+    li.editfield {
         padding:10px;
-        border-top:1px solid grey;
-    }
-    ul.picklist {
-        padding:0px;
-        margin:0px;
-    ;
-    }
-
-    li {
-        padding:25px;
-        border-bottom:1px solid grey;
         list-style-type: none;
         font-size:12pt;
     }
 
-    div.bottombar {
-        position:fixed;
-        bottom:0px;
-        height:30px;
-        border-top:1px solid grey;
-        font-size:20pt;
-        line-height:.75;
-        font-weight:bold;
-        width:25%;
-        padding-left:10px;
-        background: #f8f8f8;
+    div.editor {
+        border-bottom:1px solid grey;
     }
 
-    div.bottombutton {
+    div.savebutton {
         float:left;
-        width: 25px;
-        font-size:20pt;
-        line-height:.75;
-        font-weight:bold;
+        padding:5px;
+        margin-left:10px;
+        border-radius: 5px;
+        font-size:12pt;
+        background-color: magenta;
         border-right:1px;
     }
 
-    div.newbutton {
-        float:right;
-        font-size:20pt;
-        line-height:.5;
-        font-weight:bold
-    }
 
 </style>
