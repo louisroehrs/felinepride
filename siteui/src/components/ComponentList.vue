@@ -8,7 +8,7 @@
                 <li class="componententry" v-for="component in components.items" :key="component.id">
                     <ul v-if="component">
                         <li class="componentfield" v-for="attribute in component.attributes" :key="attribute.name">
-                            <input class="componentfieldinput" :name="attribute.name" :value="attribute.value"/>
+                            <span class="smalllabel">{{attribute.name}}</span><br/><input class="componentfieldinput" :name="attribute.name" :value="attribute.value"/>
                         </li>
                     </ul>
                 </li>
@@ -98,8 +98,18 @@ export default {
         list-style-type: none;
         color:white;
     }
+    .smalllabel {
+        margin:0px;
+        font-size: 9px;
+        padding-left:6px;
+        padding-right:6px;
+        background-color: darkgrey;
+    }
 
     input.componentfieldinput {
+        margin: 0px;
+        margin-top: -1px;
+        border: 0px;
         float:left;
         padding:5px;
         list-style-type: none;

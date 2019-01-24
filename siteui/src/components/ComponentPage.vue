@@ -100,11 +100,10 @@ export default {
     ul.picklist {
         padding:0px;
         margin:0px;
-    ;
     }
 
     li.componentType {
-        padding:25px;
+        padding:15px;
         border-bottom:1px solid grey;
         list-style-type: none;
         font-size:12pt;

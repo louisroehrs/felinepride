@@ -1,9 +1,10 @@
 <template >
     <div>
-        <h3>New {{ componentType.name}}</h3>
+        <h3>New {{ componentType.name}} {{ component.name}}</h3>
         <div class="editor rightside scrolling" ref="scrollermain" v-bind:style="{ height: this.scrollerHeight+'px'}">
 <!--        <em v-if="componentTypes.loading">Loading componentTypes...</em>
         <span v-if="componentTypes.error" class="text-danger">ERROR: {{componentTypes.error}}</span>-->
+            <input placeholder="Name" v-model="component.name"/>
             <form id="componentForm" @submit.prevent="handleSubmit">
                 <ul class="componentfield" v-if="componentType.attributes">
                     <li class="editfield" v-for="(attribute,key) in componentType.attributes" :key="attribute.name">
@@ -87,14 +88,14 @@ export default {
         display: block;
     }
 
-    div.editfieldlabel {
+    .editfieldlabel {
         float:left;
         text-align:right;
         margin-right:5px;
         min-width:50px;
         font-size: 16px;
     }
-    li.editfield {
+    .editfield {
         padding:10px;
         list-style-type: none;
         font-size:12pt;
