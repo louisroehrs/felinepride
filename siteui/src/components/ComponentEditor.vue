@@ -4,13 +4,16 @@
         <div class="editor rightside scrolling" ref="scrollermain" v-bind:style="{ height: this.scrollerHeight+'px'}">
 <!--        <em v-if="componentTypes.loading">Loading componentTypes...</em>
         <span v-if="componentTypes.error" class="text-danger">ERROR: {{componentTypes.error}}</span>-->
-            <ul class="componentfield" v-if="componentType.attributes">
-                <li class="editfield" v-for="attribute in componentType.attributes" :key="attribute.name">
-                    <div class="editfieldlabel">{{ attribute.name}}</div>
-                    <input :name="attribute.name"/>
-                </li>
-            </ul>
-            <div class="savebutton">Save</div>
+            <form id="componentForm" @submit.prevent="handleSubmit">
+                <ul class="componentfield" v-if="componentType.attributes">
+                    <li class="editfield" v-for="(attribute,key) in componentType.attributes" :key="attribute.name">
+                        <div class="editfieldlabel">{{ attribute.name }}</div>
+                        <input v-model="component.attributes[attribute.name]"/>
+                    </li>
+                </ul>
+                <div class="savebutton"  @click="saveComponent(component,componentType)">Save</div>
+            </form>
+
         </div>
     </div>
 
@@ -23,9 +26,11 @@ export default {
 
   props: ['componentType'],
 
+
   data() {
     return {
-      scrollerHeight: 300
+      scrollerHeight: 300,
+      component: { name:"",attributes:{}}
     }
   },
   computed: {
@@ -40,12 +45,27 @@ export default {
   },
 
   methods: {
-    ...mapActions('componentTypes', {
+    ...mapActions('componentTypes', ['storeComponent'])
+    ,
+    saveComponent(component,componentType) {
+      var newComponentRequestInput = {};
+      newComponentRequestInput.name = this.component.name;
+      newComponentRequestInput.type = "component";
+      newComponentRequestInput.componentType = componentType.name;
+      newComponentRequestInput.attributes = [];
 
-    }),
+      for (var attribute in componentType.attributes) {
+        var newAttribute = {};
+        newAttribute.name = componentType.attributes[attribute].name;
+        newAttribute.value = this.component.attributes[newAttribute.name];
+        newComponentRequestInput.attributes.push(newAttribute);
+      }
+      this.storeComponent( newComponentRequestInput);
+
+    },
     resize() {
       //this.scrollerHeight = window.innerHeight - this.$refs.scrollermain.offsetTop ;
-    }
+    },
 
   },
 
@@ -60,7 +80,7 @@ export default {
         box-sizing: border-box;
 
     }
-    h1 { padding: 10px;}
+    h2 { padding-left: 10px;}
 
     div.scrolling {
         overflow: scroll;
@@ -90,8 +110,10 @@ export default {
         margin-left:10px;
         border-radius: 5px;
         font-size:12pt;
-        background-color: magenta;
-        border-right:1px;
+        color:black;
+        background-color: lightgrey;
+        border:1px solid grey;
+
     }
 
 

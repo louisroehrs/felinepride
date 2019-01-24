@@ -4,7 +4,7 @@ const axios = require('axios');
 
 export const graphqlService = {
   graphQuery: doGraphQuery       // schema query, parameters, fields
-//  , graphMutation: doGraphMutation   // schema query, action [create|update|delete], jsonobject, schema objectType, fields to bring back
+ , graphMutation: doGraphMutation   // schema query, action [create|update|delete], jsonobject, schema objectType, fields to bring back
 };
 
 
@@ -114,29 +114,32 @@ function graphqlMutation(query, action, objectType, fields) {
 }
 
 // make into doGraphMutation at some point
-function gStore(mutation, object, fields) {
+function doGraphMutation(mutation, action, object, objectType, fields) {
     const requestMutation =
-          graphqlMutation(mutation,
-                          "create",
-                          object, // { username, password}  expands to json object.
-                          fields //  " { id  type  userName emailAddress}"  string
-                         );
-
+          graphqlMutationRequest(
+            mutation,
+            action, // "create",
+            { input: object}, // { username, password}  expands to json object.
+            objectType,
+            fields //  " { id  type  userName emailAddress}"  string
+          );
+/*
     const requestOptions = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(user)
+        body: JSON.stringify(object)
     };
-
+*/
   return axios(requestMutation)
     .then(handleResponse)
-    .then(response => {return response.data.data[query]});;
+    .then(response => {
+      return response.data.data[mutation]});
 
 }
 
 function doGraphQuery(query,filters,fields) {
     const requestQuery =
-          graphqlQueryRequest(query,  // type of object
+          graphqlQueryRequest(query,  // type of objectf
                        filters, // { username, password}  expands to json object.
                        fields //  " { id  type  userName emailAddress}"  string
                       );

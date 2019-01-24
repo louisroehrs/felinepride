@@ -6,6 +6,8 @@ const state = {
   components:{}
 };
 
+const done = "done";
+
 const actions = {
   getAll({ commit }) {
     commit('getAllCompTypesRequest');
@@ -39,6 +41,26 @@ const actions = {
     // something about assign this component typ  is this.
   },
 */
+
+  storeComponent({commit}, component) {
+    commit('saveComponentRequest', component)
+    var keepComponent = component;
+    component.type = 'component';
+    graphqlService.graphMutation('saveNewComponent', 'create', component, "NewComponentRequestInput", "{id name}")
+      .then(
+        component => {
+          commit('saveComponentSuccess', keepComponent);
+          setTimeout(() => {
+      //      dispatch('alert/success', 'Saved', {root: true})
+          })
+        },
+        error => {
+          commit('saveComponentFailure', error);
+   //       dispatch('alert/error', error, {root: true});
+        }
+      );
+  },
+
   delete({ commit }, id) {
     commit('deleteRequest', id);
 
@@ -77,6 +99,25 @@ const mutations = {
     state.components = { error};
   },
 
+  // Save/ update a component.
+
+  saveComponentRequest(state,component) {
+    state.components = { items: state.components.items, saving: true};
+  },
+  saveComponentSuccess(state,component) {
+    if (state.editingComponentType.name == component.componentType) {
+      if (state.components.items) {
+        state.components.items.push(component);
+      }
+      state.components.saving = done;
+      state.components.componentType = state.editingComponentType;
+    } else {
+      state.components = {items: state.components.items, saving: done};
+    }
+  },
+  saveComponentFailure(state,error) {
+    state.components.status = { items: state.components.items, error: error};
+  },
 
   deleteCompRequest(state, id) {
     // add 'deleting:true' property to user being deleted

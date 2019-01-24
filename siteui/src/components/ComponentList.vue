@@ -8,7 +8,7 @@
                 <li class="componententry" v-for="component in components.items" :key="component.id">
                     <ul v-if="component">
                         <li class="componentfield" v-for="attribute in component.attributes" :key="attribute.name">
-                            <input :name="attribute.name" :value="attribute.value"/>
+                            <input class="componentfieldinput" :name="attribute.name" :value="attribute.value"/>
                         </li>
                     </ul>
                 </li>
@@ -63,7 +63,7 @@ export default {
         box-sizing: border-box;
 
     }
-    h1 { padding: 10px;}
+    h2 { padding-left: 10px;}
 
     div.scrolling {
         overflow: scroll;
@@ -89,12 +89,23 @@ export default {
         padding:0px;
         margin:0px;
     }
-
+    li.componententry {
+        clear:both;
+    }
     li.componentfield {
         float:left;
         padding:5px;
         list-style-type: none;
+        color:white;
+    }
+
+    input.componentfieldinput {
+        float:left;
+        padding:5px;
+        list-style-type: none;
         font-size:12pt;
+        background-color:darkgrey;
+        color:white;
     }
 
     div.bottombar {

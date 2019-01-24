@@ -1,6 +1,6 @@
 <template> 
     <div>
-        <h1><router-link to="/admin">Admin</router-link> > Component Editor</h1>
+        <h2><router-link to="/admin">Admin</router-link> > Component Editor</h2>
         <div></div>
         <div class="leftside scrolling" ref="scroller" v-bind:style="{ height: this.scrollerHeight+'px'}">
 <!--        <em v-if="componentTypes.loading">Loading componentTypes...</em>
