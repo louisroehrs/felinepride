@@ -23,6 +23,10 @@ const actions = {
     commit('selectEditor', editingComponentType)
   },
 
+  closeEditor({commit}) {
+    commit('closeEditor')
+  },
+
   listComponents({commit}, componentType){
     commit('getComponentsByTypeRequest', componentType);
 
@@ -76,6 +80,12 @@ const mutations = {
 
   selectEditor (state, editingComponentType) {
     state.editingComponentType = editingComponentType;
+    window.setTimeout("window.dispatchEvent(new Event('resize'))",100);
+  },
+
+  closeEditor (state) {
+    state.editingComponentType = null;
+    window.setTimeout("window.dispatchEvent(new Event('resize'))",100);
   },
 
   getAllCompTypesRequest(state) {
@@ -83,6 +93,7 @@ const mutations = {
   },
   getAllCompTypesSuccess(state, componentTypes) {
     state.all = { items: componentTypes };
+    window.setTimeout("window.dispatchEvent(new Event('resize'))",100);
   },
   getAllCompTypesFailure(state, error) {
     state.all = { error };
@@ -94,6 +105,8 @@ const mutations = {
   },
   getComponentsByTypeSuccess(state, components) {
     state.components = { items: components.list, componentType: components.type};
+    window.setTimeout("window.dispatchEvent(new Event('resize'))",100);
+
   },
   getComponentsByTypeFailure(state, error) {
     state.components = { error};

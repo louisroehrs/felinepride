@@ -1,18 +1,25 @@
 <template >
     <div>
-        <h3>New {{ componentType.name}} {{ component.name}}</h3>
+        <div class="close" @click="closeEditor()">X</div>
+        <h3 class="pagename" >New {{ componentType.name}} {{ component.name}}</h3>
         <div class="editor rightside scrolling" ref="scrollermain" v-bind:style="{ height: this.scrollerHeight+'px'}">
 <!--        <em v-if="componentTypes.loading">Loading componentTypes...</em>
         <span v-if="componentTypes.error" class="text-danger">ERROR: {{componentTypes.error}}</span>-->
-            <input placeholder="Name" v-model="component.name"/>
+
             <form id="componentForm" @submit.prevent="handleSubmit">
+                <ul>
+                    <li  class="editfield">
+                        <div class="editfieldlabel">name</div>
+                        <input class="newfieldinput" v-model="component.name"/>
+                    </li>
+                </ul>
                 <ul class="componentfield" v-if="componentType.attributes">
                     <li class="editfield" v-for="(attribute,key) in componentType.attributes" :key="attribute.name">
                         <div class="editfieldlabel">{{ attribute.name }}</div>
-                        <input v-model="component.attributes[attribute.name]"/>
+                        <input class="newfieldinput" v-model="component.attributes[attribute.name]"/>
                     </li>
                 </ul>
-                <div class="savebutton"  @click="saveComponent(component,componentType)">Save</div>
+                <div class="submitbutton"  @click="saveComponent(component,componentType)">Save</div>
             </form>
 
         </div>
@@ -40,13 +47,13 @@ export default {
   },
 
   mounted() {
-      window.addEventListener('resize', this.resize);
+      //window.addEventListener('resize', this.resize);
       //Init
-      this.resize()
+      //this.resize()
   },
 
   methods: {
-    ...mapActions('componentTypes', ['storeComponent'])
+    ...mapActions('componentTypes', ['storeComponent','closeEditor'])
     ,
     saveComponent(component,componentType) {
       var newComponentRequestInput = {};
@@ -81,41 +88,70 @@ export default {
         box-sizing: border-box;
 
     }
-    h2 { padding-left: 10px;}
-
-    div.scrolling {
-        overflow: scroll;
-        display: block;
+    h3 {
+        margin-left: 5px;
+        margin-top:0px;
     }
+
 
     .editfieldlabel {
         float:left;
-        text-align:right;
+        margin-top:9px;
         margin-right:5px;
         min-width:50px;
         font-size: 16px;
+        color:rgba(255,255,255,0.50);
     }
     .editfield {
-        padding:10px;
+        margin: 0px;
+        border: 0px;
+        float: left;
+        padding: 5px;
+        font-size: 12pt;
+        background-color: black;
+        color: white;
         list-style-type: none;
-        font-size:12pt;
     }
 
-    div.editor {
+    .newfieldinput {
+        background-color: black;
+        color:white;
+        font-size:16pt;
+    }
+
+    .editor {
         border-bottom:1px solid grey;
     }
 
-    div.savebutton {
+    .submitbutton {
         float:left;
         padding:5px;
-        margin-left:10px;
+        margin:4px;
         border-radius: 5px;
         font-size:12pt;
-        color:black;
-        background-color: lightgrey;
+        color:greenyellow;
         border:1px solid grey;
-
     }
 
+    .submitbutton:hover {
+        background-color: greenyellow;
+        color:black;
+    }
+
+    .pagename {
+        color:#eee;
+    }
+
+    .close, close:hover {
+        border: 1px solid transparent;
+        border-radius: 5px;
+        padding:5px;
+        float:right;
+        color:white;
+        font-size:16px;
+    }
+    .close:hover {
+        border-color:grey;
+    }
 
 </style>

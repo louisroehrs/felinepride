@@ -56,7 +56,8 @@ export default {
       getAll: 'getAll',
       deleteComponentType: 'delete',
       newComponent: 'newComponent',
-      listComponents: 'listComponents'
+      listComponents: 'listComponents',
+      closeEditor: 'closeEditor'
     }),
     resize() {
       this.scrollerHeight = window.innerHeight - this.$refs.scroller.offsetTop - this.$refs.bottombox.offsetHeight;
@@ -73,30 +74,24 @@ export default {
     body, html, div, ul , li {margin:0;padding:0;
         font: 12px "IBM Plex Sans";
         box-sizing: border-box;
+        text-shadow: none;
+        color:black;
+    }
 
+    a {
+        color: black;
     }
     h1 { padding: 10px;}
 
-    div.scrolling {
-        overflow: scroll;
-        display: block;
-        height: 200px;
-    }
 
     div.leftside {
         border-top:1px solid grey;
         background: #eee;
-        width:25%;
+        width:15%;
         float:left;
     }
 
-    div.editarea {
-        width:75%;
-        margin-left:25%;
-        background-color:whitesmoke;
-        padding:10px;
-        border-top:1px solid grey;
-    }
+
     ul.picklist {
         padding:0px;
         margin:0px;
@@ -104,7 +99,7 @@ export default {
 
     li.componentType {
         padding:15px;
-        border-bottom:1px solid grey;
+        border-bottom:1px solid #8b8b8b;
         list-style-type: none;
         font-size:12pt;
     }
@@ -113,11 +108,11 @@ export default {
         position:fixed;
         bottom:0px;
         height:30px;
-        border-top:1px solid grey;
+        border-top:1px solid #454545;
         font-size:20pt;
         line-height:.75;
         font-weight:bold;
-        width:25%;
+        width:15%;
         padding-left:10px;
         background: #f8f8f8;
     }
@@ -129,6 +124,14 @@ export default {
         line-height:.75;
         font-weight:bold;
         border-right:1px;
+    }
+
+    div.editarea {
+        width:85%;
+        margin-left:15%;
+        background-color:rgb(69, 69, 89);
+        padding:10px;
+        border-top:1px solid grey;
     }
 
     div.newbutton {

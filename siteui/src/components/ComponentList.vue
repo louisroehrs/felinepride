@@ -1,16 +1,46 @@
 <template >
     <div>
-        <div v-if="components.componentType">List of {{components.componentType.name}}</div>
+        <h3 class="pagename" v-if="components.componentType">List of {{components.componentType.name}}</h3>
         <div class="rightside scrolling" ref="scrollermain" v-bind:style="{ height: this.scrollerHeight+'px'}">
 <!--        <em v-if="componentTypes.loading">Loading componentTypes...</em>
         <span v-if="componentTypes.error" class="text-danger">ERROR: {{componentTypes.error}}</span>-->
             <ul  v-if="components.items">
+                <!--
                 <li class="componententry" v-for="component in components.items" :key="component.id">
                     <ul v-if="component">
+                        <li class="componentfield"  >
+                            <span class="smalllabel">name</span><br/><input class="componentfieldinput" name="name" :value="component.name"/>
+                        </li>
                         <li class="componentfield" v-for="attribute in component.attributes" :key="attribute.name">
-                            <span class="smalllabel">{{attribute.name}}</span><br/><input class="componentfieldinput" :name="attribute.name" :value="attribute.value"/>
+                        <span class="smalllabel">{{attribute.name}}</span><br/><input class="componentfieldinput" :name="attribute.name" :value="attribute.value"/>
                         </li>
                     </ul>
+                </li> -->
+                <li class="componententry" v-for="component in components.items" :key="component.id" >
+                    <div v-if="component">
+                        <ul>
+                            <li class="editfield" >
+                                <div class="smalllabel">name</div>
+                                <input class="componentfieldinput" name="name" :value="component.name"/>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="editfield" v-for="attribute in component.attributes" :key="attribute.name">
+                                <div class="smalllabel">{{attribute.name}}</div>
+                                <input class="componentfieldinput" :name="attribute.name" :value="attribute.value"/>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="buttonfield" >
+                                <div class="deletebutton">X</div>
+                            </li>
+                            <li class="buttonfield" >
+                                <div class="savebutton">O</div>
+                            </li>
+                        </ul>
+
+                    </div>
+
                 </li>
             </ul>
         </div>
@@ -47,7 +77,7 @@ export default {
 
     }),
     resize() {
-      //this.scrollerHeight = window.innerHeight - this.$refs.scrollermain.offsetTop ;
+      this.scrollerHeight = window.innerHeight - this.$refs.scrollermain.offsetTop-10 ;
     }
 
   },
@@ -61,90 +91,82 @@ export default {
     body, html, div, ul , li {margin:0;padding:0;
         font: 12px "IBM Plex Sans";
         box-sizing: border-box;
-
+        background-image: none;
     }
+
     h2 { padding-left: 10px;}
 
     div.scrolling {
-        overflow: scroll;
-        display: block;
         height: 200px;
+        white-space: nowrap;
     }
 
-    div.leftside {
-        border-top:1px solid grey;
-        background: #eee;
-        width:25%;
-        float:left;
-    }
-
-    div.editarea {
-        width:75%;
-        margin-left:25%;
-        background-color:whitesmoke;
-        padding:10px;
-        border-top:1px solid grey;
-    }
-    ul.picklist {
-        padding:0px;
-        margin:0px;
-    }
     li.componententry {
         clear:both;
     }
-    li.componentfield {
-        float:left;
-        padding:5px;
-        list-style-type: none;
-        color:white;
-    }
     .smalllabel {
-        margin:0px;
-        font-size: 9px;
-        padding-left:6px;
-        padding-right:6px;
-        background-color: darkgrey;
+        float: left;
+        margin-top:5px;
+        margin-right: 5px;
+        min-width: 50px;
+        font-size: 16px;
+        color: rgba(255, 255, 255, 0.50);
     }
 
     input.componentfieldinput {
-        margin: 0px;
-        margin-top: -1px;
+        margin:0px;
         border: 0px;
         float:left;
         padding:5px;
-        list-style-type: none;
         font-size:12pt;
-        background-color:darkgrey;
+        background-color:black;
+        color:white;
+    }
+    .pagename {
+        color:#eee;
+        font-size:16px;
+    }
+
+    .editfield {
+        margin: 0px;
+        border: 0px;
+        float: left;
+        padding: 5px;
+        font-size: 16pt;
+        background-color: black;
+        color: white;
+        list-style-type: none;
+    }
+
+    .buttonfield {
+        margin: 0px;
+        border: 0px;
+        float: left;
+        padding: 5px;
+        color: white;
+        list-style-type: none;
+    }
+
+    .deletebutton,.savebutton {
+        border-radius:5px;
+        padding:5px;
+        font-size:16px;
+    }
+    .deletebutton:hover {
+        background-color: red;
         color:white;
     }
 
-    div.bottombar {
-        position:fixed;
-        bottom:0px;
-        height:30px;
-        border-top:1px solid grey;
-        font-size:20pt;
-        line-height:.75;
-        font-weight:bold;
-        width:25%;
-        padding-left:10px;
-        background: #f8f8f8;
+    .deletebutton {
+        color: red;
     }
 
-    div.bottombutton {
-        float:left;
-        width: 25px;
-        font-size:20pt;
-        line-height:.75;
-        font-weight:bold;
-        border-right:1px;
+    .savebutton:hover {
+        background-color: greenyellow;
+        color:white;
     }
-
-    div.newbutton {
-        float:right;
-        font-size:20pt;
-        line-height:.5;
-        font-weight:bold
+    .savebutton {
+        color:greenyellow;
     }
 
 </style>

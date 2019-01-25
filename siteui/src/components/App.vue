@@ -28,3 +28,26 @@ export default {
   } 
 };
 </script>
+<style>
+
+    div.scrolling {
+        overflow: scroll;
+        display: block;
+        height: 200px;
+    }
+
+
+    html {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    body {
+        height: 100%;
+        padding: 0;
+        overflow: auto;
+        margin: 0;
+        -webkit-overflow-scrolling: touch;
+    }
+</style>
