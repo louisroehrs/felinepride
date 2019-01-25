@@ -16,7 +16,8 @@
                         </li>
                     </ul>
                 </li> -->
-                <li class="componententry" v-for="component in components.items" :key="component.id" >
+                <li class="componententry" v-for="component in components.items" :key="component.id"
+                    v-bind:class="{ deleting: component.deleting }">
                     <div v-if="component">
                         <ul>
                             <li class="editfield" >
@@ -32,7 +33,7 @@
                         </ul>
                         <ul>
                             <li class="buttonfield" >
-                                <div class="deletebutton">X</div>
+                                <div @click="deleteComponent(component)" class="deletebutton">X</div>
                             </li>
                             <li class="buttonfield" >
                                 <div class="savebutton">O</div>
@@ -73,9 +74,7 @@ export default {
   },
 
   methods: {
-    ...mapActions('componentTypes', {
-
-    }),
+    ...mapActions('componentTypes', ['deleteComponent']),
     resize() {
       this.scrollerHeight = window.innerHeight - this.$refs.scrollermain.offsetTop-10 ;
     }
@@ -159,6 +158,10 @@ export default {
 
     .deletebutton {
         color: red;
+    }
+
+    .deleting {
+        background-color: burlywood;
     }
 
     .savebutton:hover {

@@ -65,13 +65,13 @@ const actions = {
       );
   },
 
-  delete({ commit }, id) {
-    commit('deleteRequest', id);
+  deleteComponent({ commit }, component) {
+    commit('deleteCompRequest', component);
 
-    graphqlService.delete(id)
+    graphqlService.graphMutation('deleteComponent','delete', {id: component.id}, "DeleteComponentRequestInput", "{id}")
       .then(
-        componentType => commit('deleteSuccess', id),
-        error => commit('deleteFailure', { id, error: error.toString() })
+        component => commit('deleteCompSuccess', component.id),
+        error => commit('deleteCompFailure', {id:component.id, error: error.toString() })
       );
   }
 };
@@ -134,26 +134,26 @@ const mutations = {
 
   deleteCompRequest(state, id) {
     // add 'deleting:true' property to user being deleted
-    state.all.items = state.all.items.map(componentType =>
-        componentType.id === id
-          ? { ...componentType, deleting: true }
-          : componentType
+    state.components.items = state.components.items.map(component =>
+        component.id === id
+          ? { ...component, deleting: true }
+          : component
     )
   },
   deleteCompSuccess(state, id) {
     // remove deleted user from state
-    state.all.items = state.all.items.filter(componentType => componentType.id !== id)
+    state.components.items = state.components.items.filter(component => component.id !== id)
   },
   deleteCompFailure(state, { id, error }) {
     // remove 'deleting:true' property and add 'deleteError:[error]' property to user
-    state.all.items = state.items.map(componentType => {
-            if (componentType.id === id) {
-              // make copy of user without 'deleting:true' property
-              const { deleting, ...componentTypeCopy } = componentType;
-              // return copy of user with 'deleteError:[error]' property
-              return { ...componentTypeCopy, deleteError: error };
+    state.components.items = state.components.items.map(component => {
+            if (component.id === id) {
+              // make copy of component without 'deleting:true' property
+              const { deleting, ...componentCopy } = component;
+              // return copy of component with 'deleteError:[error]' property
+              return { ...component, deleteError: error };
             }
-      return componentType;
+      return component;
     })
   }
 };

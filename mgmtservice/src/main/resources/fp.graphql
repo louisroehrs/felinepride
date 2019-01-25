@@ -17,6 +17,7 @@ type Mutation {
     deleteUser( delete: DeleteRequestInput!) :User
     updateUser( update: UpdateUserRequestInput! ) :User
     saveNewComponent(create: NewComponentRequestInput!) : Component
+    deleteComponent(delete: DeleteComponentRequestInput!): Component
 }
 
 input RegisterUserRequestInput {
@@ -42,6 +43,10 @@ input NewComponentRequestInput {
     type:String
     componentType:String
     attributes: [AttributeInput]
+}
+
+input DeleteComponentRequestInput {
+    id: String
 }
 
 type Position {
@@ -86,7 +91,7 @@ type Attribute {
 }
 
 input AttributeInput {
-    name:String
+    name: String
     value: String
     type: String
     owl: String
