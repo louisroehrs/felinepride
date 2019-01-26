@@ -10,7 +10,6 @@
                         <a @click="listComponents(componentType)">{{ componentType.name}}</a>
                         <span v-if="componentType.deleting"><em> - Deleting...</em></span>
                         <span v-else-if="componentType.deleteError" class="text-danger"> - ERROR: {{componentType.deleteError}}</span>
-                    <!--    <span v-else> - <a @click="deleteComponentType(componentType.id)" class="text-danger">Delete</a></span> -->
                         <div class="newbutton"><a @click="newComponent(componentType)" class="text-danger">+</a></div>
                     </li>
                 </ul>
@@ -81,7 +80,7 @@ export default {
     a {
         color: black;
     }
-    h1 { padding: 10px;}
+    h2 { padding-left: 10px;}
 
 
     div.leftside {

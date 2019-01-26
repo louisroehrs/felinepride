@@ -4,8 +4,8 @@
         <h3 class="pagename" v-if="components.componentType"><span class="toggleedit">Edit <input  type="checkbox" v-model="toggleedit"/></span>List of {{components.componentType.name}}</h3>
 
         <div class="rightside scrolling" ref="scrollermain" v-bind:style="{ height: this.scrollerHeight+'px'}">
-<!--        <em v-if="componentTypes.loading">Loading componentTypes...</em>
-        <span v-if="componentTypes.error" class="text-danger">ERROR: {{componentTypes.error}}</span>-->
+            <em v-if="components.loading">Loading component...</em>
+            <span v-if="components.error" class="text-danger">ERROR: {{components.error}}</span>
             <ul  v-if="components.items">
                 <li class="componententry" v-for="component in components.items" :key="component.id">
                     <div v-if="component">
@@ -94,8 +94,9 @@ export default {
         background-image: none;
     }
 
-    h2 { padding-left: 10px;}
-
+    .pagename {
+        margin:1px;
+    }
     div.scrolling {
         height: 200px;
         white-space: nowrap;
