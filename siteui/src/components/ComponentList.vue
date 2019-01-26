@@ -1,48 +1,48 @@
 <template >
     <div>
-        <h3 class="pagename" v-if="components.componentType">List of {{components.componentType.name}}</h3>
+
+        <h3 class="pagename" v-if="components.componentType"><span class="toggleedit">Edit <input  type="checkbox" v-model="toggleedit"/></span>List of {{components.componentType.name}}</h3>
+
         <div class="rightside scrolling" ref="scrollermain" v-bind:style="{ height: this.scrollerHeight+'px'}">
 <!--        <em v-if="componentTypes.loading">Loading componentTypes...</em>
         <span v-if="componentTypes.error" class="text-danger">ERROR: {{componentTypes.error}}</span>-->
             <ul  v-if="components.items">
-                <!--
                 <li class="componententry" v-for="component in components.items" :key="component.id">
-                    <ul v-if="component">
-                        <li class="componentfield"  >
-                            <span class="smalllabel">name</span><br/><input class="componentfieldinput" name="name" :value="component.name"/>
-                        </li>
-                        <li class="componentfield" v-for="attribute in component.attributes" :key="attribute.name">
-                        <span class="smalllabel">{{attribute.name}}</span><br/><input class="componentfieldinput" :name="attribute.name" :value="attribute.value"/>
-                        </li>
-                    </ul>
-                </li> -->
-                <li class="componententry" v-for="component in components.items" :key="component.id"
-                    v-bind:class="{ deleting: component.deleting }">
                     <div v-if="component">
+                        <div class="row" v-bind:class="{ deleting: component.deleting,updating: component.updating , changed: component.changed }"></div>
                         <ul>
                             <li class="editfield" >
                                 <div class="smalllabel">name</div>
-                                <input class="componentfieldinput" name="name" :value="component.name"/>
+                                <input class="componentfieldinput"
+                                       name="name"
+                                       v-model="component.name"
+                                       v-bind:disabled="!toggleedit"
+                                       @input="component.changed=true"
+                                />
                             </li>
                         </ul>
                         <ul>
                             <li class="editfield" v-for="attribute in component.attributes" :key="attribute.name">
                                 <div class="smalllabel">{{attribute.name}}</div>
-                                <input class="componentfieldinput" :name="attribute.name" :value="attribute.value"/>
+                                <input class="componentfieldinput"
+                                       :name="attribute.name"
+                                       v-model="attribute.value"
+                                       v-bind:disabled="!toggleedit"
+                                       @input="component.changed=true"
+                                />
                             </li>
                         </ul>
-                        <ul>
+                        <ul v-if="toggleedit">
                             <li class="buttonfield" >
                                 <div @click="deleteComponent(component)" class="deletebutton">X</div>
                             </li>
                             <li class="buttonfield" >
-                                <div class="savebutton">O</div>
+                                <div @click="updateComponent({component:component,componentType:components.componentType})" class="updatebutton">O</div>
                             </li>
                         </ul>
-
                     </div>
-
                 </li>
+
             </ul>
         </div>
     </div>
@@ -58,7 +58,8 @@ export default {
 
   data() {
     return {
-      scrollerHeight: 300
+      scrollerHeight: 300,
+      toggleedit:false
     }
   },
   computed: {
@@ -74,7 +75,7 @@ export default {
   },
 
   methods: {
-    ...mapActions('componentTypes', ['deleteComponent']),
+    ...mapActions('componentTypes', ['deleteComponent','updateComponent']),
     resize() {
       this.scrollerHeight = window.innerHeight - this.$refs.scrollermain.offsetTop-10 ;
     }
@@ -118,7 +119,7 @@ export default {
         float:left;
         padding:5px;
         font-size:12pt;
-        background-color:black;
+        background-color:#111;
         color:white;
     }
     .pagename {
@@ -141,12 +142,12 @@ export default {
         margin: 0px;
         border: 0px;
         float: left;
-        padding: 5px;
+        padding-left: 5px;
         color: white;
         list-style-type: none;
     }
 
-    .deletebutton,.savebutton {
+    .deletebutton,.updatebutton {
         border-radius:5px;
         padding:5px;
         font-size:16px;
@@ -163,13 +164,31 @@ export default {
     .deleting {
         background-color: burlywood;
     }
-
-    .savebutton:hover {
+    .updating {
+        background-color: blue;
+    }
+    .changed {
+        background-color: greenyellow;
+    }
+    .updatebutton:hover {
         background-color: greenyellow;
         color:white;
     }
-    .savebutton {
+    .updatebutton {
         color:greenyellow;
+    }
+
+    .row {
+        height:2px;
+    }
+    .toggleedit {
+        float:right;
+    }
+    input[disabled] {
+        color:white;
+        opacity:1;
+        -webkit-text-fill-color:#ffffff;
+        background-color: transparent;
     }
 
 </style>

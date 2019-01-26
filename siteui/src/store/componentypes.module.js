@@ -55,12 +55,34 @@ const actions = {
         component => {
           commit('saveComponentSuccess', keepComponent);
           setTimeout(() => {
-      //      dispatch('alert/success', 'Saved', {root: true})
+            //      dispatch('alert/success', 'Saved', {root: true})
           })
         },
         error => {
           commit('saveComponentFailure', error);
-   //       dispatch('alert/error', error, {root: true});
+          //       dispatch('alert/error', error, {root: true});
+        }
+      );
+  },
+
+
+  updateComponent({commit}, updateRequest) {
+    commit('updateComponentRequest', updateRequest);
+    var component = updateRequest.component;
+    delete(component.changed);
+    var keepComponent = component;
+    component.type = 'component';
+    graphqlService.graphMutation('updateComponent', 'update', component, "UpdateComponentRequestInput", "{id name componentType}")
+      .then(
+        component => {
+          commit('updateComponentSuccess', keepComponent);
+          setTimeout(() => {
+            //      dispatch('alert/success', 'Saved', {root: true})
+          })
+        },
+        error => {
+          commit('updateComponentFailure', error);
+          //       dispatch('alert/error', error, {root: true});
         }
       );
   },
@@ -128,8 +150,39 @@ const mutations = {
       state.components = {items: state.components.items, saving: done};
     }
   },
+
   saveComponentFailure(state,error) {
     state.components.status = { items: state.components.items, error: error};
+  },
+
+  // TODO
+  updateComponentRequest(state,updateRequest) {
+    state.components = { items: state.components.items, updating: true, componentType: updateRequest.componentType};
+    state.components.items = state.components.items.map(component =>
+      component.id === updateRequest.component.id
+        ? { ...component, updating: true }
+        : component
+    )
+  },
+  // TODO
+  updateComponentFailure(state,error) {
+    state.components.status = { items: state.components.items, error: error};
+  },
+  // TODO
+  updateComponentSuccess(state,component) {
+    if (state.components.componentType.name == component.componentType) {
+      if (state.components.items) {
+        for (let [index,statecomponent] of state.components.items.entries()) {
+          if (statecomponent.id == component.id ) {
+            state.components.items.splice(index,1,{...component, changed:false})
+
+          }
+        }
+      }
+      state.components.updating = done;
+    } else {
+      state.components = {items: state.components.items, updating: done};
+    }
   },
 
   deleteCompRequest(state, id) {

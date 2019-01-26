@@ -18,6 +18,7 @@ type Mutation {
     updateUser( update: UpdateUserRequestInput! ) :User
     saveNewComponent(create: NewComponentRequestInput!) : Component
     deleteComponent(delete: DeleteComponentRequestInput!): Component
+    updateComponent(update: UpdateComponentRequestInput!): Component
 }
 
 input RegisterUserRequestInput {
@@ -38,6 +39,14 @@ input UpdateUserRequestInput {
 }
 
 input NewComponentRequestInput {
+    id: String
+    name:String
+    type:String
+    componentType:String
+    attributes: [AttributeInput]
+}
+
+input UpdateComponentRequestInput {
     id: String
     name:String
     type:String
