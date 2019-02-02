@@ -1,7 +1,7 @@
 <template >
     <div>
 
-        <h3 class="pagename" v-if="components.componentType"><span class="toggleedit">Edit <input  type="checkbox" v-model="toggleedit"/></span>List of {{components.componentType.name}}</h3>
+        <h3 class="pagename" v-if="components.componentType"><label v-bind:class="{ toggleediton: toggleedit, toggleeditoff:!toggleedit}">Edit <input type="checkbox" v-model="toggleedit"/></label>List of {{components.componentType.name}}</h3>
 
         <div class="rightside scrolling" ref="scrollermain" v-bind:style="{ height: this.scrollerHeight+'px'}">
             <em v-if="components.loading">Loading component...</em>
@@ -18,17 +18,19 @@
                                        v-model="component.name"
                                        v-bind:disabled="!toggleedit"
                                        @input="component.changed=true"
+                                       autocomplete="off"
                                 />
                             </li>
                         </ul>
                         <ul>
-                            <li class="editfield" v-for="attribute in component.attributes" :key="attribute.name">
-                                <div class="smalllabel">{{attribute.name}}</div>
+                            <li class="editfield" v-for="(attribute, key, index) in component.attributes" :key="attribute.name">
+                                <div class="smalllabel">{{attribute.name}} {{components.componentType.attributes[index]}}</div>
                                 <input class="componentfieldinput"
                                        :name="attribute.name"
                                        v-model="attribute.value"
                                        v-bind:disabled="!toggleedit"
                                        @input="component.changed=true"
+                                       autocomplete="off"
                                 />
                             </li>
                         </ul>
@@ -88,11 +90,6 @@ export default {
 };
 </script>
 <style>
-    body, html, div, ul , li {margin:0;padding:0;
-        font: 12px "IBM Plex Sans";
-        box-sizing: border-box;
-        background-image: none;
-    }
 
     .pagename {
         margin:1px;
@@ -126,6 +123,7 @@ export default {
     .pagename {
         color:#eee;
         font-size:16px;
+        margin-bottom:7px;
     }
 
     .editfield {
@@ -173,7 +171,7 @@ export default {
     }
     .updatebutton:hover {
         background-color: greenyellow;
-        color:white;
+        color:black;
     }
     .updatebutton {
         color:greenyellow;
@@ -182,9 +180,36 @@ export default {
     .row {
         height:2px;
     }
-    .toggleedit {
+    .toggleediton, .toggleeditoff {
         float:right;
+        display: block;
+        position: relative;
+        padding: 3px;
+        padding-left:5px;
+        cursor: pointer;
+        font-size: 16px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        border-radius:5px;
+        color:white;
     }
+
+    .toggleediton {
+        background-color: greenyellow;
+        color:black;
+    }
+
+    .toggleediton input, .toggleeditoff input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+
     input[disabled] {
         color:white;
         opacity:1;

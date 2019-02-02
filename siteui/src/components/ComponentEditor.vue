@@ -1,5 +1,6 @@
 <template >
     <div>
+
         <div class="close" @click="closeEditor()">X</div>
         <h3 class="pagename" >New {{ componentType.name}} {{ component.name}}</h3>
         <div class="editor rightside scrolling" ref="scrollermain" v-bind:style="{ height: this.scrollerHeight+'px'}">
@@ -10,13 +11,26 @@
                 <ul>
                     <li  class="editfield">
                         <div class="editfieldlabel">name</div>
-                        <input class="newfieldinput" v-model="component.name"/>
+                        <input class="newfieldinput"
+                               v-model="component.name"
+                               autocomplete="off" />
                     </li>
                 </ul>
                 <ul class="componentfield" v-if="componentType.attributes">
                     <li class="editfield" v-for="(attribute,key) in componentType.attributes" :key="attribute.name">
                         <div class="editfieldlabel">{{ attribute.name }}</div>
-                        <input class="newfieldinput" v-model="component.attributes[attribute.name]"/>
+                        <input v-if="attribute.editor == 'string'" class="newfieldinput"
+                               v-model="component.attributes[attribute.name]"
+                               autocomplete="off" />
+                        <color-picker v-if="attribute.editor == 'color'" class="newfieldinput"
+                                      v-model="component.attributes[attribute.name]"
+                                      autocomplete="off" />
+                        <select v-if="attribute.editor == 'dropdown'" class="newfieldinput"
+                             v-model="component.attributes[attribute.name]"
+                             autocomplete="off" ><option v-for="(member, key, index) in componentType.sets[0].members" :value="member.name">{{member.name}}</option></select>
+                        <input v-if="attribute.editor == 'price'" class="newfieldinput"
+                             v-model="component.attributes[attribute.name]"
+                             autocomplete="off"/>
                     </li>
                 </ul>
                 <div class="submitbutton"  @click="saveComponent(component,componentType)">Save</div>
@@ -29,16 +43,20 @@
 
 <script>
 import { mapState, mapActions } from 'vuex'
-
+import ColorPicker from 'vue-color'
+// v-model="component.attributes[attribute.name]"
 export default {
 
   props: ['componentType'],
+  components: {
+    ColorPicker: VueColor.Chrome
+  },
 
-
-  data() {
+    data() {
     return {
       scrollerHeight: 300,
-      component: { name:"",attributes:{}}
+      component: { name:"",attributes:{}},
+      color: '#000000'
     }
   },
   computed: {
@@ -83,11 +101,7 @@ export default {
 };
 </script>
 <style>
-    body, html, div, ul , li {margin:0;padding:0;
-        font: 12px "IBM Plex Sans";
-        box-sizing: border-box;
 
-    }
     h3 {
         margin-left: 5px;
         margin-top:0px;
@@ -114,7 +128,7 @@ export default {
     }
 
     .newfieldinput {
-        background-color: black;
+        background-color: #111;
         color:white;
         font-size:16pt;
     }

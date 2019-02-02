@@ -1,61 +1,42 @@
-# FelinePride
+# Network Stream Demo
+This demo shows how to use the network stream system to stream entity updates to connected clients. It is a client /
+server demo and requires that the server is running for the client to work.
 
-This projects demonstrates a prototype graphql endpoint and schema for 
-FelinePride. A visualizer and graphiql query ui are provided.  
-
-## Schema
-The schema is a work in progress where the initial effort will be 
-understanding the use cases, user conceptual model, and making it 
-available at a single endpoint.
-
-First steps will be building out query model and workflows.  
-
-The next steps will focus on mutation workflows while continuing to 
-enhance the query model.
-
-The schema is located at src/main/resources/fp.graphql
-
-## Running 
-
-Clone the repository.
-
-Cd to the fp-graphql directory.  Build with maven.
-
-```mvn clean install```
-
-Run the server.
-
-```scripts/localstart.sh```
-
-Browse the site.
-
-```http://localhost:9080```
-or 
-  
-```https://localhost:8443```
-
-A graphql endpoint is available at ```/graphql``` with some basic
-mocked up data.  (more work needs to be done on that data)
-
-## Pointing to your data.
-
-The fun begins when you begin to hook graphql to your datasources.
-
-In ```/src/main/java/com/ibm/wce/graphql/api/graphql/GraphQLDataFetcherBuilder.java```, 
-build out datafetchers to get data from APIs, databases, walmart labs, and more.
-
-One could build out graphql as a service by making dynamic datafetchers 
-using lambdas and other IoT integration tools.  Or you could fire
-off a perl script.
-
-## More information
-
-Contact: lroehrs at gmail com.  Just a hint, the 
-slack option will be faster.
-
-## todo
+You can open multiple instances of the client to see the exact same simulation being displayed on all clients. This is
+the reason why the network stream is so useful because it automatically handles updating your simulation on connected
+clients so that they all see the same thing.
 
 
+# Multiplayer Example
+This example uses the network stream to keep all clients in sync with the server-side simulation. When a client
+connects to the server it requests that a new player entity is created for it by sending the network command
+"playerEntity". The server receives this command, sets up the new player entity and then sends the network command
+"playerEntity" back to the client with the ID of the entity it just created.
 
+The client receives the "playerEntity" network command and then tells it's main camera to track the translation of the
+new entity.
 
+The client controls are UP, DOWN, LEFT and RIGHT. When control states of each key change the change is sent to the server
+so for instance, when the LEFT key is pressed down, the network command "playerControlsLeftDown" is sent. When the LEFT
+key is released the network command "playerControlsLeftUp" is sent.
 
+Each tick in the Player class on the server it checks the current state of the controls that are set by the
+playerControls* network commands. When a control is pressed the entity is altered.
+
+The server streams all the simulation updates to the connected clients and that is how this example works.
+
+Players can only move around. There is no "game" with this example, it exists to show you how to successfully create
+a multiplayer environment with each player controlling their entity and synchronising the simulation to all clients.
+
+The engine knows which entities to synchronise because a call to the entity's streamMode() method is made in the
+Player class (./gameClasses/Player.js). The streamMode() method accepts a mode integer which tells the engine how
+to handle streaming the entity's updates to connected clients. In this example we do:
+
+    entity.streamMode(1);
+
+This tells the engine to stream all data automatically - in other words whenever the entity's transform data (position,
+rotation, scale etc) is updated all clients are informed. The engine supports much more advanced ways to deal with
+streaming data to clients but this is the simplest way to handle it. A single method call is all that is required
+to get the server-side simulation to send sync data to clients :)
+
+You can find out much more about the network stream system here: http://www.isogenicengine.com/documentation/isogenic-game-engine/versions/1-1-0/manual/networking-multiplayer/realtime-network-streaming/

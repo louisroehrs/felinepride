@@ -18,7 +18,7 @@
         <div class="bottombar" ref="bottombox"><div class="bottombutton">+</div><div class="bottombutton">-</div></div>
         <div class="editarea">
             <ComponentEditor v-if="editingComponentType" v-bind:componentType="editingComponentType"></ComponentEditor>
-            <ComponentList v-if="components" v-bind:components="components"></ComponentList>
+            <ComponentList v-if="components" v-bind:components="components" ></ComponentList>
         </div>
 
     </div>
@@ -71,10 +71,13 @@ export default {
 </script>
 <style>
     body, html, div, ul , li {margin:0;padding:0;
-        font: 12px "IBM Plex Sans";
+        font: 12px plex-sans-regular;
         box-sizing: border-box;
         text-shadow: none;
         color:black;
+    }
+    input {
+        box-shadow: none;
     }
 
     a {
@@ -128,9 +131,10 @@ export default {
     div.editarea {
         width:85%;
         margin-left:15%;
-        background-color:rgb(69, 69, 89);
+        background-color:rgb(31, 36, 42);
         padding:10px;
         border-top:1px solid grey;
+
     }
 
     div.newbutton {

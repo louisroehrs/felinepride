@@ -1,14 +1,23 @@
 var Mover = IgeEntity.extend({
 	classId: 'Mover',
   
-	init: function () {
-	        IgeEntity.prototype.init.call(this);
+	init: function (username) {
+	  IgeEntity.prototype.init.call(this);
 
-		var self = this;
+	  this._value = '';
+    if (username !== undefined) {
+			this._value = username;
+		} else {
+			this._value= "movernameless";
+		}
 
+    var self = this;
+    
 		if (ige.isClient) {
 			// Define the texture this entity will use
-			this._tex = new IgeTexture('/Users/lroehrs/awork/felinepride/igefpgame/assets/caturday.jpg');
+      //			this._tex = new IgeTexture('/Users/lroehrs/awork/felinepride/igefpgame/assets/caturday.jpg');
+      this._tex = new IgeTexture('/Users/lroehrs/awork/felinepride/igefpgame/assets/OrangeAvatar(aKaFred).svg');
+      
 			// Wait for the texture to load
 			this._tex.on('loaded', function () {
 				self.texture(self._tex)
@@ -17,16 +26,17 @@ var Mover = IgeEntity.extend({
 					.height(100);
 			});
 
-			this._ballon = new SpeechBalloon("hi there")
-			    .width(100)
-			    .translateBy(0,80,-1)
-			    .height(100)
-			    .mount(self, this._balloon);
-
+			this._namebox = new NameBox(this._value)
+				.width(100)
+				.translateBy(0,50,-1)
+				.height(50)
+				.value(this._value)
+				.streamMode(1)
+				.mount(self);
 		}
 
 		// Define the data sections that will be included in the stream
-		this.streamSections(['transform', 'custom1']);
+		this.streamSections(['transform','value']);
 	},
 
 	/**
@@ -34,22 +44,23 @@ var Mover = IgeEntity.extend({
 	 * so that we can check for the custom1 section and handle how we deal
 	 * with it.
 	 * @param {String} sectionId A string identifying the section to
-	 * handle data get / set for.
-	 * @param {*=} data If present, this is the data that has been sent
+	 * handle data @param {*=} data If present, this is the data that has been sent
 	 * from the server to the client for this entity.
 	 * @return {*}
 	 */
 	streamSectionData: function (sectionId, data) {
 		// Check if the section is one that we are handling
-		if (sectionId === 'custom1') {
+
+		if (sectionId === 'value') {
 			// Check if the server sent us data, if not we are supposed
 			// to return the data instead of set it
 			if (data) {
 				// We have been given new data!
-				this._customProperty = data;
+				this._value = data;
+        this._namebox.value(data);
 			} else {
 				// Return current data
-				return this._customProperty;
+				return this._name;
 			}
 		} else {
 			// The section was not one that we handle here, so pass this
@@ -58,6 +69,29 @@ var Mover = IgeEntity.extend({
 			return IgeEntity.prototype.streamSectionData.call(this, sectionId, data);
 		}
 	},
+  	/**
+	 * Gets / sets the text value of the input box.
+	 * @param {String=} val The text value.
+	 * @return {*}
+	 */
+
+	stuff: function (val) {
+		if (val !== undefined) {
+			if (this._value !== val) {
+				this._value = val;
+	
+				if (!val) {
+					// Assign placeholder text and color
+					this._namebox.value(this._value);
+        }
+				this.$emit('change', this._value);
+			}
+			return this;
+		}
+		return this._value;
+
+	},
+	
 
 	/**
 	 * Called every frame by the engine when this entity is mounted to the

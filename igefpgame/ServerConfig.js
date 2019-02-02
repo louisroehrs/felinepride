@@ -4,7 +4,10 @@ var config = {
 		{name: 'Rotator', path: './gameClasses/Rotator'},
 		{name: 'Rotator2', path: './gameClasses/Rotator2'},
 		{name: 'Mover', path: './gameClasses/Mover'},
-		{name: 'SpeechBallon', path: './gameClasses/SpeechBalloon'}
+        {name: 'NameBox', path: './gameClasses/NameBox'},
+		{name: 'SpeechBalloon', path: './gameClasses/SpeechBalloon'},
+		{name: 'Character', path: './gameClasses/Character'},
+		{name: 'PlayerComponent', path: './gameClasses/PlayerComponent'}
 	]
 };
 

@@ -78,17 +78,20 @@ type User {
 }
 
 type ComponentType {
+    id: String
     type: String
     name:String
-    id: String
+    owlClass:String
     attributes: [Attribute]
+    sets: [Set]
 }
 
 type Component {
+    id: String
     type: String
     componentType:String
     name:String
-    id: String
+    owlClass:String
     attributes: [Attribute]
 }
 
@@ -96,12 +99,23 @@ type Attribute {
     name:String
     value: String
     type: String
-    owl: String
+    editor:String
+    setName: String
+    owlClass: String
+}
+
+type Set {
+    setName:String
+    members: [SetMember]
+}
+
+type SetMember {
+    name: String
+    owlClass:String
 }
 
 input AttributeInput {
     name: String
     value: String
     type: String
-    owl: String
 }

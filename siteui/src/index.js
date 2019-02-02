@@ -1,7 +1,8 @@
 import Vue from 'vue';
 import VeeValidate from 'vee-validate';
-import upperFirst from 'lodash/upperFirst'
-import camelCase from 'lodash/camelCase'
+import upperFirst from 'lodash/upperFirst';
+import camelCase from 'lodash/camelCase';
+import VueColor from 'vue-color';
 
 import { store } from './store';
 import { router } from './helpers';
@@ -43,6 +44,8 @@ requireComponent.keys().forEach(fileName => {
     componentConfig.default || componentConfig
   )
 })
+
+
 
 new Vue({
     el: '#app',

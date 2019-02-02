@@ -12,7 +12,7 @@ const actions = {
   getAll({ commit }) {
     commit('getAllCompTypesRequest');
 
-    graphqlService.graphQuery('getAllComponentTypes',null,"{id name attributes {name value type}}")
+    graphqlService.graphQuery('getAllComponentTypes',null,"{id name owlClass sets {setName members {name owlClass}} attributes {name value type editor setName owlClass}}")
       .then(
         componentTypes => commit('getAllCompTypesSuccess', componentTypes),
         error => commit('getAllCompTypesFailure', error)
@@ -30,7 +30,7 @@ const actions = {
   listComponents({commit}, componentType){
     commit('getComponentsByTypeRequest', componentType);
 
-    graphqlService.graphQuery('getComponentsByType',{ componentType: componentType.name },"{id componentType name attributes {name value }}")
+    graphqlService.graphQuery('getComponentsByType',{ componentType: componentType.name },"{id componentType name owlClass attributes {name value type editor owlClass}}")
       .then(
         components => commit('getComponentsByTypeSuccess', { list:components, type:componentType}),
         error => commit('getComponentsByTypeFailure', error)
