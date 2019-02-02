@@ -22,10 +22,15 @@
                         <input v-if="attribute.editor == 'string'" class="newfieldinput"
                                v-model="component.attributes[attribute.name]"
                                autocomplete="off" />
-                        <color-picker v-if="attribute.editor == 'color'" class="newfieldinput"
+                        <input v-if="attribute.editor == 'color'" class="newcolorfieldinput"
                                       v-model="component.attributes[attribute.name]"
                                       autocomplete="off" />
-                        <select v-if="attribute.editor == 'dropdown'" class="newfieldinput"
+                        <span v-if="attribute.editor == 'color'"
+                              class="colorswatch"
+                              v-bind:style="{backgroundColor: component.attributes[attribute.name]}">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </span>
+                        <select v-if="attribute.editor == 'dropdown'" class="newfieldselect"
                              v-model="component.attributes[attribute.name]"
                              autocomplete="off" ><option v-for="(member, key, index) in componentType.sets[0].members" :value="member.name">{{member.name}}</option></select>
                         <input v-if="attribute.editor == 'price'" class="newfieldinput"
@@ -56,7 +61,7 @@ export default {
     return {
       scrollerHeight: 300,
       component: { name:"",attributes:{}},
-      color: '#000000'
+      colors: "#ff0000"
     }
   },
   computed: {
@@ -73,6 +78,7 @@ export default {
   methods: {
     ...mapActions('componentTypes', ['storeComponent','closeEditor'])
     ,
+
     saveComponent(component,componentType) {
       var newComponentRequestInput = {};
       newComponentRequestInput.name = this.component.name;
@@ -110,7 +116,8 @@ export default {
 
     .editfieldlabel {
         float:left;
-        margin-top:9px;
+        margin-top:6px;
+        margin-bottom:3px;
         margin-right:5px;
         min-width:50px;
         font-size: 16px;
@@ -127,10 +134,24 @@ export default {
         list-style-type: none;
     }
 
-    .newfieldinput {
+    .newfieldinput, .newcolorfieldinput {
         background-color: #111;
         color:white;
-        font-size:16pt;
+        font-size:12pt;
+        margin-top:3px;
+    }
+    .newcolorfieldinput {
+        width:100px;
+    }
+
+    .newfieldselect {
+        background-color: #111;
+        color:white;
+        padding-top: 6px;
+        padding-left: 2px;
+        border:0px;
+        font-size:12pt;
+        -webkit-appearance: none;
     }
 
     .editor {
@@ -154,6 +175,12 @@ export default {
 
     .pagename {
         color:#eee;
+    }
+
+    .colorswatch {
+        font-size:12pt;
+        width:20px;
+        height:20px;
     }
 
     .close, close:hover {
