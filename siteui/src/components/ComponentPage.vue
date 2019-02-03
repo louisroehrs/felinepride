@@ -10,7 +10,6 @@
                         <a @click="listComponents(componentType)">{{ componentType.name}}</a>
                         <span v-if="componentType.deleting"><em> - Deleting...</em></span>
                         <span v-else-if="componentType.deleteError" class="text-danger"> - ERROR: {{componentType.deleteError}}</span>
-                        <div class="newbutton"><a @click="newComponent(componentType)" class="text-danger">+</a></div>
                     </li>
                 </ul>
 
@@ -38,6 +37,7 @@ export default {
       componentTypes: state => state.componentTypes.all,
       components: state => state.componentTypes.components,
       editingComponentType : state => state.componentTypes.editingComponentType
+
     })
   },
   created () {
@@ -54,7 +54,6 @@ export default {
     ...mapActions('componentTypes', {
       getAll: 'getAll',
       deleteComponentType: 'delete',
-      newComponent: 'newComponent',
       listComponents: 'listComponents',
       closeEditor: 'closeEditor'
     }),

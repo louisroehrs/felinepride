@@ -3,7 +3,7 @@
 
         <div class="close" @click="closeEditor()">X</div>
         <h3 class="pagename" >New {{ componentType.name}} {{ component.name}}</h3>
-        <div class="editor rightside scrolling" ref="scrollermain" v-bind:style="{ height: this.scrollerHeight+'px'}">
+        <div class="rightside scrolling editor" ref="scrollermain" >
 <!--        <em v-if="componentTypes.loading">Loading componentTypes...</em>
         <span v-if="componentTypes.error" class="text-danger">ERROR: {{componentTypes.error}}</span>-->
 
@@ -113,6 +113,12 @@ export default {
         margin-top:0px;
     }
 
+    .editor {
+        height: auto !important;
+        padding-bottom: 10px;
+        max-height: 300px;
+        border-bottom:1px solid grey;
+    }
 
     .editfieldlabel {
         float:left;
@@ -152,10 +158,6 @@ export default {
         border:0px;
         font-size:12pt;
         -webkit-appearance: none;
-    }
-
-    .editor {
-        border-bottom:1px solid grey;
     }
 
     .submitbutton {

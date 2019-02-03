@@ -50,10 +50,10 @@ const actions = {
     commit('saveComponentRequest', component)
     var keepComponent = component;
     component.type = 'component';
-    graphqlService.graphMutation('saveNewComponent', 'create', component, "NewComponentRequestInput", "{id name}")
+    graphqlService.graphMutation('saveNewComponent', 'create', component, "NewComponentRequestInput", "{id name attributes { editor name owlClass type value}  owlClass componentType }")
       .then(
         component => {
-          commit('saveComponentSuccess', keepComponent);
+          commit('saveComponentSuccess', component);
           setTimeout(() => {
             //      dispatch('alert/success', 'Saved', {root: true})
           })
@@ -141,9 +141,10 @@ const mutations = {
   },
   saveComponentSuccess(state,component) {
     if (state.editingComponentType.name == component.componentType) {
-      if (state.components.items) {
-        state.components.items.push(component);
+      if (!state.components.items) {
+        state.components.items = [];
       }
+      state.components.items.push(component);
       state.components.saving = done;
       state.components.componentType = state.editingComponentType;
     } else {

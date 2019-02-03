@@ -51,6 +51,7 @@ input UpdateComponentRequestInput {
     name:String
     type:String
     componentType:String
+    owlClass:String
     attributes: [AttributeInput]
 }
 
@@ -118,4 +119,6 @@ input AttributeInput {
     name: String
     value: String
     type: String
+    editor: String
+    owlClass: String
 }

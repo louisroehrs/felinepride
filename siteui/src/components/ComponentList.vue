@@ -1,7 +1,11 @@
 <template >
     <div>
+        <h3 class="pagename" v-if="components.componentType">
+            <label class="editbutton" vd-if="editingComponentType" @click="newComponent(components.componentType)">New</label>
+            <label v-bind:class="{ toggleediton: toggleedit, toggleeditoff:!toggleedit}">Edit <input type="checkbox" v-model="toggleedit"/></label>
+            List of {{components.componentType.name}}
+        </h3>
 
-        <h3 class="pagename" v-if="components.componentType"><label v-bind:class="{ toggleediton: toggleedit, toggleeditoff:!toggleedit}">Edit <input type="checkbox" v-model="toggleedit"/></label>List of {{components.componentType.name}}</h3>
 
         <div class="rightside scrolling" ref="scrollermain" v-bind:style="{ height: this.scrollerHeight+'px'}">
             <em v-if="components.loading">Loading component...</em>
@@ -66,7 +70,7 @@ export default {
   },
   computed: {
     ...mapState({
-
+      editingComponentType : state => state.componentTypes.editingComponentType
     })
   },
 
@@ -77,7 +81,7 @@ export default {
   },
 
   methods: {
-    ...mapActions('componentTypes', ['deleteComponent','updateComponent']),
+    ...mapActions('componentTypes', ['deleteComponent','updateComponent','newComponent']),
     resize() {
       this.scrollerHeight = window.innerHeight - this.$refs.scrollermain.offsetTop-10 ;
     }
@@ -180,7 +184,7 @@ export default {
     .row {
         height:2px;
     }
-    .toggleediton, .toggleeditoff {
+    .editbutton, .toggleediton, .toggleeditoff {
         float:right;
         display: block;
         position: relative;
@@ -201,14 +205,13 @@ export default {
         color:black;
     }
 
-    .toggleediton input, .toggleeditoff input {
+    .editbutton input, .toggleediton input, .toggleeditoff input {
         position: absolute;
         opacity: 0;
         cursor: pointer;
         height: 0;
         width: 0;
     }
-
 
     input[disabled] {
         color:white;
