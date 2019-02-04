@@ -42,6 +42,7 @@ input NewComponentRequestInput {
     id: String
     name:String
     type:String
+    owlClass:String
     componentType:String
     attributes: [AttributeInput]
 }

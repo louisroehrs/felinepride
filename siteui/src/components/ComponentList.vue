@@ -13,8 +13,15 @@
             <ul  v-if="components.items">
                 <li class="componententry" v-for="component in components.items" :key="component.id">
                     <div v-if="component">
-                        <div class="row" v-bind:class="{ deleting: component.deleting,updating: component.updating , changed: component.changed }"></div>
-                        <ul>
+                        <EditableRow :component="flattenComponent(component)"
+                                     :component-type="components.componentType"
+                                     :save-component="saveComponent"
+                                     :update-component="updateThisComponent"
+                                     :delete-component="deleteThisComponent"
+                                     :blankform="false"
+                                     :toggleedit="toggleedit"
+                        />
+                        <!-- <ul>
                             <li class="editfield" >
                                 <div class="smalllabel">name</div>
                                 <input class="componentfieldinput"
@@ -37,15 +44,13 @@
                                        autocomplete="off"
                                 />
                             </li>
-                        </ul>
-                        <ul v-if="toggleedit">
-                            <li class="buttonfield" >
+                        </ul> -->
+                       <!-- <ul >
+                            <li v-if="toggleedit" class="buttonfield" >
                                 <div @click="deleteComponent(component)" class="deletebutton">X</div>
                             </li>
-                            <li class="buttonfield" >
-                                <div @click="updateComponent({component:component,componentType:components.componentType})" class="updatebutton">O</div>
-                            </li>
-                        </ul>
+
+                        </ul>-->
                     </div>
                 </li>
 
@@ -74,6 +79,8 @@ export default {
     })
   },
 
+
+
   mounted() {
       window.addEventListener('resize', this.resize);
       //Init
@@ -84,10 +91,61 @@ export default {
     ...mapActions('componentTypes', ['deleteComponent','updateComponent','newComponent']),
     resize() {
       this.scrollerHeight = window.innerHeight - this.$refs.scrollermain.offsetTop-10 ;
+    },
+    flattenComponent(component) {
+      let tmpattributes = component.attributes;
+      if (tmpattributes.map) {  // may have already flattened the attributes which would kill map.
+        let newattributes = {};
+        tmpattributes.map(attribute => (newattributes[attribute.name] = attribute.value));
+        component.attributes = newattributes;
+      }
+      return component;
+    },
+
+    attributeRequestInput(ari) {
+      var componentType = ari.componentType;
+      var attributes = ari.attributes;
+      var newAttributes = [];
+      for (var attribute in componentType.attributes) {
+        var newAttribute = {};
+        newAttribute.name = componentType.attributes[attribute].name;
+        newAttribute.owlClass = componentType.attributes[attribute].owlClass;
+        newAttribute.type = componentType.attributes[attribute].type;
+        newAttribute.editor = componentType.attributes[attribute].editor;
+        newAttribute.value = attributes[newAttribute.name];
+        newAttributes.push(newAttribute);
+      }
+      return newAttributes;
+    },
+
+    updateThisComponent(updateRequest) {
+      var updateComponentRequestInput = {};
+      var component = updateRequest.component;
+      var componentType = updateRequest.componentType;
+      updateComponentRequestInput.id = component.id;
+      updateComponentRequestInput.name = component.name;
+      updateComponentRequestInput.type = "component";
+      updateComponentRequestInput.componentType = componentType.name;
+      updateComponentRequestInput.owlClass = componentType.owlClass;
+      updateComponentRequestInput.attributes = this.attributeRequestInput({attributes: component.attributes,componentType:componentType});
+      this.updateComponent( {component:updateComponentRequestInput, componentType:componentType});
+    },
+
+    saveComponent() {
+      var newComponentRequestInput = {};
+      newComponentRequestInput.name = this.component.name;
+      newComponentRequestInput.type = "component";
+      newComponentRequestInput.componentType = this.componentType.name;
+      newComponentRequestInput.owlClass = this.componentType.owlClass;
+      newComponentRequestInput.attributes = this.attributeRequestInput(component.attributes,this.componentType);
+      this.storeComponent( newComponentRequestInput);
+    },
+
+
+    deleteThisComponent(component) {
+      this.deleteComponent(component);
     }
-
   },
-
   beforeDestroy() {
     window.removeEventListener('resize', this.resize);
   }

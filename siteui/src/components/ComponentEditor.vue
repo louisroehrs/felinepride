@@ -7,39 +7,11 @@
 <!--        <em v-if="componentTypes.loading">Loading componentTypes...</em>
         <span v-if="componentTypes.error" class="text-danger">ERROR: {{componentTypes.error}}</span>-->
 
-            <form id="componentForm" @submit.prevent="handleSubmit">
-                <ul>
-                    <li  class="editfield">
-                        <div class="editfieldlabel">name</div>
-                        <input class="newfieldinput"
-                               v-model="component.name"
-                               autocomplete="off" />
-                    </li>
-                </ul>
-                <ul class="componentfield" v-if="componentType.attributes">
-                    <li class="editfield" v-for="(attribute,key) in componentType.attributes" :key="attribute.name">
-                        <div class="editfieldlabel">{{ attribute.name }}</div>
-                        <input v-if="attribute.editor == 'string'" class="newfieldinput"
-                               v-model="component.attributes[attribute.name]"
-                               autocomplete="off" />
-                        <input v-if="attribute.editor == 'color'" class="newcolorfieldinput"
-                                      v-model="component.attributes[attribute.name]"
-                                      autocomplete="off" />
-                        <span v-if="attribute.editor == 'color'"
-                              class="colorswatch"
-                              v-bind:style="{backgroundColor: component.attributes[attribute.name]}">
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        </span>
-                        <select v-if="attribute.editor == 'dropdown'" class="newfieldselect"
-                             v-model="component.attributes[attribute.name]"
-                             autocomplete="off" ><option v-for="(member, key, index) in componentType.sets[0].members" :value="member.name">{{member.name}}</option></select>
-                        <input v-if="attribute.editor == 'price'" class="newfieldinput"
-                             v-model="component.attributes[attribute.name]"
-                             autocomplete="off"/>
-                    </li>
-                </ul>
-                <div class="submitbutton"  @click="saveComponent(component,componentType)">Save</div>
-            </form>
+            <EditableRow :component="component"
+                         :component-type="componentType"
+                         :save-component="saveComponent"
+                         :blankform="true"
+            />
 
         </div>
     </div>
@@ -79,16 +51,20 @@ export default {
     ...mapActions('componentTypes', ['storeComponent','closeEditor'])
     ,
 
-    saveComponent(component,componentType) {
+    saveComponent() {
       var newComponentRequestInput = {};
       newComponentRequestInput.name = this.component.name;
       newComponentRequestInput.type = "component";
-      newComponentRequestInput.componentType = componentType.name;
+      newComponentRequestInput.componentType = this.componentType.name;
+      newComponentRequestInput.owlClass = this.componentType.owlClass;
       newComponentRequestInput.attributes = [];
 
-      for (var attribute in componentType.attributes) {
+      for (var attribute in this.componentType.attributes) {
         var newAttribute = {};
-        newAttribute.name = componentType.attributes[attribute].name;
+        newAttribute.name = this.componentType.attributes[attribute].name;
+        newAttribute.owlClass = this.componentType.attributes[attribute].owlClass;
+        newAttribute.editor = this.componentType.attributes[attribute].editor;
+        newAttribute.type = this.componentType.attributes[attribute].type;
         newAttribute.value = this.component.attributes[newAttribute.name];
         newComponentRequestInput.attributes.push(newAttribute);
       }
