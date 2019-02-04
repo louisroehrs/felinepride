@@ -31,36 +31,7 @@
                                      :blankform="false"
                                      :toggleedit="toggleedit"
                         />
-                        <!-- <ul>
-                            <li class="editfield" >
-                                <div class="smalllabel">name</div>
-                                <input class="componentfieldinput"
-                                       name="name"
-                                       v-model="component.name"
-                                       v-bind:disabled="!toggleedit"
-                                       @input="component.changed=true"
-                                       autocomplete="off"
-                                />
-                            </li>
-                        </ul>
-                        <ul>
-                            <li class="editfield" v-for="(attribute, key, index) in component.attributes" :key="attribute.name">
-                                <div class="smalllabel">{{attribute.name}} {{components.componentType.attributes[index]}}</div>
-                                <input class="componentfieldinput"
-                                       :name="attribute.name"
-                                       v-model="attribute.value"
-                                       v-bind:disabled="!toggleedit"
-                                       @input="component.changed=true"
-                                       autocomplete="off"
-                                />
-                            </li>
-                        </ul> -->
-                       <!-- <ul >
-                            <li v-if="toggleedit" class="buttonfield" >
-                                <div @click="deleteComponent(component)" class="deletebutton">X</div>
-                            </li>
 
-                        </ul>-->
                     </div>
                 </li>
 
@@ -273,20 +244,22 @@ export default {
         float:right;
         display: block;
         position: relative;
-        padding: 3px;
-        padding-left:5px;
         cursor: pointer;
-        font-size: 16px;
         -webkit-user-select: none;
         -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;
-        border-radius:5px;
-        color:white;
+        color:grey;
+        padding: 4px;
+        margin: 4px;
+        border-radius: 5px;
+        font-size: 12pt;
+        font-weight: normal;
+        border: 1px solid grey;
     }
 
     .toggleediton {
-        background-color: greenyellow;
+        background-color: red;
         color:black;
     }
 
