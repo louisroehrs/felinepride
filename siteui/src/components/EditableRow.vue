@@ -6,7 +6,9 @@
                 <div class="editfieldlabel">name</div>
                 <input class="newfieldinput"
                        v-model="component.name"
-                       autocomplete="off"/>
+                       autocomplete="off"
+                       @input="component.changed=true"
+                />
             </li>
         </ul>
         <ul class="componentfield" v-if="componentType.attributes">
@@ -44,19 +46,19 @@
                 />
             </li>
         </ul>
-        <ul >
-            <li v-if="toggleedit" class="buttonfield" >
-                <div @click="deleteComponent(component)" class="deletebutton">ddX</div>
-            </li>
 
-            <li v-if="component.changed && !blankform" class="buttonfield" >
-                <div @click="updateComponent({component:component, componentType:componentType})" class="updatebutton">O</div>
-            </li>
-        </ul>
+
+        <div  v-if="toggleedit" @click="deleteComponent(component)" class="deletebutton">delete</div>
+        <div v-if="component.changed && !blankform"
+             @click="updateComponent({component:component, componentType:componentType})"
+             class="submitbutton">Save
+        </div>
         <div v-if="blankform" class="submitbutton" @click="saveComponent">Save</div>
+        <div v-if="blankform" class="closebutton" @click="closeMyEditor">Cancel</div>
     </form>
 </template>
 <script>
+
   export default {
     name: 'EditableRow',
     props: {
@@ -65,9 +67,16 @@
       saveComponent: {},
       updateComponent: {},
       deleteComponent: {},
+      closeEditor:{},
       blankform: true,
       toggleedit: false
+    },
+    methods: {
+      closeMyEditor () {
+        this.closeEditor();
+      }
     }
+
   }
 </script>
 <style>
@@ -119,14 +128,26 @@
         -webkit-appearance: none;
     }
 
-    .submitbutton {
+    .submitbutton, .closebutton,.deletebutton {
         float: left;
-        padding: 5px;
+        padding: 4px;
         margin: 4px;
         border-radius: 5px;
         font-size: 12pt;
         color: greenyellow;
         border: 1px solid grey;
+    }
+
+    .deletebutton {
+        color:red;
+        border-color:red;
+    }
+
+    .closebutton {
+        color: grey;
+    }
+    .closebutton:hover {
+        color: white;
     }
 
     .submitbutton:hover {

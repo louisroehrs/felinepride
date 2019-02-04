@@ -16,7 +16,7 @@
         </div>
         <div class="bottombar" ref="bottombox"><div class="bottombutton">+</div><div class="bottombutton">-</div></div>
         <div class="editarea">
-            <ComponentEditor v-if="editingComponentType" v-bind:componentType="editingComponentType"></ComponentEditor>
+       <!--     <ComponentEditor v-if="editingComponentType" v-bind:componentType="editingComponentType"></ComponentEditor> -->
             <ComponentList v-if="components" v-bind:components="components" ></ComponentList>
         </div>
 

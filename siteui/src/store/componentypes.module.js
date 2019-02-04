@@ -137,19 +137,16 @@ const mutations = {
   // Save/ update a component.
 
   saveComponentRequest(state,component) {
-    state.components = { items: state.components.items, saving: true};
+    state.components.saving = "true";
   },
   saveComponentSuccess(state,component) {
-    if (state.editingComponentType.name == component.componentType) {
-      if (!state.components.items) {
-        state.components.items = [];
-      }
-      state.components.items.push(component);
-      state.components.saving = done;
-      state.components.componentType = state.editingComponentType;
-    } else {
-      state.components = {items: state.components.items, saving: done};
+    if (!state.components.items) {
+      state.components.items = [];
     }
+    state.components.items.unshift(component);
+    state.components.saving = "done";
+    state.editingComponentType = null;
+    window.setTimeout(this.closeEditor,100);
   },
 
   saveComponentFailure(state,error) {
