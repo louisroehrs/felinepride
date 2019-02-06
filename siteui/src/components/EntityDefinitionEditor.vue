@@ -162,6 +162,7 @@ export default {
 
     .pagename {
         margin:1px;
+        height:40px;
     }
     div.scrolling {
         height: 200px;

@@ -181,6 +181,7 @@ export default {
     .pagename {
         color:#eee;
         font-size:16px;
+        height:40px;
         margin-bottom:7px;
     }
 
