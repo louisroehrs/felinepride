@@ -1,12 +1,14 @@
 import { graphqlService } from '../services';
 
 const state = {
-  all: {},
-  editingComponentType:null,
-  components:{},
-  editingComponentDefinition :{}
-
-};
+    all: {},
+    editingComponentType: null,
+    components: {},
+    editingComponentDefinition: null,
+    editingAttributeType: null,
+    newAttribute: null
+  }
+;
 
 const done = "done";
 
@@ -23,6 +25,14 @@ const actions = {
 
   newComponent({commit}, editingComponentType) {
     commit('selectEditor', editingComponentType)
+  },
+
+  showNewAttribute({commit}) {
+    commit('newAttribute');
+  },
+
+  closeAttribute({commit}) {
+    commit('closeAttribute');
   },
 
   closeEditor({commit}) {
@@ -113,6 +123,7 @@ const actions = {
             componentType => commit('selectEditor',componentType),
             error => commit('editComponentTypeFailure',error)
           )
+
   );
   }
 
@@ -130,6 +141,14 @@ const mutations = {
 
   editComponentTypeFailure(state, error) {
     state.editingComponentDefinition = error;
+  },
+
+  newAttribute() {
+    state.newAttribute = {"status": true};
+  },
+
+  closeAttribute() {
+    state.newAttribute = null;
   },
 
   selectEditor (state, editingComponentType) {

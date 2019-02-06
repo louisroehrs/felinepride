@@ -1,16 +1,16 @@
 <template >
     <div>
         <h3 class="pagename" v-if="entityDefinition">
-            <label class="editbutton" vd-if="entityDefinition" @click="makeNewAttribute()">NewAttribute</label>
+            <label class="editbutton" v-if="entityDefinition" @click="newThisAttribute()">New Attribute</label>
             <label v-bind:class="{ toggleediton: toggleedit, toggleeditoff:!toggleedit}">Edit <input type="checkbox" v-model="toggleedit"/></label>
             Entity Definition for {{entityDefinition.name}}
         </h3>
 
         <div class="rightside scrolling" ref="scrollermain" v-bind:style="{ height: this.scrollerHeight+'px'}">
             <div class="makeyway"
-                 v-if="componentType">
+                 v-if="newAttribute">
                 <EditableRow
-                        v-if="componentType"
+                        v-if="newAttribute"
                         :component="entityDefinition.name ? component:entityDefinition"
                         :component-type="componentType"
                         :save-component="saveComponentAttributeDefinition"
@@ -22,7 +22,7 @@
                 <li class="componententry" v-for="attribute in entityDefinition.attributes" :key="attribute.name">
                     <div v-if="componentType">
                         <!-- TODO: make each row from an attribute like it is a separate component -->
-                        <EditableRow :component="makeComponentFrom(attribute,componentType)"
+                        <EditableRow :component="makeEditableAttributesComponentFrom(attribute)"
                                      :component-type="componentType"
                                      :save-component="saveComponentAttributeDefinition"
                                      :update-component="updateThisComponentAttributeDefinition"
@@ -52,11 +52,14 @@ export default {
       scrollerHeight: 300,
       toggleedit:false,
       component: {name:"", attributes:{}},
-      componentDefinitionAttributes: []
+      componentDefinitionAttributes: [],
+      editableAttributeAsComponent: null,
     }
   },
   computed: {
     ...mapState({
+      editingComponentType : state => state.componentTypes.editingComponentType,
+      newAttribute : state => state.componentTypes.newAttribute
 
     })
   },
@@ -68,29 +71,40 @@ export default {
   },
 
   methods: {
-    ...mapActions('componentTypes', ['deleteComponentType','updateComponentType','newComponentType','storeComponentType','closeEditor']),
+    ...mapActions('componentTypes', ['deleteComponentType','updateComponentType','showNewAttribute','storeComponentType','closeAttribute']),
+
+    newThisAttribute() {
+      this.showNewAttribute();
+    },
+
     resize() {
       this.scrollerHeight = window.innerHeight - this.$refs.scrollermain.offsetTop-10 ;
     },
 
     closeThisEditor() {
       this.component = {name:"", attributes:{}};
-      this.closeEditor();
+      this.closeAttribute();
     },
 
-    makeComponentFrom(attribute,componentType) {
-      var editableAttributeAsComponent = {};
+    // TODO: make maybe create a new datastructure to present and then convert back when saving.
+    makeEditableAttributesComponentFrom(attribute) {
+      var tempEditableAttributeAsComponent = {};
       console.log(JSON.stringify(attribute))
-      console.log(JSON.stringify(componentType))
-      editableAttributeAsComponent.name = attribute.name;
+      console.log(JSON.stringify(this.editingComponentType))
+      tempEditableAttributeAsComponent.name = attribute.name;
       var tempEditableAttribute = {}
-      for (var componentTypeAttribute of componentType.attributes) {
+      for (var componentTypeAttribute of this.editingComponentType.attributes) {
         tempEditableAttribute[componentTypeAttribute.name]= attribute[componentTypeAttribute.name];
       }
-      editableAttributeAsComponent.attributes = tempEditableAttribute;
-      return editableAttributeAsComponent;
+      tempEditableAttributeAsComponent.attributes = tempEditableAttribute;
 
+      this.editableAttributeAsComponent= tempEditableAttributeAsComponent;
+
+      return tempEditableAttributeAsComponent;
     },
+
+
+
 /*
     makeNewComponentType() {
       this.componentType.name = prompt("Name your new component type.");
@@ -136,9 +150,10 @@ export default {
       updateComponentRequestInput.attributes = this.attributeRequestInput({attributes: component.attributes,componentType:componentType});
       this.updateComponent( {component:updateComponentRequestInput, componentType:componentType});
     },
-
+/* TODO: This next.  save the component as an attribute. */
     saveComponentAttributeDefinition() {
       var newComponentRequestInput = {};
+      debugger;
       newComponentRequestInput.name = this.componentType.name;
       newComponentRequestInput.type = "component";
       newComponentRequestInput.componentType = this.components.componentType.name;
@@ -173,123 +188,13 @@ export default {
         clear:both
     }
 
-    li.componententry {
-        clear:both;
-    }
-    .smalllabel {
-        float: left;
-        margin-top:5px;
-        margin-right: 5px;
-        min-width: 50px;
-        font-size: 16px;
-        color: rgba(255, 255, 255, 0.50);
-    }
 
-    input.componentfieldinput {
-        margin:0px;
-        border: 0px;
-        float:left;
-        padding:5px;
-        font-size:12pt;
-        background-color:#111;
-        color:white;
-    }
     .pagename {
         color:#eee;
         font-size:16px;
         margin-bottom:7px;
     }
 
-    .editfield {
-        margin: 0px;
-        border: 0px;
-        float: left;
-        padding: 5px;
-        font-size: 16pt;
-        background-color: black;
-        color: white;
-        list-style-type: none;
-    }
 
-    .buttonfield {
-        margin: 0px;
-        border: 0px;
-        float: left;
-        padding-left: 5px;
-        color: white;
-        list-style-type: none;
-    }
-
-    .deletebutton,.updatebutton {
-        border-radius:5px;
-        padding:5px;
-        font-size:16px;
-    }
-    .deletebutton:hover {
-        background-color: red;
-        color:white;
-    }
-
-    .deletebutton {
-        color: red;
-    }
-
-    .deleting {
-        background-color: burlywood;
-    }
-    .updating {
-        background-color: blue;
-    }
-    .changed {
-        background-color: greenyellow;
-    }
-    .updatebutton:hover {
-        background-color: greenyellow;
-        color:black;
-    }
-    .updatebutton {
-        color:greenyellow;
-    }
-
-    .row {
-        height:2px;
-    }
-    .editbutton, .toggleediton, .toggleeditoff {
-        float:right;
-        display: block;
-        position: relative;
-        cursor: pointer;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        color:grey;
-        padding: 4px;
-        margin: 4px;
-        border-radius: 5px;
-        font-size: 12pt;
-        font-weight: normal;
-        border: 1px solid grey;
-    }
-
-    .toggleediton {
-        background-color: red;
-        color:black;
-    }
-
-    .editbutton input, .toggleediton input, .toggleeditoff input {
-        position: absolute;
-        opacity: 0;
-        cursor: pointer;
-        height: 0;
-        width: 0;
-    }
-
-    input[disabled] {
-        color:white;
-        opacity:1;
-        -webkit-text-fill-color:#ffffff;
-        background-color: transparent;
-    }
 
 </style>
