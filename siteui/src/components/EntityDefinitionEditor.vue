@@ -1,33 +1,32 @@
 <template >
     <div>
-        <h3 class="pagename" v-if="components.componentType">
-            <label class="editbutton" vd-if="editingComponentType" @click="makeNewComponent(components.componentType)">New</label>
+        <h3 class="pagename" v-if="entityDefinition">
+            <label class="editbutton" vd-if="entityDefinition" @click="makeNewAttribute()">NewAttribute</label>
             <label v-bind:class="{ toggleediton: toggleedit, toggleeditoff:!toggleedit}">Edit <input type="checkbox" v-model="toggleedit"/></label>
-            List of {{components.componentType.name}}
+            Entity Definition for {{entityDefinition.name}}
         </h3>
 
         <div class="rightside scrolling" ref="scrollermain" v-bind:style="{ height: this.scrollerHeight+'px'}">
-            <em v-if="components.loading">Loading component...</em>
-            <span v-if="components.error" class="text-danger">ERROR: {{components.error}}</span>
             <div class="makeyway"
-                 v-if="editingComponentType">
+                 v-if="componentType">
                 <EditableRow
-                        v-if="editingComponentType"
-                        :component="editingComponentType ? component:null"
-                        :component-type="components.componentType"
-                        :save-component="saveComponent"
+                        v-if="componentType"
+                        :component="entityDefinition.name ? component:entityDefinition"
+                        :component-type="componentType"
+                        :save-component="saveComponentAttributeDefinition"
                         :close-editor="closeThisEditor"
                         :blankform="true"
                 />
             </div>
-            <ul  v-if="components.items">
-                <li class="componententry" v-for="component in components.items" :key="component.id">
-                    <div v-if="component">
-                        <EditableRow :component="flattenComponent(component)"
-                                     :component-type="components.componentType"
-                                     :save-component="saveComponent"
-                                     :update-component="updateThisComponent"
-                                     :delete-component="deleteThisComponent"
+            <ul  v-if="entityDefinition && entityDefinition.attributes">
+                <li class="componententry" v-for="attribute in entityDefinition.attributes" :key="attribute.name">
+                    <div v-if="componentType">
+                        <!-- TODO: make each row from an attribute like it is a separate component -->
+                        <EditableRow :component="makeComponentFrom(attribute,componentType)"
+                                     :component-type="componentType"
+                                     :save-component="saveComponentAttributeDefinition"
+                                     :update-component="updateThisComponentAttributeDefinition"
+                                     :delete-component="deleteThisComponentAttributeDefinition"
                                      :blankform="false"
                                      :toggleedit="toggleedit"
                         />
@@ -46,18 +45,18 @@ import { mapState, mapActions } from 'vuex'
 
 export default {
 
-  props: ['components'],
+  props: ['entityDefinition','componentType'],
 
   data() {
     return {
       scrollerHeight: 300,
       toggleedit:false,
       component: {name:"", attributes:{}},
+      componentDefinitionAttributes: []
     }
   },
   computed: {
     ...mapState({
-      editingComponentType : state => state.componentTypes.editingComponentType
 
     })
   },
@@ -69,7 +68,7 @@ export default {
   },
 
   methods: {
-    ...mapActions('componentTypes', ['deleteComponent','updateComponent','newComponent','storeComponent','closeEditor']),
+    ...mapActions('componentTypes', ['deleteComponentType','updateComponentType','newComponentType','storeComponentType','closeEditor']),
     resize() {
       this.scrollerHeight = window.innerHeight - this.$refs.scrollermain.offsetTop-10 ;
     },
@@ -79,17 +78,32 @@ export default {
       this.closeEditor();
     },
 
-    makeNewComponent(componentyType) {
-      this.component = {name:"", attributes:{}};
-      this.newComponent(componentyType);
-    },
+    makeComponentFrom(attribute,componentType) {
+      var editableAttributeAsComponent = {};
+      console.log(JSON.stringify(attribute))
+      console.log(JSON.stringify(componentType))
+      editableAttributeAsComponent.name = attribute.name;
+      var tempEditableAttribute = {}
+      for (var componentTypeAttribute of componentType.attributes) {
+        tempEditableAttribute[componentTypeAttribute.name]= attribute[componentTypeAttribute.name];
+      }
+      editableAttributeAsComponent.attributes = tempEditableAttribute;
+      return editableAttributeAsComponent;
 
-    flattenComponent(component) {
-      let tmpattributes = component.attributes;
+    },
+/*
+    makeNewComponentType() {
+      this.componentType.name = prompt("Name your new component type.");
+      this.componentType = {name:"", attributes:{}};
+      this.newComponentType(componentType);
+    },
+*/
+    flattenComponentType(componentType) {
+      let tmpattributes = componentType.attributes;
       if (tmpattributes.map) {  // may have already flattened the attributes which would kill map.
         let newattributes = {};
         tmpattributes.map(attribute => (newattributes[attribute.name] = attribute.value));
-        component.attributes = newattributes;
+        componentType.attributes = newattributes;
       }
       return component;
     },
@@ -110,7 +124,7 @@ export default {
       return newAttributes;
     },
 
-    updateThisComponent(updateRequest) {
+    updateThisComponentAttributeDefinition(updateRequest) {
       var updateComponentRequestInput = {};
       var component = updateRequest.component;
       var componentType = updateRequest.componentType;
@@ -123,20 +137,21 @@ export default {
       this.updateComponent( {component:updateComponentRequestInput, componentType:componentType});
     },
 
-    saveComponent() {
+    saveComponentAttributeDefinition() {
       var newComponentRequestInput = {};
-      newComponentRequestInput.name = this.component.name;
+      newComponentRequestInput.name = this.componentType.name;
       newComponentRequestInput.type = "component";
       newComponentRequestInput.componentType = this.components.componentType.name;
       newComponentRequestInput.owlClass = this.components.componentType.owlClass;
-      newComponentRequestInput.attributes = this.attributeRequestInput({attributes:this.component.attributes,componentType:this.components.componentType});
+      newComponentRequestInput.attributes = this.attributeRequestInput({attributes:this.componentType.attributes,componentType:this.components.componentType});
       this.storeComponent( newComponentRequestInput);
     },
 
 
-    deleteThisComponent(component) {
-      this.deleteComponent(component);
+    deleteThisComponentAttributeDefinition(attribute) {
+      //this.deleteComponent(attribute);
     }
+
   },
   beforeDestroy() {
     window.removeEventListener('resize', this.resize);

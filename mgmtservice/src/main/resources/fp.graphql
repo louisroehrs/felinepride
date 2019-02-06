@@ -7,8 +7,10 @@ type Query {
     user (userName: String email:String id:String): User
     getAllUsers: [User]
     login (userName:String password:String) : User
-    getAllComponentTypes : [ComponentType]
+    getAllComponentTypes (visibility:String) : [ComponentType]
     getComponentsByType ( componentType:String): [Component]
+    getComponentTypeByName ( name:String) : ComponentType
+
 }
 
 
@@ -85,6 +87,7 @@ type ComponentType {
     name:String
     owlClass:String
     attributes: [Attribute]
+    visibility:String
     sets: [Set]
 }
 
@@ -100,14 +103,14 @@ type Component {
 type Attribute {
     name:String
     value: String
-    type: String
+    datatype: String
     editor:String
     setName: String
     owlClass: String
 }
 
 type Set {
-    setName:String
+    setName: String
     members: [SetMember]
 }
 
@@ -119,7 +122,7 @@ type SetMember {
 input AttributeInput {
     name: String
     value: String
-    type: String
+    datatype: String
     editor: String
     owlClass: String
 }

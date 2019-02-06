@@ -35,7 +35,7 @@
                         autocomplete="off"
                         @change="component.changed=true"
                 >
-                    <option v-for="(member, key, index) in componentType.sets[0].members" :value="member.name">
+                    <option v-for="(member, key, index) in componentType.sets.filter(set => set.setName == attribute.setName)[0].members" :value="member.name">
                         {{member.name}}
                     </option>
                 </select>
@@ -44,6 +44,11 @@
                        autocomplete="off"
                        @input="component.changed=true"
                 />
+                <div :class="'switch' + ((component.attributes[attribute.name] == 'true')? 'on' : '')"
+                     v-if="attribute.editor == 'switch'"
+                     v-model="component.attributes[attribute.name]"
+                     @input="component.changed=true"
+                ><div :class="'switchthumb' + ((component.attributes[attribute.name] == 'true')? 'on' : '')" ></div></div>
             </li>
         </ul>
 
@@ -76,7 +81,6 @@
         this.closeEditor();
       }
     }
-
   }
 </script>
 <style>
@@ -161,4 +165,33 @@
         height: 20px;
     }
 
+    .switch,.switchon {
+        height: 20px;
+        background-color:#333;
+        width: 35px;
+        display: block;
+        float: right;
+        margin-top: 6px;
+        border-radius: 14px;
+    }
+    .switchthumb,.switchthumbon {
+        height: 20px;
+        background-color: gray;
+        width: 20px;
+        display: block;
+        float: right;
+        /* margin-top: 6px; */
+        border-radius: 14px;
+        border:1px solid gray;
+    }
+
+    .switchon {
+        background-color: greenyellow;
+        border:1px inset gray;
+    }
+
+    .switchthumbon {
+        float:left;
+
+    }
 </style>

@@ -3,7 +3,9 @@ import { graphqlService } from '../services';
 const state = {
   all: {},
   editingComponentType:null,
-  components:{}
+  components:{},
+  editingComponentDefinition :{}
+
 };
 
 const done = "done";
@@ -12,7 +14,7 @@ const actions = {
   getAll({ commit }) {
     commit('getAllCompTypesRequest');
 
-    graphqlService.graphQuery('getAllComponentTypes',null,"{id name owlClass sets {setName members {name owlClass}} attributes {name value type editor setName owlClass}}")
+    graphqlService.graphQuery('getAllComponentTypes',{visibility:"all"},"{id name owlClass sets {setName members {name owlClass}} attributes {name value datatype editor setName owlClass}}")
       .then(
         componentTypes => commit('getAllCompTypesSuccess', componentTypes),
         error => commit('getAllCompTypesFailure', error)
@@ -30,7 +32,7 @@ const actions = {
   listComponents({commit}, componentType){
     commit('getComponentsByTypeRequest', componentType);
 
-    graphqlService.graphQuery('getComponentsByType',{ componentType: componentType.name },"{id componentType name owlClass attributes {name value type editor owlClass}}")
+    graphqlService.graphQuery('getComponentsByType',{ componentType: componentType.name},"{id componentType name owlClass attributes {name value datatype editor owlClass}}")
       .then(
         components => commit('getComponentsByTypeSuccess', { list:components, type:componentType}),
         error => commit('getComponentsByTypeFailure', error)
@@ -50,7 +52,7 @@ const actions = {
     commit('saveComponentRequest', component)
     var keepComponent = component;
     component.type = 'component';
-    graphqlService.graphMutation('saveNewComponent', 'create', component, "NewComponentRequestInput", "{id name attributes { editor name owlClass type value}  owlClass componentType }")
+    graphqlService.graphMutation('saveNewComponent', 'create', component, "NewComponentRequestInput", "{id name attributes { editor name owlClass datatype value}  owlClass componentType }")
       .then(
         component => {
           commit('saveComponentSuccess', component);
@@ -95,10 +97,40 @@ const actions = {
         component => commit('deleteCompSuccess', component.id),
         error => commit('deleteCompFailure', {id:component.id, error: error.toString() })
       );
+  },
+
+  editComponentType({commit}, componentType){
+    commit('editComponentTypeRequest');
+
+    graphqlService.graphQuery('getComponentTypeByName',{ "name":componentType.name },"{id name owlClass attributes {name value setName datatype editor owlClass}}")
+      .then(
+        componentType => commit('editComponentTypeSuccess', componentType),
+        error => commit('editComponentTypeFailure', error)
+      )
+      .then(
+        graphqlService.graphQuery('getComponentTypeByName',{ "name":"componenttypeattribute" },"{id name owlClass sets { setName members {name owlClass} } attributes {name setName value datatype editor owlClass}}")
+          .then(
+            componentType => commit('selectEditor',componentType),
+            error => commit('editComponentTypeFailure',error)
+          )
+  );
   }
+
 };
 
 const mutations = {
+
+  editComponentTypeRequest( state)  {
+    state.editingComponentDefinition = { loading : true};
+  },
+
+  editComponentTypeSuccess(state, componentType) {
+    state.editingComponentDefinition = componentType;
+  },
+
+  editComponentTypeFailure(state, error) {
+    state.editingComponentDefinition = error;
+  },
 
   selectEditor (state, editingComponentType) {
     state.editingComponentType = editingComponentType;

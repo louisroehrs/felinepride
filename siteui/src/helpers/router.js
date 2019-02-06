@@ -9,6 +9,7 @@ import AvatarPage from '../components/AvatarPage'
 import TacPage from '../components/TacPage'
 import WelcomePage from '../components/WelcomePage'
 import ComponentPage from '../components/ComponentPage'
+import ComponentTypePage from '../components/EntityDefinitionPage'
 
 Vue.use(Router);
 
@@ -23,6 +24,7 @@ export const router = new Router({
     { path: '/welcome', component: WelcomePage },
     { path: '/admin', component: AdminPage },
     { path: '/compeditor', component: ComponentPage },
+    { path: '/comptypeeditor', component: ComponentTypePage },
 
     // otherwise redirect to home
     { path: '*', redirect: '/' }

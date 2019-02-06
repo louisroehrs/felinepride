@@ -29,9 +29,9 @@ function graphqlQueryRequest(query,parameters, fields) {
     url:`${config.apiUrl}/graphql`,
     header: "Content-Type: application/json",
     data: { "query" : graphqlQuery(query,
-        parameters,
+        parameters,   // listens to this one.
         fields),
-      "variables":parameters,
+      "variables":parameters,   // ignored.
       "operationName":null}
   }
 }
@@ -58,7 +58,7 @@ function graphqlMutationRequest(query,action, object, objectType, fields) {
 function graphqlQuery(query,parameters, fields) {
   let parameterList = [];
   for (var p in parameters) {
-    parameterList.push(p + ':"'+parameters[p]+'"');
+    parameterList.push(p + ':"'+parameters[p] +'"');
   }
   let graphqlQuery = CL + query;
   if (parameters) {
