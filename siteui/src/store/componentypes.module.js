@@ -42,7 +42,7 @@ const actions = {
   listComponents({commit}, componentType){
     commit('getComponentsByTypeRequest', componentType);
 
-    graphqlService.graphQuery('getComponentsByType',{ componentType: componentType.name},"{id componentType name owlClass attributes {name value datatype editor owlClass}}")
+    graphqlService.graphQuery('getComponentsByType',{ componentType: componentType.name},"{id componentType name owlClass  attributes {name value datatype editor owlClass}}")
       .then(
         components => commit('getComponentsByTypeSuccess', { list:components, type:componentType}),
         error => commit('getComponentsByTypeFailure', error)
@@ -62,7 +62,7 @@ const actions = {
     commit('saveComponentRequest', component)
     var keepComponent = component;
     component.type = 'component';
-    graphqlService.graphMutation('saveNewComponent', 'create', component, "NewComponentRequestInput", "{id name attributes { editor name owlClass datatype value}  owlClass componentType }")
+    graphqlService.graphMutation('saveNewComponent', 'create', component, "NewComponentRequestInput", "{id name  attributes { editor name owlClass datatype value}  owlClass componentType }")
       .then(
         component => {
           commit('saveComponentSuccess', component);
@@ -84,7 +84,7 @@ const actions = {
     delete(component.changed);
     var keepComponent = component;
     component.type = 'component';
-    graphqlService.graphMutation('updateComponent', 'update', component, "UpdateComponentRequestInput", "{id name componentType}")
+    graphqlService.graphMutation('updateComponent', 'update', component, "UpdateComponentRequestInput", "{id name componentType }")
       .then(
         component => {
           commit('updateComponentSuccess', keepComponent);
@@ -112,20 +112,42 @@ const actions = {
   editComponentType({commit}, componentType){
     commit('editComponentTypeRequest');
 
-    graphqlService.graphQuery('getComponentTypeByName',{ "name":componentType.name },"{id name owlClass attributes {name value setName datatype editor owlClass}}")
+    graphqlService.graphQuery('getComponentTypeByName',{ "name":componentType.name },"{id name visibility owlClass sets { setName members {name owlClass} } attributes {name value setName datatype editor owlClass}}")
       .then(
         componentType => commit('editComponentTypeSuccess', componentType),
         error => commit('editComponentTypeFailure', error)
       )
       .then(
-        graphqlService.graphQuery('getComponentTypeByName',{ "name":"componenttypeattribute" },"{id name owlClass sets { setName members {name owlClass} } attributes {name setName value datatype editor owlClass}}")
+        graphqlService.graphQuery('getComponentTypeByName',{ "name":"componenttypeattribute" },"{id name owlClass visibility sets { setName members {name owlClass} } attributes {name setName value datatype editor owlClass}}")
           .then(
             componentType => commit('selectEditor',componentType),
             error => commit('editComponentTypeFailure',error)
           )
 
   );
-  }
+  },
+
+  updateComponentType({commit}, updateRequest) {
+    commit('updateComponentTypeRequest', updateRequest);
+    var component = updateRequest.component;
+    delete(component.changed);
+    var keepComponent = component;
+    component.type = 'componenttype';
+    graphqlService.graphMutation('updateComponentType', 'update', component, "UpdateComponentTypeRequestInput", "{id name owlClass visibility type componentType sets {setName members {name owlClass}} attributes {name setName value datatype editor owlClass}}")
+      .then(
+        componentType => {
+          commit('updateComponentTypeSuccess', componentType);
+          setTimeout(() => {
+            //      dispatch('alert/success', 'Saved', {root: true})
+          })
+        },
+        error => {
+          commit('updateComponentTypeFailure', error);
+          //       dispatch('alert/error', error, {root: true});
+        }
+      );
+  },
+
 
 };
 
@@ -204,7 +226,7 @@ const mutations = {
     state.components.status = { items: state.components.items, error: error};
   },
 
-  // TODO
+
   updateComponentRequest(state,updateRequest) {
     state.components = { items: state.components.items, updating: true, componentType: updateRequest.componentType};
     state.components.items = state.components.items.map(component =>
@@ -213,11 +235,11 @@ const mutations = {
         : component
     )
   },
-  // TODO
+
   updateComponentFailure(state,error) {
     state.components.status = { items: state.components.items, error: error};
   },
-  // TODO
+
   updateComponentSuccess(state,component) {
     if (state.components.componentType.name == component.componentType) {
       if (state.components.items) {
@@ -233,6 +255,7 @@ const mutations = {
       state.components = {items: state.components.items, updating: done};
     }
   },
+
 
   deleteCompRequest(state, id) {
     // add 'deleting:true' property to user being deleted
@@ -257,7 +280,37 @@ const mutations = {
             }
       return component;
     })
-  }
+  },
+
+  // TODO
+  updateComponentTypeRequest(state,updateRequest) {
+    state.all = { items: state.all.items, updating: true, componentType: updateRequest.componentType};
+    state.all.items = state.all.items.map(componentType =>
+      componentType.id === updateRequest.component.id
+        ? { ...componentType, updating: true }
+        : componentType
+    )
+  },
+  // TODO
+  updateComponentTypeFailure(state,error) {
+    state.components.status = { items: state.components.items, error: error};
+  },
+  // TODO
+  updateComponentTypeSuccess(state,component) {
+    if (state.components.componentType.name == component.componentType) {
+      if (state.components.items) {
+        for (let [index,statecomponent] of state.components.items.entries()) {
+          if (statecomponent.id == component.id ) {
+            state.components.items.splice(index,1,{...component, changed:false})
+
+          }
+        }
+      }
+      state.components.updating = done;
+    } else {
+      state.components = {items: state.components.items, updating: done};
+    }
+  },
 };
 
 export const componentTypes = {

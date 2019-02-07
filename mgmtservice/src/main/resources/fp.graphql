@@ -21,6 +21,7 @@ type Mutation {
     saveNewComponent(create: NewComponentRequestInput!) : Component
     deleteComponent(delete: DeleteComponentRequestInput!): Component
     updateComponent(update: UpdateComponentRequestInput!): Component
+    updateComponentType(update: UpdateComponentTypeRequestInput!) : ComponentType
 }
 
 input RegisterUserRequestInput {
@@ -58,6 +59,17 @@ input UpdateComponentRequestInput {
     attributes: [AttributeInput]
 }
 
+input UpdateComponentTypeRequestInput {
+    id: String
+    name:String
+    type:String
+    componentType:String
+    visibility: String
+    owlClass:String
+    sets: [SetInput]
+    attributes: [ComponentTypeAttributeInput]
+}
+
 input DeleteComponentRequestInput {
     id: String
 }
@@ -85,6 +97,7 @@ type ComponentType {
     id: String
     type: String
     name:String
+    componentType:String
     owlClass:String
     attributes: [Attribute]
     visibility:String
@@ -113,16 +126,35 @@ type Set {
     setName: String
     members: [SetMember]
 }
+input SetInput {
+    setName: String
+    members: [SetMemberInput]
+}
 
 type SetMember {
     name: String
     owlClass:String
 }
 
+input SetMemberInput {
+    name: String
+    owlClass:String
+}
+
+
 input AttributeInput {
     name: String
     value: String
     datatype: String
     editor: String
+    owlClass: String
+}
+
+input ComponentTypeAttributeInput {
+    name: String
+    value: String
+    datatype: String
+    editor: String
+    setName: String
     owlClass: String
 }

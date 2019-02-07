@@ -19,10 +19,10 @@
                 />
             </div>
             <ul  v-if="entityDefinition && entityDefinition.attributes">
-                <li class="componententry" v-for="attribute in entityDefinition.attributes" :key="attribute.name">
+                <li class="componententry" v-for="(attribute,index) in entityDefinition.attributes" :key="index">
                     <div v-if="componentType">
                         <!-- TODO: make each row from an attribute like it is a separate component -->
-                        <EditableRow :component="makeEditableAttributesComponentFrom(attribute)"
+                        <EditableRow :component="makeEditableAttributesComponentFrom(attribute,index)"
                                      :component-type="componentType"
                                      :save-component="saveComponentAttributeDefinition"
                                      :update-component="updateThisComponentAttributeDefinition"
@@ -87,17 +87,17 @@ export default {
     },
 
     // TODO: make maybe create a new datastructure to present and then convert back when saving.
-    makeEditableAttributesComponentFrom(attribute) {
+    makeEditableAttributesComponentFrom(attribute, index) {
       var tempEditableAttributeAsComponent = {};
       console.log(JSON.stringify(attribute))
       console.log(JSON.stringify(this.editingComponentType))
-      tempEditableAttributeAsComponent.name = attribute.name;
+     // tempEditableAttributeAsComponent.name = attribute.name;
       var tempEditableAttribute = {}
       for (var componentTypeAttribute of this.editingComponentType.attributes) {
         tempEditableAttribute[componentTypeAttribute.name]= attribute[componentTypeAttribute.name];
       }
       tempEditableAttributeAsComponent.attributes = tempEditableAttribute;
-
+      tempEditableAttributeAsComponent.index = index
       this.editableAttributeAsComponent= tempEditableAttributeAsComponent;
 
       return tempEditableAttributeAsComponent;
@@ -137,18 +137,24 @@ export default {
       }
       return newAttributes;
     },
-
+    // Goal.  update this.entityDefinition with a single attribute and save
+    // by calling updateComponent type:componentType id: componentType: <name>
     updateThisComponentAttributeDefinition(updateRequest) {
+      debugger;
       var updateComponentRequestInput = {};
-      var component = updateRequest.component;
+      var updatedAttribute = updateRequest.component;
       var componentType = updateRequest.componentType;
-      updateComponentRequestInput.id = component.id;
-      updateComponentRequestInput.name = component.name;
-      updateComponentRequestInput.type = "component";
-      updateComponentRequestInput.componentType = componentType.name;
-      updateComponentRequestInput.owlClass = componentType.owlClass;
-      updateComponentRequestInput.attributes = this.attributeRequestInput({attributes: component.attributes,componentType:componentType});
-      this.updateComponent( {component:updateComponentRequestInput, componentType:componentType});
+      debugger;  // this.entityDefinition needs to be updated and saved.
+
+     
+      updateComponentRequestInput = this.entityDefinition;
+      //overlay fixed properties.
+      updateComponentRequestInput.type = "componenttype";
+      updateComponentRequestInput.componentType = "componenttype";
+
+      updateComponentRequestInput.attributes[updatedAttribute.index] = updatedAttribute.attributes;
+ //     updateComponentRequestInput.attributes = this.attributeRequestInput({attributes: updateComponentRequestInput.attributes,componentType:componentType});
+      this.updateComponentType( {component:updateComponentRequestInput, componentType:componentType});
     },
 /* TODO: This next.  save the component as an attribute. */
     saveComponentAttributeDefinition() {

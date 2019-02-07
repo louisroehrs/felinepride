@@ -80,6 +80,7 @@ export default {
     },
 
     makeNewComponent(componentType) {
+      this.closeThisEditor();
       this.component = {name:"", attributes:{}};
       this.newComponent(componentType);
     },

@@ -1,16 +1,7 @@
 <template>
     <form id="componentForm" @submit.prevent="handleSubmit">
         <div class="row" v-bind:class="{ deleting: component.deleting,updating: component.updating , changed: component.changed }"></div>
-        <ul>
-            <li class="editfield">
-                <div class="editfieldlabel">name</div>
-                <input class="newfieldinput"
-                       v-model="component.name"
-                       autocomplete="off"
-                       @input="component.changed=true"
-                />
-            </li>
-        </ul>
+
         <ul class="componentfield" v-if="componentType.attributes">
             <li class="editfield" v-for="(attribute,key) in componentType.attributes" :key="attribute.name">
                 <div class="editfieldlabel">{{ attribute.name }}</div>
