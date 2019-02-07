@@ -140,22 +140,20 @@ export default {
     // Goal.  update this.entityDefinition with a single attribute and save
     // by calling updateComponent type:componentType id: componentType: <name>
     updateThisComponentAttributeDefinition(updateRequest) {
-      debugger;
       var updateComponentRequestInput = {};
       var updatedAttribute = updateRequest.component;
       var componentType = updateRequest.componentType;
-      debugger;  // this.entityDefinition needs to be updated and saved.
 
-     
       updateComponentRequestInput = this.entityDefinition;
       //overlay fixed properties.
       updateComponentRequestInput.type = "componenttype";
       updateComponentRequestInput.componentType = "componenttype";
 
       updateComponentRequestInput.attributes[updatedAttribute.index] = updatedAttribute.attributes;
- //     updateComponentRequestInput.attributes = this.attributeRequestInput({attributes: updateComponentRequestInput.attributes,componentType:componentType});
+
       this.updateComponentType( {component:updateComponentRequestInput, componentType:componentType});
     },
+
 /* TODO: This next.  save the component as an attribute. */
     saveComponentAttributeDefinition() {
       var newComponentRequestInput = {};

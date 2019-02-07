@@ -282,7 +282,7 @@ const mutations = {
     })
   },
 
-  // TODO
+
   updateComponentTypeRequest(state,updateRequest) {
     state.all = { items: state.all.items, updating: true, componentType: updateRequest.componentType};
     state.all.items = state.all.items.map(componentType =>
@@ -296,20 +296,20 @@ const mutations = {
     state.components.status = { items: state.components.items, error: error};
   },
   // TODO
-  updateComponentTypeSuccess(state,component) {
-    if (state.components.componentType.name == component.componentType) {
-      if (state.components.items) {
-        for (let [index,statecomponent] of state.components.items.entries()) {
-          if (statecomponent.id == component.id ) {
-            state.components.items.splice(index,1,{...component, changed:false})
+  updateComponentTypeSuccess(state,componentType) {
 
+//    if (state.all.items. == componentType.id) {  // are we showing the same componenttype?
+      if (state.all.items) {
+        for (let [index,statecomponenttype] of state.all.items.entries()) {
+          if (statecomponenttype.id == componentType.id ) {
+            state.all.items.splice(index,1,{...componentType, changed:false})
           }
         }
       }
-      state.components.updating = done;
-    } else {
-      state.components = {items: state.components.items, updating: done};
-    }
+      state.all.updating = "done";
+//    } else {
+//      state.all = {items: state.all.items, updating: "done"};
+//    }
   },
 };
 
