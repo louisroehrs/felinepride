@@ -148,22 +148,23 @@ export default {
       //overlay fixed properties.
       updateComponentRequestInput.type = "componenttype";
       updateComponentRequestInput.componentType = "componenttype";
-
       updateComponentRequestInput.attributes[updatedAttribute.index] = updatedAttribute.attributes;
 
       this.updateComponentType( {component:updateComponentRequestInput, componentType:componentType});
     },
 
-/* TODO: This next.  save the component as an attribute. */
-    saveComponentAttributeDefinition() {
-      var newComponentRequestInput = {};
+/* TODO: This next.  Add the attribute to this entity definition and UPDATE (not save new) component*/
+    saveComponentAttributeDefinition(saveRequest) {
+      var updateComponentRequestInput = {};
       debugger;
-      newComponentRequestInput.name = this.componentType.name;
-      newComponentRequestInput.type = "component";
-      newComponentRequestInput.componentType = this.components.componentType.name;
-      newComponentRequestInput.owlClass = this.components.componentType.owlClass;
-      newComponentRequestInput.attributes = this.attributeRequestInput({attributes:this.componentType.attributes,componentType:this.components.componentType});
-      this.storeComponent( newComponentRequestInput);
+      var updatedAttribute = saveRequest.component;
+      var componentType = saveRequest.componentType;
+      updateComponentRequestInput = this.entityDefinition;
+      updateComponentRequestInput.type = "componenttype";
+      updateComponentRequestInput.componentType = "componenttype";
+      updateComponentRequestInput.attributes[updateComponentRequestInput.attributes.length] =
+        updatedAttribute.attributes;
+      this.updateComponentType( {component:updateComponentRequestInput, componentType:componentType});
     },
 
 

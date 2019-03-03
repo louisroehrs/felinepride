@@ -35,21 +35,23 @@
                        autocomplete="off"
                        @input="component.changed=true"
                 />
-                <div :class="'switch' + ((component.attributes[attribute.name] == 'true')? 'on' : '')"
+                <!--  v-model="component.attributes[attribute.name]" -->
+                <div class="switch" v-bind:class="{switchon: component.attributes[attribute.name] == 'true'}"
                      v-if="attribute.editor == 'switch'"
-                     v-model="component.attributes[attribute.name]"
-                     @input="component.changed=true"
-                ><div :class="'switchthumb' + ((component.attributes[attribute.name] == 'true')? 'on' : '')" ></div></div>
+
+                     @click="component.changed=true;
+                     component.attributes[attribute.name] = (component.attributes[attribute.name] === 'true' ? 'false':'true')"
+                ><div class="switchthumb" v-bind:class="{switchthumbon:component.attributes[attribute.name] == 'true'}" ></div></div>
             </li>
         </ul>
 
 
-        <div  v-if="toggleedit" @click="deleteComponent(component)" class="deletebutton">delete</div>
+        <div v-if="toggleedit" @click="deleteComponent(component)" class="deletebutton">delete</div>
         <div v-if="component.changed && !blankform"
              @click="updateComponent({component:component, componentType:componentType})"
              class="submitbutton">Save
         </div>
-        <div v-if="blankform" class="submitbutton" @click="saveComponent">Save</div>
+        <div v-if="blankform" class="submitbutton" @click="saveComponent({component:component, componentType:componentType})">Save</div>
         <div v-if="blankform" class="closebutton" @click="closeMyEditor">Cancel</div>
     </form>
 </template>
@@ -88,7 +90,7 @@
         float: left;
         margin-top:5px;
         margin-right: 5px;
-        min-width: 50px;
+        min-width: 80px;
         font-size: 16px;
         color: rgba(255, 255, 255, 0.50);
     }
@@ -108,8 +110,8 @@
         margin-top: 6px;
         margin-bottom: 3px;
         margin-right: 5px;
-        min-width: 50px;
-        font-size: 16px;
+        min-width: 60px;
+        font-size: 12px;
         color: rgba(255, 255, 255, 0.50);
     }
 
@@ -209,6 +211,7 @@
     }
 
     .editfield {
+        height:40px;
         margin: 0px;
         border: 0px;
         float: left;

@@ -66,6 +66,7 @@ export default {
       window.addEventListener('resize', this.resize);
       //Init
       this.resize()
+      this.closeEditor()
   },
 
   methods: {
@@ -124,13 +125,15 @@ export default {
       this.updateComponent( {component:updateComponentRequestInput, componentType:componentType});
     },
 
-    saveComponent() {
-      var newComponentRequestInput = {};
-      newComponentRequestInput.name = this.component.name;
+    saveComponent(saveRequest) {
+      var component = saveRequest.component;
+      var componentType = saveRequest.componentType;
+      newComponentRequestInput.name = component.name;
       newComponentRequestInput.type = "component";
-      newComponentRequestInput.componentType = this.components.componentType.name;
-      newComponentRequestInput.owlClass = this.components.componentType.owlClass;
-      newComponentRequestInput.attributes = this.attributeRequestInput({attributes:this.component.attributes,componentType:this.components.componentType});
+      newComponentRequestInput.componentType = componentType.name;
+      newComponentRequestInput.owlClass = componentType.owlClass;
+      newComponentRequestInput.attributes = this.attributeRequestInput({attributes:component.attributes,componentType:componentType});
+
       this.storeComponent( newComponentRequestInput);
     },
 

@@ -127,6 +127,7 @@ const actions = {
   );
   },
 
+
   updateComponentType({commit}, updateRequest) {
     commit('updateComponentTypeRequest', updateRequest);
     var component = updateRequest.component;
@@ -149,6 +150,7 @@ const actions = {
   },
 
 
+
 };
 
 const mutations = {
@@ -158,7 +160,9 @@ const mutations = {
   },
 
   editComponentTypeSuccess(state, componentType) {
+    componentType.attributes.forEach( attribute => { attribute.changed = false});
     state.editingComponentDefinition = componentType;
+    state.editingComponentType = componentType;
   },
 
   editComponentTypeFailure(state, error) {

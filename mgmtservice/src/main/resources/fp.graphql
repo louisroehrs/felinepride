@@ -21,7 +21,9 @@ type Mutation {
     saveNewComponent(create: NewComponentRequestInput!) : Component
     deleteComponent(delete: DeleteComponentRequestInput!): Component
     updateComponent(update: UpdateComponentRequestInput!): Component
+
     updateComponentType(update: UpdateComponentTypeRequestInput!) : ComponentType
+    saveNewComponentType(create: UpdateComponentTypeRequestInput!) : ComponentType
 }
 
 input RegisterUserRequestInput {
