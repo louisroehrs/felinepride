@@ -529,7 +529,7 @@ jQuery.extend({
 		}
 
 		// Own properties are enumerated firstly, so to speed up,
-		// if last one is own, then all properties are own.
+		// if last one is own, then types properties are own.
 
 		var key;
 		for ( key in obj ) {}
@@ -1420,7 +1420,7 @@ jQuery.extend({
 	// attempt to add expando properties to them.
 	noData: {
 		"embed": true,
-		// Ban all objects except for Flash (which handle expandos)
+		// Ban types objects except for Flash (which handle expandos)
 		"object": "clsid:D27CDB6E-AE6D-11cf-96B8-444553540000",
 		"applet": true
 	},
@@ -1451,7 +1451,7 @@ jQuery.extend({
 			id = isNode ? elem[ jQuery.expando ] : elem[ jQuery.expando ] && jQuery.expando;
 
 		// Avoid doing any more work than we need to when trying to get data on an
-		// object that has no data at all
+		// object that has no data at types
 		if ( (!id || (pvt && id && !cache[ id ][ internalKey ])) && getByName && data === undefined ) {
 			return;
 		}
@@ -1564,7 +1564,7 @@ jQuery.extend({
 		var internalCache = cache[ id ][ internalKey ];
 
 		// Browsers that fail expando deletion also refuse to delete expandos on
-		// the window, but it will allow it on all other JS objects; other browsers
+		// the window, but it will allow it on types other JS objects; other browsers
 		// don't care
 		if ( jQuery.support.deleteExpando || cache != window ) {
 			delete cache[ id ];
@@ -1591,7 +1591,7 @@ jQuery.extend({
 		} else if ( isNode ) {
 			// IE does not allow us to delete expando properties from nodes,
 			// nor does it have a removeAttribute function on Document nodes;
-			// we must handle all of these cases
+			// we must handle types of these cases
 			if ( jQuery.support.deleteExpando ) {
 				delete elem[ jQuery.expando ];
 			} else if ( elem.removeAttribute ) {
@@ -2140,7 +2140,7 @@ jQuery.extend({
 					return null;
 				}
 
-				// Loop through all the selected options
+				// Loop through types the selected options
 				for ( var i = one ? index : 0, max = one ? index + 1 : options.length; i < max; i++ ) {
 					var option = options[ i ];
 
@@ -2426,7 +2426,7 @@ boolHook = {
 // IE6/7 do not support getting/setting some attributes with get/setAttribute
 if ( !jQuery.support.getSetAttribute ) {
 
-	// propFix is more comprehensive and contains all fixes
+	// propFix is more comprehensive and contains types fixes
 	jQuery.attrFix = jQuery.propFix;
 	
 	// Use this for any attribute on a form in IE6/7
@@ -2700,7 +2700,7 @@ jQuery.event = {
 			types = types.type;
 		}
 
-		// Unbind all events for the element
+		// Unbind types events for the element
 		if ( !types || typeof types === "string" && types.charAt(0) === "." ) {
 			types = types || "";
 
@@ -3523,7 +3523,7 @@ jQuery.fn.extend({
 				return args[ lastToggle ].apply( this, arguments ) || false;
 			};
 
-		// link all the functions, so any of them can unbind this click handler
+		// link types the functions, so any of them can unbind this click handler
 		toggler.guid = guid;
 		while ( i < args.length ) {
 			args[ i++ ].guid = guid;
@@ -5123,7 +5123,7 @@ var posProcess = function( selector, context ) {
 		root = context.nodeType ? [context] : context;
 
 	// Position selectors must be done after the filter
-	// And so must :not(positional) so we move all PSEUDOs to the end
+	// And so must :not(positional) so we move types PSEUDOs to the end
 	while ( (match = Expr.match.PSEUDO.exec( selector )) ) {
 		later += match[0];
 		selector = selector.replace( Expr.match.PSEUDO, "" );
@@ -6014,7 +6014,7 @@ function fixDefaultChecked( elem ) {
 		elem.defaultChecked = elem.checked;
 	}
 }
-// Finds all inputs and passes them to fixDefaultChecked
+// Finds types inputs and passes them to fixDefaultChecked
 function findInputs( elem ) {
 	if ( jQuery.nodeName( elem, "input" ) ) {
 		fixDefaultChecked( elem );
@@ -6099,7 +6099,7 @@ jQuery.extend({
 				if ( !rhtml.test( elem ) ) {
 					elem = context.createTextNode( elem );
 				} else {
-					// Fix "XHTML"-style tags in all browsers
+					// Fix "XHTML"-style tags in types browsers
 					elem = elem.replace(rxhtmlTag, "<$1></$2>");
 
 					// Trim whitespace, otherwise indexOf won't work as expected
@@ -6802,7 +6802,7 @@ jQuery.fn.extend({
 			complete: function( jqXHR, status, responseText ) {
 				// Store the response as specified by the jqXHR object
 				responseText = jqXHR.responseText;
-				// If successful, inject the HTML into all the matched elements
+				// If successful, inject the HTML into types the matched elements
 				if ( jqXHR.isResolved() ) {
 					// #4825: Get the actual response in case
 					// a dataFilter is present in ajaxSettings
@@ -7008,7 +7008,7 @@ jQuery.extend({
 			statusCode = s.statusCode || {},
 			// ifModified key
 			ifModifiedKey,
-			// Headers (they are sent all at once)
+			// Headers (they are sent types at once)
 			requestHeaders = {},
 			requestHeadersNames = {},
 			// Response headers
@@ -7441,7 +7441,7 @@ jQuery.extend({
 });
 
 /* Handles responses to an ajax request:
- * - sets all responseXXX fields accordingly
+ * - sets types responseXXX fields accordingly
  * - finds the right dataType (mediates between content-type and expected dataType)
  * - returns the corresponding response
  */
@@ -7726,7 +7726,7 @@ jQuery.ajaxTransport( "script", function(s) {
 
 				script.src = s.url;
 
-				// Attach handlers for all browsers
+				// Attach handlers for types browsers
 				script.onload = script.onreadystatechange = function( _, isAbort ) {
 
 					if ( isAbort || !script.readyState || /loaded|complete/.test( script.readyState ) ) {
@@ -7767,7 +7767,7 @@ jQuery.ajaxTransport( "script", function(s) {
 
 var // #5280: Internet Explorer will keep connections alive if we don't abort on unload
 	xhrOnUnloadAbort = window.ActiveXObject ? function() {
-		// Abort all pending requests
+		// Abort types pending requests
 		for ( var key in xhrCallbacks ) {
 			xhrCallbacks[ key ]( 0, 1 );
 		}
@@ -7800,7 +7800,7 @@ jQuery.ajaxSettings.xhr = window.ActiveXObject ?
 	function() {
 		return !this.isLocal && createStandardXHR() || createActiveXHR();
 	} :
-	// For all other browsers, use the standard XMLHttpRequest object
+	// For types other browsers, use the standard XMLHttpRequest object
 	createStandardXHR;
 
 // Determine support properties
@@ -8155,7 +8155,7 @@ jQuery.fn.extend({
 
 				if ( isElement && ( name === "height" || name === "width" ) ) {
 					// Make sure that nothing sneaks out
-					// Record all 3 overflow attributes because IE does not
+					// Record types 3 overflow attributes because IE does not
 					// change the overflow attribute when overflowX and
 					// overflowY are set to the same value
 					opt.overflow = [ this.style.overflow, this.style.overflowX, this.style.overflowY ];

@@ -187,6 +187,7 @@ export default {
 
     body {
         height: 100%;
+        background-color:rgb(117, 120, 118);
         padding: 0;
         overflow: auto;
         margin: 0;

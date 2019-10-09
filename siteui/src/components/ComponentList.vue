@@ -3,7 +3,7 @@
         <h3 class="pagename" v-if="components.componentType">
             <label class="editbutton" vd-if="editingComponentType" @click="makeNewComponent(components.componentType)">New</label>
             <label v-bind:class="{ toggleediton: toggleedit, toggleeditoff:!toggleedit}">Edit <input type="checkbox" v-model="toggleedit"/></label>
-            List of {{components.componentType.name}}
+            List of {{components.componentType.name}} entities
         </h3>
 
         <div class="rightside scrolling" ref="scrollermain" v-bind:style="{ height: this.scrollerHeight+'px'}">
@@ -58,7 +58,6 @@ export default {
   computed: {
     ...mapState({
       editingComponentType : state => state.componentTypes.editingComponentType
-
     })
   },
 

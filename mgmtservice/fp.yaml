@@ -78,5 +78,5 @@ couchbaseConfiguration:
   nodes:
     - 127.0.0.1
   bucket: fp
-  bucketPassword: 2Beagles
+  bucketPassword: 2beagles
   driver: com.felinepride.app.graphql.dal.DAL

@@ -1,9 +1,9 @@
 import { graphqlService } from '../services';
 
 const state = {
-    all: {},
+    types: {},
+    components:{},
     editingComponentType: null,
-    components: {},
     editingComponentDefinition: null,
     editingAttributeType: null,
     newAttribute: null
@@ -13,7 +13,7 @@ const state = {
 const done = "done";
 
 const actions = {
-  getAll({ commit }) {
+  getAllComponentTypes({ commit }) {
     commit('getAllCompTypesRequest');
 
     graphqlService.graphQuery('getAllComponentTypes',{visibility:"all"},"{id name owlClass sets {setName members {name owlClass}} attributes {name value datatype editor setName owlClass}}")
@@ -49,8 +49,8 @@ const actions = {
       );
   },
 
-/*    for (var componentType in this.state.componentTypes.all.items) {
-      if (this.state.componentTypes.all.items[componentType].id == componentTypeId ) {
+/*    for (var componentType in this.state.componentTypes.types.items) {
+      if (this.state.componentTypes.types.items[componentType].id == componentTypeId ) {
         this.store.commit('selectEditor', componentType);
       }
     }
@@ -160,9 +160,8 @@ const mutations = {
   },
 
   editComponentTypeSuccess(state, componentType) {
-    componentType.attributes.forEach( attribute => { attribute.changed = false});
     state.editingComponentDefinition = componentType;
-    state.editingComponentType = componentType;
+    // TODO, put the editing Component Definition in a usable format for the uI.  method exists, use makeEditableAttributesComponentFrom
   },
 
   editComponentTypeFailure(state, error) {
@@ -188,14 +187,14 @@ const mutations = {
   },
 
   getAllCompTypesRequest(state) {
-    state.all = { loading: true };
+    state.types = { loading: true };
   },
   getAllCompTypesSuccess(state, componentTypes) {
-    state.all = { items: componentTypes };
+    state.types = { items: componentTypes };
     window.setTimeout("window.dispatchEvent(new Event('resize'))",100);
   },
   getAllCompTypesFailure(state, error) {
-    state.all = { error };
+    state.types = { error };
   },
 
 
@@ -288,9 +287,13 @@ const mutations = {
 
 
   updateComponentTypeRequest(state,updateRequest) {
-    state.all = { items: state.all.items, updating: true, componentType: updateRequest.componentType};
-    state.all.items = state.all.items.map(componentType =>
-      componentType.id === updateRequest.component.id
+    state.types = {
+      items: state.types.items,
+      updating: true,
+      componentType: updateRequest.componentType
+    };
+    state.types.items = state.types.items.map(componentType =>
+      componentType.id === updateRequest.componentType.id
         ? { ...componentType, updating: true }
         : componentType
     )
@@ -302,17 +305,19 @@ const mutations = {
   // TODO
   updateComponentTypeSuccess(state,componentType) {
 
-//    if (state.all.items. == componentType.id) {  // are we showing the same componenttype?
-      if (state.all.items) {
-        for (let [index,statecomponenttype] of state.all.items.entries()) {
+//    if (state.types.items. == componentType.id) {  // are we showing the same componenttype?
+      if (state.types.items) {
+        debugger;
+        for (let [index,statecomponenttype] of state.types.items.entries()) {
           if (statecomponenttype.id == componentType.id ) {
-            state.all.items.splice(index,1,{...componentType, changed:false})
+            state.types.items.splice(index,1,{...componentType, changed:false})
           }
         }
       }
-      state.all.updating = "done";
+      state.editingComponentType = componentType;
+      state.types.updating = "done";
 //    } else {
-//      state.all = {items: state.all.items, updating: "done"};
+//      state.types = {items: state.types.items, updating: "done"};
 //    }
   },
 };

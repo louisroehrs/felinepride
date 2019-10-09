@@ -32,11 +32,11 @@ export default {
         })
     },
     created () {
-        this.getAll();
+        this.getAllUsers();
     },
     methods: {
         ...mapActions('users', {
-            getAll: 'getAll',
+            getAllUsers: 'getAllUsers',
             deleteUser: 'delete'
         })
     }

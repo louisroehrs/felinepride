@@ -1,10 +1,10 @@
 <template> 
     <div>
-        <h2><router-link to="/admin">Admin</router-link> | Component Editor | <router-link to="/comptypeeditor">Component Type Editor</router-link></h2>
+        <h2><router-link to="/admin">Admin</router-link> | Entity Editor | <router-link to="/comptypeeditor">Entity Definition Editor</router-link></h2>
         <div></div>
         <div class="leftside scrolling" ref="scroller" v-bind:style="{ height: this.scrollerHeight+'px'}">
-<!--        <em v-if="componentTypes.loading">Loading componentTypes...</em>
-        <span v-if="componentTypes.error" class="text-danger">ERROR: {{componentTypes.error}}</span>-->
+            <em v-if="componentTypes.loading">Loading componentTypes...</em>
+            <span v-if="componentTypes.error" class="text-danger">ERROR: {{componentTypes.error}}</span>
             <ul class="picklist" v-if="componentTypes.items">
                     <li class="componentType" v-for="componentType in componentTypes.items" :key="componentType.id">
                         <a @click="listComponents(componentType)">{{ componentType.name}}</a>
@@ -16,7 +16,6 @@
         </div>
         <div class="bottombar" ref="bottombox"><div class="bottombutton">+</div><div class="bottombutton">-</div></div>
         <div class="editarea">
-       <!--     <ComponentEditor v-if="editingComponentType" v-bind:componentType="editingComponentType"></ComponentEditor> -->
             <ComponentList v-if="components" v-bind:components="components" ></ComponentList>
         </div>
 
@@ -34,15 +33,15 @@ export default {
   },
   computed: {
     ...mapState({
-      componentTypes: state => state.componentTypes.all,
+      componentTypes: state => state.componentTypes.types,
       components: state => state.componentTypes.components,
       editingComponentType : state => state.componentTypes.editingComponentType
-
     })
   },
   created () {
-    this.getAll();
+    this.getAllComponentTypes();
   },
+
   mounted() {
       window.addEventListener('resize', this.resize);
       //Init
@@ -52,7 +51,7 @@ export default {
 
   methods: {
     ...mapActions('componentTypes', {
-      getAll: 'getAll',
+      getAllComponentTypes: 'getAllComponentTypes',
       listComponents: 'listComponents',
       closeEditor: 'closeEditor'
     }),
@@ -86,7 +85,7 @@ export default {
 
     div.leftside {
         border-top:1px solid grey;
-        background: #eee;
+        background-color: blue-grey;
         width:15%;
         float:left;
     }

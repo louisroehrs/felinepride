@@ -1,10 +1,10 @@
 <template> 
     <div>
-        <h2><router-link to="/admin">Admin</router-link> | <router-link to="/compeditor">Component Editor</router-link> | Entity Definition Editor</h2>
+        <h2><router-link to="/admin">Admin</router-link> | <router-link to="/compeditor">Entity Editor</router-link> | Entity Definition Editor</h2>
         <div></div>
         <div class="leftside scrolling" ref="scroller" v-bind:style="{ height: this.scrollerHeight+'px'}">
-<!--        <em v-if="componentTypes.loading">Loading componentTypes...</em>
-        <span v-if="componentTypes.error" class="text-danger">ERROR: {{componentTypes.error}}</span>-->
+            <em v-if="componentTypes.loading">Loading componentTypes...</em>
+            <span v-if="componentTypes.error" class="text-danger">ERROR: {{componentTypes.error}}</span>
             <ul class="picklist" v-if="componentTypes.items">
                     <li class="componentType" v-for="componentType in componentTypes.items" :key="componentType.id">
                         <a @click="editComponentType(componentType)">{{ componentType.name}}</a>
@@ -36,13 +36,13 @@ export default {
   },
   computed: {
     ...mapState({
-      componentTypes: state => state.componentTypes.all,
+      componentTypes: state => state.componentTypes.types,
       editingComponentType : state => state.componentTypes.editingComponentType,
       editingComponentDefinition : state => state.componentTypes.editingComponentDefinition
     })
   },
   created () {
-    this.getAll();
+    this.getAllComponentTypes();
   },
   mounted() {
       window.addEventListener('resize', this.resize);
@@ -53,7 +53,7 @@ export default {
 
   methods: {
     ...mapActions('componentTypes', {
-      getAll: 'getAll',
+      getAllComponentTypes: 'getAllComponentTypes',
       deleteComponentType: 'delete',
       closeEditor: 'closeEditor',
       editComponentType: 'editComponentType'
@@ -76,6 +76,8 @@ export default {
         text-shadow: none;
         color:black;
     }
+
+        
     input {
         box-shadow: none;
     }
@@ -88,7 +90,7 @@ export default {
 
     div.leftside {
         border-top:1px solid grey;
-        background: #eee;
+        background-color: grey;
         width:15%;
         float:left;
     }

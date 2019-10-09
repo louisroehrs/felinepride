@@ -122,6 +122,7 @@ function login(userName, password) {
                     "{ id  type  userName isAdmin}"
                    );
 
+debugger;
   return axios(requestQuery)
     .then(handleResponse)
     .then(response => {

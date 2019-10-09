@@ -30,11 +30,11 @@ export default {
         })
     },
     created () {
-        this.getAll();
+        this.getAllComponentTypes();
     },
     methods: {
         ...mapActions('users', {
-            getAll: 'getAll',
+            getAllComponentTypes: 'getAll',
             deleteUser: 'delete'
         })
     }

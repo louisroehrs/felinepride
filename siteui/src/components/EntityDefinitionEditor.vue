@@ -21,7 +21,7 @@
             <ul  v-if="entityDefinition && entityDefinition.attributes">
                 <li class="componententry" v-for="(attribute,index) in entityDefinition.attributes" :key="index">
                     <div v-if="componentType">
-                        <!-- TODO: make each row from an attribute like it is a separate component -->
+                        <!-- TODO: make each row from an attribute like it —is a separate component -->
                         <EditableRow :component="makeEditableAttributesComponentFrom(attribute,index)"
                                      :component-type="componentType"
                                      :save-component="saveComponentAttributeDefinition"

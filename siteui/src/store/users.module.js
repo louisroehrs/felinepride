@@ -5,7 +5,7 @@ const state = {
 };
 
 const actions = {
-    getAll({ commit }) {
+    getAllUsers({ commit }) {
       commit('getAllRequest');
 
       userService.getAllUsers('getAllUsers',null,"{id userName email}")
