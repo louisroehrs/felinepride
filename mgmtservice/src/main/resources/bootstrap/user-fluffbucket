@@ -1,0 +1,14 @@
+{
+  "type": "user",
+  "componentType": "user",
+  "id": "user:fluffbucket",
+  "userName": "fluffbucket",
+  "password": "123",
+  "isAdmin": true,
+  "isActive": true,
+  "firstName": "fluff",
+  "lastName": "bucket",
+  "email": "lroehrs@gmail.com",
+  "currentLand": "MidrockPillow",
+  "with JSON": "there are no reserved field names"
+}

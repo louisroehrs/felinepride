@@ -1,0 +1,50 @@
+{
+  "id": "componentType:avatar",
+  "name": "Avatar",
+  "type": "componenttype",
+  "componentType": "avatar",
+  "visibility": "all",
+  "attributes": [
+    {
+      "name": "name",
+      "type": "string",
+      "editor": "string",
+      "datatype": "string",
+      "owlClass": "fp:name"
+    },
+    {
+      "name": "animal",
+      "type": "string",
+      "editor": "dropdown",
+      "datatype": "string",
+      "setName": "animals",
+      "owlClass": "fp:animal"
+    },
+    {
+      "name": "image",
+      "type": "string",
+      "datatype": "image",
+      "editor": "avatarImagePicker",
+      "owlClass": "fp:image"
+    }
+  ],
+  "sets": [
+    {
+      "setName": "animals",
+      "members": [
+        {
+          "name": "lion",
+          "owlClass": "fp:lion"
+        },
+        {
+          "name": "tiger",
+          "owlClass": "fp:tiger"
+        },
+        {
+          "name": "marmot",
+          "owlClass": "fp:marmot"
+        }
+      ]
+    }
+  ]
+}

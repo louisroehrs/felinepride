@@ -125,6 +125,7 @@ export default {
     },
 
     saveComponent(saveRequest) {
+      var newComponentRequestInput = {};
       var component = saveRequest.component;
       var componentType = saveRequest.componentType;
       newComponentRequestInput.name = component.name;

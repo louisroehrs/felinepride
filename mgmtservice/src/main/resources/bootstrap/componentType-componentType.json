@@ -1,0 +1,28 @@
+e",
+          "owlCloss": "fp:price"
+        },
+        {
+          "name": "switch",
+          "owlClass": "fp:wwitch"
+        }
+      ]
+    },
+    {
+      "setName": "datatype",
+      "members": [
+        {
+          "name": "string",
+          "owlClass": "fp:string"
+        },
+        {
+          "name": "float",
+          "owlClass": "fp:float"
+        },
+        {
+          "name": "image",
+          "owlClass": "fp:image"
+        }
+      ]
+    }
+  ]
+}
