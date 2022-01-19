@@ -1,0 +1,64 @@
+
+
+
+
+<HTML>
+  <head>
+    <script language=JavaScript src=https://pixijs.download/v6.2.1/pixi.js></script>
+        
+  </head>
+  <body>
+    
+  </body>
+
+  <script>
+
+    const spriteNames = ["cat2","rocket"];
+    let sprites = [];
+    
+    const loadSprites = () => {
+      spriteNames.map( spriteName => {
+        let sprite = PIXI.Sprite.from(spriteName + ".png");
+        sprites.push(sprite);
+        sprite.y=100;
+        if (spriteName === "rocket")
+        {
+          sprite.y -= 30;
+          sprite.x -= 100;
+          sprite.width= 200;
+          sprite.height= 200;
+          sprite.rotation += .50;
+        }
+      });
+    }
+
+
+    let app = new PIXI.Application({ width: window.innerWidth,height: window.innerHeight });
+//    let app = new PIXI.Application({ width: 600, height: 600 });
+    document.body.appendChild(app.view);
+
+    const container = new PIXI.Container();
+
+    app.stage.addChild(container);
+
+
+    // Add a ticker callback to move the sprite back and forth
+    let elapsed = 0.0;
+    loadSprites();
+
+    container.addChild(sprites[0]);
+    container.addChild(sprites[1]);
+    container.y = app.screen.height/2;
+
+    container.pivot.y=100;
+    container.pivot.x=-100;
+    
+    app.ticker.add((delta) => {
+      elapsed += delta;
+      container.x = app.screen.width/2 + Math.cos(elapsed/50.0) * 100.0;
+      container.rotation = -.010*   elapsed;
+    })
+
+  </script>
+  
+</html>

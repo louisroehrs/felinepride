@@ -123,7 +123,7 @@ const actions = {
             componentType => commit('selectEditor',componentType),
             error => commit('editComponentTypeFailure',error)
           )
-
+// TODO: fill in the componenttypeattribute data into database and bootstrap.  def of a componentTypes attributes.
   );
   },
 

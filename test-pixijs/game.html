@@ -1,0 +1,105 @@
+
+
+
+
+<HTML>
+  <head>
+    <script language=JavaScript src=https://pixijs.download/v6.2.1/pixi.js></script>
+        
+  </head>
+  <body>
+    
+  </body>
+
+  <script>
+
+    const spriteNames = ["cat2","rocket"];
+    let sprites = [];
+
+    const spriteData = [
+      { img : "cat2",
+        name : "Floofie",
+        x : 200,
+        y : 300,
+        chatText : "Hi everyone",
+        dx : 1,
+        dy: 0
+      },
+      { img : "rocket",
+        name : "Rocky",
+        x : 100,
+        y : 300,
+        chatText : "Yo!",
+        dx : 1,
+        dy: 0
+      }]
+      
+    
+    const loadSprites = () => {
+      spriteData.map( spriteName => {
+        let sprite = PIXI.Sprite.from(spriteName + ".png");
+        sprites.push(sprite);
+        sprite.y=100;
+        if (spriteName === "rocket")
+        {
+          sprite.y -= 30;
+          sprite.x -= 100;
+          sprite.width= 200;
+          sprite.height= 200;
+          sprite.rotation += .50;
+        }
+      });
+    }
+
+
+    let app = new PIXI.Application({ width: window.innerWidth,height: window.innerHeight });
+//    let app = new PIXI.Application({ width: 600, height: 600 });
+    document.body.appendChild(app.view);
+
+    const graphics = new PIXI.Graphics();
+
+
+// Circle
+    graphics.lineStyle(0); // draw a circle, set the lineStyle to zero so the circle doesn't have an outline
+
+    var grd = app.createLinearGradient(0, 0, 200, 0);
+    grd.addColorStop(0, "red");
+    grd.addColorStop(1, "white");
+    graphics.beginFill(grd, 1);
+    graphics.drawCircle(100, 100, 50);
+    graphics.endFill();
+
+
+app.stage.addChild(graphics);
+
+    const container = new PIXI.Container();
+
+    app.stage.addChild(container);
+
+
+    // Add a ticker callback to move the sprite back and forth
+    let elapsed = 0.0;
+    loadSprites();
+
+    
+    container.addChild(sprites[0]);
+    container.addChild(sprites[1]);
+    container.y = app.screen.height/2;
+
+    container.pivot.y=100;
+    container.pivot.x=-100;
+
+
+
+    app.ticker.add((delta) => {
+      elapsed += delta;
+      container.x = app.screen.width/2 + Math.cos(elapsed/50.0) * 100.0;
+      container.rotation = -.010 *   elapsed;
+      sprites[0].position.x += Math.cos(elapsed) * 2;
+      sprites[0].position.y += Math.cos(elapsed) * 2;
+    })
+
+
+  </script>
+  
+</html>

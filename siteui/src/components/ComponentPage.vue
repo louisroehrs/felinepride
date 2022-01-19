@@ -72,6 +72,7 @@ export default {
         box-sizing: border-box;
         text-shadow: none;
         color:black;
+        background-image: none;
     }
     input {
         box-shadow: none;

@@ -1,0 +1,130 @@
+
+
+
+
+<HTML>
+  <head>
+    <script language=JavaScript src=https://pixijs.download/v6.2.1/pixi.js></script>
+        
+  </head>
+  <body>
+    
+  </body>
+
+  <style>
+    body, head, html {
+      padding:0;
+      margin:0;
+    }
+    </style>
+  <script>
+
+    const spriteNames = ["rocket","cat2"];
+    let sprites = [];
+    const numStars = 1000;
+    
+    const loadSprites = () => {
+      spriteNames.map( spriteName => {
+        let sprite = PIXI.Sprite.from(spriteName + ".png");
+        sprites.push(sprite);
+        sprite.y=100;
+        if (spriteName === "rocket")
+        {
+          sprite.y -= 30;
+          sprite.x -= 100;
+          sprite.width= 200;
+          sprite.height= 200;
+          sprite.rotation += .50;
+        }
+      });
+    }
+
+
+    const stars = [];
+    let app = new PIXI.Application({ width: window.innerWidth,height: window.innerHeight });
+
+    
+    for (let i=0;i<numStars; i++) {
+      stars.push(1);
+      stars.push({x:Math.random()*app.screen.width,
+                  y:Math.random()*app.screen.height,
+                  brightness: Math.random()*2
+                 }
+                );
+    }
+
+    
+
+//    let app = new PIXI.Application({ width: 600, height: 600 });
+    document.body.appendChild(app.view);
+
+    const graphics = new PIXI.Graphics();
+
+
+// Circle
+    graphics.lineStyle(0); // draw a circle, set the lineStyle to zero so the circle doesn't have an outline
+
+    graphics.beginFill(0xe8e8e8, 1);
+    graphics.drawCircle(100,100,70);
+    graphics.beginFill(0xd8d8d8, 1);
+    graphics.drawCircle(120,130,10);
+    graphics.drawCircle(150,110,8);
+    graphics.drawCircle(90,90,18);
+    graphics.drawCircle(80,130,6);
+
+
+//    for (let i=0;i<120; i++) {
+//      graphics.drawCircle(stars[i].x,stars[i].y,1);
+//    }
+    graphics.endFill();
+
+    app.stage.addChild(graphics);
+
+    const starField = new PIXI.Graphics();
+
+    app.stage.addChild(starField);
+
+    const container = new PIXI.Container();
+    app.stage.addChild(container);
+    
+
+
+    // Add a ticker callback to move the sprite back and forth
+    let elapsed = 0.0;
+    loadSprites();
+
+    
+    container.addChild(sprites[0]);
+    container.addChild(sprites[1]);
+    container.y = app.screen.height/2;
+
+    container.pivot.y=100;
+    container.pivot.x=-100;
+
+
+    let rocketNominal = {x:  sprites[0].position.x,
+                     y:  sprites[0].position.y
+                    }
+    app.ticker.add((delta) => {
+      elapsed += delta;
+      container.x = app.screen.width/2 + Math.cos(elapsed/50.0) * 100.0;
+      container.rotation = -.010 *   elapsed;
+      sprites[0].position.x = rocketNominal.x + Math.cos(elapsed) * 1;
+      sprites[0].position.y = rocketNominal.y + Math.cos(elapsed) * 1;
+
+      starField.clear();
+      starField.beginFill(0xe8e8e8, 1);
+      for (let i=0;i<numStars; i++) {
+        starField.drawCircle(stars[i].x,stars[i].y,stars[i].brightness);
+        stars[i].x+=.1;
+        stars[i].y+=.01;
+        if (stars[i].x > app.screen.width) stars[i].x=-2;
+        if (stars[i].y > app.screen.height) stars[i].y=-2;
+      }
+      starField.endFill();        
+    })
+
+
+  </script>
+  
+</html>
